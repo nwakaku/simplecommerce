@@ -4,6 +4,7 @@ import {FaSearch} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {GiShoppingCart} from 'react-icons/gi'
 import { UserContext } from '../../UserContext'
+import { Link, useHistory } from 'react-router-dom'
 
 const Navbar = () => {
     const {cartItems} =useContext(UserContext)
@@ -58,9 +59,11 @@ const Navbar = () => {
                                 <i><BsPersonFill/></i>
                             </a>
 
-                            <a className='icon__item'>
+                            <Link to='/cart'>
+                                <a className='icon__item'>
                                 <i><GiShoppingCart/></i>
-                            </a>
+                                </a>
+                            </Link>
                             <span className='cart__total'>{cartItems.length}</span>
                         </div>
                     </nav>

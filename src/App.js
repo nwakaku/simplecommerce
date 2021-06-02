@@ -18,7 +18,12 @@ function App() {
       <Router>
       <UserProvider>
         <Switch>
-          <Route path='/carts' component={Cart} />
+          <Route path='/cart'>
+            <Cart />
+          </Route>
+          <Route path='/'>
+            <Landing />
+          </Route>
         </Switch>
       </UserProvider>        
       </Router>
