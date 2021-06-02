@@ -1,5 +1,10 @@
 import React,{useState} from 'react'
 import Hero from './Hero';
+import { 
+         FaSearch,
+        } from 'react-icons/fa';
+import {BsPersonFill} from 'react-icons/bs'
+import {GiShoppingCart} from 'react-icons/gi'
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -12,7 +17,7 @@ const Navbar = () => {
                     <nav className='nav'>
                         <div onClick={() => setToggle(false)}
                          className='nav__hamburger'>
-                            #
+                            <i></i>
                         </div>
 
                         <div className='nav__logo'>
@@ -23,7 +28,7 @@ const Navbar = () => {
                          className={`${toggle ? 'nav__menu' : 'nav__menu open'}`} >
                             <div className='menu__top'>
                                 <span className='nav__category'>PHONE</span>
-                                <a className='close__toggle'><i>%</i></a>
+                                <a className='close__toggle'><i></i></a>
                             </div>
                             <ul className='nav__list'>
                                 <li className='nav__item'>
@@ -46,15 +51,15 @@ const Navbar = () => {
 
                         <div className='nav__icons'>
                             <a className='icon__item'>
-                               <i>@</i>
+                               <i><FaSearch/></i>
                             </a>
 
                             <a className='icon__item'>
-                                <i>@</i>
+                                <i><BsPersonFill/></i>
                             </a>
 
                             <a className='icon__item'>
-                                <i>@</i>
+                                <i><GiShoppingCart/></i>
                             </a>
                             <span className='cart__total'>0</span>
                         </div>

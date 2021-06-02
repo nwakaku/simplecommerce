@@ -3,6 +3,7 @@ import './App.css';
 import Landing from './components/pages/Landing';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { UserProvider } from './UserContext';
 
 function App() {
   useEffect(() => {
@@ -10,9 +11,12 @@ function App() {
     AOS.refresh();
   });
   return (
-    <div className="App">
+    <UserProvider>
+      <div className="App">
       <Landing />
     </div>
+    </UserProvider>
+    
   );
 }
 
