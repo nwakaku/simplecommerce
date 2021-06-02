@@ -1,5 +1,9 @@
 import React, { useContext } from 'react'
 import {UserContext} from '../../UserContext';
+import {GrOverview} from 'react-icons/gr';
+import {GrCart} from 'react-icons/gr';
+import {RiChatHeartFill} from 'react-icons/ri';
+
 
 
 const Product = ({product}) => {
@@ -26,17 +30,17 @@ const Product = ({product}) => {
                   <ul>
                       <li>
                         <a data-tip="Quick View" data-place="left" href="#">
-                          D
+                         <i><GrOverview/></i>
                         </a>
                       </li>
                       <li>
                         <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          H
+                          <GrCart/>
                         </a>
                       </li>
                       <li>
                         <a data-tip="Add To Compare" data-place="left" href="#">
-                          K
+                          <RiChatHeartFill/>
                         </a>
                       </li>
                   </ul>

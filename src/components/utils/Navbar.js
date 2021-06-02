@@ -1,12 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import Hero from './Hero';
-import { 
-         FaSearch,
-        } from 'react-icons/fa';
+import {FaSearch} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {GiShoppingCart} from 'react-icons/gi'
+import { UserContext } from '../../UserContext'
 
 const Navbar = () => {
+    const {cartItems} =useContext(UserContext)
     const [toggle, setToggle] = useState(false);
 
     return (
@@ -61,7 +61,7 @@ const Navbar = () => {
                             <a className='icon__item'>
                                 <i><GiShoppingCart/></i>
                             </a>
-                            <span className='cart__total'>0</span>
+                            <span className='cart__total'>{cartItems.length}</span>
                         </div>
                     </nav>
                 </div>
