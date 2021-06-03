@@ -1,6 +1,6 @@
 import React, { useImperativeHandle, useEffect, useRef, forwardRef } from 'react'
-import banner_01 from '../../images/banner_01.png';
-import banner_02 from '../../images/banner_02.png';
+import banner_01 from '../../image/brand1.png';
+import banner_02 from '../../image/brand2.png';
 // import Glide from '@glidejs/glide'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';

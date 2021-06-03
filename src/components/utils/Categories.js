@@ -59,13 +59,13 @@ const Categories = () => {
 
             </div>
             </div>
-            <div className="category__container" data-aos="fade-up" data-aos-duration="1200">
-            <div className="category__center">
-              {mainItem.map(
-                product => <Product product={product}/>
+            {/* <!-- Products --> */}
+  <section class="section products" >
+    <div class="product-layout" data-aos="fade-up" data-aos-duration="1200">
+    {mainItem.map(product => <Product product={product}/>
               )}
-            </div>
-        </div>
+          </div>
+  </section>
     </section>
    )
 }

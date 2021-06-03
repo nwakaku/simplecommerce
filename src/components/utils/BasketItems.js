@@ -1,6 +1,8 @@
 import React,{useContext} from 'react'
 import {UserContext} from '../../UserContext';
 import {Link, useHistory } from 'react-router-dom'
+import {HiPlusSm} from 'react-icons/hi'
+import {HiMinusSm} from 'react-icons/hi'
 
 const BasketItems = () => {
     const {cartItems,
@@ -50,12 +52,33 @@ const BasketItems = () => {
                                         <td class="product__quantity">
                                             <div class="input-counter">
                                                 <div>
-                                                    <span class="minus-btn" onClick={() => onRemove(item)}>
-                                                        <i>-</i>
+                                                    <span 
+                                                        style={{
+                                                            padding: '1rem 0.8rem',
+                                                            marginRight: 0,
+                                                            border: '0.1rem solid black',
+                                                            margin: '0.5rem'
+                                                        }} 
+                                                        class="minus-btn" onClick={() => onRemove(item)}>
+                                                        <i><HiMinusSm/></i>
                                                     </span>
-                                                    <input type="text" min="1" value="1" max="10" class="counter-btn"/>
-                                                    <span class="plus-btn" onClick={() => onAdd(item)}>
-                                                        <i>+</i>
+                                                    <span 
+                                                        style={{
+                                                            padding: '1rem 0.8rem',
+                                                            marginRight: 0,
+                                                            border: '0.1rem solid black',
+                                                            margin: '0.5rem'
+                                                        }} >
+                                                            {item.qty}
+                                                    </span>
+                                                    <span
+                                                     style={{
+                                                         padding: '1rem 0.8rem',
+                                                         marginRight: 0,
+                                                         margin: '0.5rem',
+                                                         border: '0.1rem solid black'}}
+                                                     class="plus-btn" onClick={() => onAdd(item)}>
+                                                        <i><HiPlusSm/></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -77,7 +100,9 @@ const BasketItems = () => {
 
                         <div class="cart-btns">
                             <div class="continue__shopping">
-                                <a href="/">Continue Shopping</a>
+                                <Link to='/'>
+                                <a href="/">Continue Shopping</a>                                
+                                </Link>
                             </div>
                             <div class="check__shipping">
                                 <input type="checkbox"/>

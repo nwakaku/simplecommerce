@@ -1,38 +1,30 @@
 import React from 'react';
-import collection1 from '../../images/collection_01.png';
-import collection2 from '../../images/collection_02.png';
+import promo1 from '../../image/promo7.jpg';
+import promo2 from '../../image/promo8.jpg';
+import './collection.css';
 
 const Collection = () => {
     return (
-        <section className='section collection'>
-            <div className='container'>
-                <div className='collection__container'>
-                    <div className='collection__box'>
-                        <div className='img__container'>
-                            <img src={collection2} className='collection_02' />
-                        </div>
-                        <div className='collection__content'>
-                            <div className='collection__data'>
-                                <span>NEW Colors Introduced</span>
-                                <h1>HEADPHONES</h1>
-                                <a href=''>SHOP NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='collection__box'>
-                        <div className='img__container'>
-                            <img src={collection1} className='collection_02' />
-                        </div>
-                        <div className='collection__content'>
-                            <div className='collection__data'>
-                                <span>NEW Colors Introduced</span>
-                                <h1>HEADPHONES</h1>
-                                <a href=''>SHOP NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        // <!-- ADVERT -->
+        <section class="section advert">
+          <div class="advert-layout container">
+            <div class="item ">
+              <img src={promo1} alt=""/>
+              <div class="content left">
+                <span>Exclusive Sales</span>
+                <h3>Spring Collections</h3>
+                <a href="">View Collection</a>
+              </div>
             </div>
+            <div class="item">
+              <img src={promo2} alt=""/>
+              <div class="content  right">
+                <span>New Trending</span>
+                <h3>Designer Bags</h3>
+                <a href="">Shop Now </a>
+              </div>
+            </div>
+          </div>
         </section>
     )
 }

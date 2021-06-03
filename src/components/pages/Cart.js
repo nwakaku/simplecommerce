@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from '../utils/Footer';
 import Facility from '../utils/Facility';
-import Navbar from '../utils/Navbar';
 import BasketItems from '../utils/BasketItems';
+import SweetNav from '../utils/SweetNav';
 
 const Cart = () => {
     return (
         <div>
-            <Navbar/>
+            <SweetNav />
             <BasketItems />
             <Facility />
             <Footer />

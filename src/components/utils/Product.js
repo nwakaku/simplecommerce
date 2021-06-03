@@ -1,50 +1,33 @@
 import React, { useContext } from 'react'
 import {UserContext} from '../../UserContext';
-import {GrOverview} from 'react-icons/gr';
-import {GrCart} from 'react-icons/gr';
-import {RiChatHeartFill} from 'react-icons/ri';
+import product1 from '../../image/product1.jpg';
+
 
 
 
 const Product = ({product}) => {
     const {onAdd} =useContext(UserContext)
     return (
-        <div class="product category__products">
-                    <div class="product__header">
-                      <img src={product.image} alt="product"/>
-                    </div>
-                    <div class="product__footer">
-                      <h3>${product.title}</h3>
-                      <div class="rating">
-                       
-                      </div>
-                      <div class="product__price">
-                        <h4>$${product.price}</h4>
-                      </div>
-                      <a href="#">
-                          <button 
-                            onClick={() => onAdd(product)} 
-                            type="submit" 
-                            class="product__btn">Add To Cart</button></a>
-                    </div>
-                  <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                         <i><GrOverview/></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <GrCart/>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <RiChatHeartFill/>
-                        </a>
-                      </li>
-                  </ul>
-                  </div>
+      <div class="product">
+        <div class="img-container">
+          <img src={product1} alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="fas fa-search"></i></span>
+            <span><i class="far fa-heart"></i></span>
+            <span onClick={() => onAdd(product)}><i class="fas fa-shopping-basket"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
     )
 }
 
