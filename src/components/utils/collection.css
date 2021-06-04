@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    margin-top: -12rem;
+    background-color: white;
+    padding: 1.5rem;
   }
   
   .advert-layout .item {
@@ -52,7 +55,7 @@
   }
   
   .advert-layout .content a:hover {
-    color: var(--primary);
+    color: #ff4545;
   }
   
   .advert-layout .item::after {

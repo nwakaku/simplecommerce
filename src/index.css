@@ -33,6 +33,7 @@ body,input{
   font-weight: 400;
   font-family: 'Archivo', sans-serif;
   color: var(--black);
+  background-color: var(--primaryColor);
 }
 
 a{
@@ -269,7 +270,7 @@ h3, h4{
 
 .hero,
 .hero .glide__slides {
-  background-color: var(--primaryColor);
+  background-color: var(--grey3);
   position: relative;
   width: 100%;
   height: 80vh;
@@ -368,7 +369,7 @@ h3, h4{
 
 .hero__left .hero__btn:hover {
   font-weight: 700;
-  background-color: transparent;
+  background-color: rgba(223, 74, 74, 0.4);
   color: var(--black);
 }
 
@@ -442,138 +443,7 @@ Hero Media Query
 /* Collection */
 
 
-.section {
-  padding: 3rem 0;
-}
 
-.collection {
-  margin: 3rem 0;
-}
-
-.collection__container {
-  width: 100%;
-  padding: 0 1.6rem;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.collection__box {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  flex: 0 0 48%;
-  height: 30rem;
-  background-color: var(--primaryColor);
-}
-
-.collection__box:not(:last-child) {
-  margin-right: 1.6rem;
-}
-
-.img__container {
-  width: 25rem;
-  text-align: center;
-}
-
-.collection__box img.collection_01 {
-  width: 60%;
-}
-
-.collection__box img.collection_02 {
-  width: 60%;
-}
-
-.collection__content {
-  flex: 0 0 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.collection__content span {
-  color: var(--black);
-}
-
-.collection__content h1 {
-  margin-top: 0.5rem;
-}
-
-.collection__data a:link,
-.collection__data a:visited {
-  font-weight: 700;
-  display: inline-block;
-  padding: 1rem 1.4rem;
-  margin-top: 1.3rem;
-  border-radius: 3rem;
-  border: 2px solid var(--secondaryColor);
-  color: var(--primaryColor);
-  background-color: var(--secondaryColor);
-  transition: all 0.3s ease-in-out;
-}
-
-.collection__content a:hover {
-  background-color: transparent;
-  color: var(--secondaryColor);
-}
-
-/*
-======================
-Collection Media Query
-======================
-*/
-@media only screen and (max-width: 999px) {
-  .collection__container {
-    width: 80%;
-    margin: 0 auto;
-    flex-direction: column;
-    height: 65rem;
-  }
-
-  .collection__box {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .collection__box:not(:last-child) {
-    margin: 0 0 1.6rem;
-  }
-}
-
-@media only screen and (max-width: 568px) {
-  .collection {
-    margin: 0;
-    position: relative;
-  }
-
-  .collection__container {
-    width: 100%;
-    height: 50rem;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .collection__box {
-    justify-content: space-around;
-    height: 15rem;
-  }
-
-  .collection__content {
-    flex: 0 0 30%;
-  }
-
-  .collection__data span {
-    font-size: 1.2rem;
-  }
-
-  .collection__data h1 {
-    font-size: 2rem;
-  }
-}
 
 /* Latest Product */
 .title__container {
@@ -582,7 +452,7 @@ Collection Media Query
   justify-content: center;
   margin: 0 auto 6rem;
   padding: 2rem 0;
-  background-color: var(--primaryColor);
+  background-color: var(--grey3);
 }
 
 .section__titles:not(:last-child) {
@@ -853,6 +723,8 @@ NewsLetter
 .newsletter {
   padding: 6rem 0;
   border-top: 1px solid var(--primaryColor);
+  margin: 1rem;
+  background-color: white;
 }
 
 .newsletter__content {
@@ -1060,6 +932,8 @@ Cart Area
   width: 100%;
   margin-bottom: 4rem;
   overflow-x: auto;
+  background-color: white;
+  padding: 10px;
 }
 
 .cart__table .table {
@@ -1084,6 +958,7 @@ Cart Area
 
 .cart__table .table thead {
   border-bottom: 1px solid var(--primaryColor);
+  background-color: white;
 }
 
 .product__name a:link,
@@ -1225,8 +1100,10 @@ Cart Area Media Query
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3rem;
   max-width: 130rem;
-  margin: 0 auto;
+  margin: -12rem auto;
   padding: 0 1.6rem;
+  background-color: var(--white);
+  padding: 2rem;
 }
 
 .product {
@@ -1242,6 +1119,12 @@ Cart Area Media Query
   object-fit: cover;
   height: 100%;
   width: 100%;
+  transition: all 500ms ease-in-out;
+}
+
+.product .img-container img:hover{
+  transform: scale(0.9);
+
 }
 
 .product .bottom {
@@ -1256,11 +1139,11 @@ Cart Area Media Query
 }
 
 .product .bottom a:hover {
-  color: var(--primary);
+  color: #ff4545;
 }
 
 .product .bottom span {
-  color: var(--primary);
+  color: #ff4545;
   font-size: 1.8rem;
 }
 
@@ -1286,7 +1169,7 @@ Cart Area Media Query
 }
 
 .product .addCart:hover {
-  background-color: var(--primary);
+  background-color: #ff4545;
   color: var(--white);
 }
 
@@ -1315,7 +1198,7 @@ Cart Area Media Query
 }
 
 .product .side-icons span:hover {
-  background-color: var(--primary);
+  background-color: #ff4545;
   color: var(--white);
 }
 

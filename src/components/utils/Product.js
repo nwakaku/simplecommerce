@@ -22,7 +22,7 @@ const Product = ({product}) => {
           </ul>
         </div>
         <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
+          <a href="">{product.title}</a>
           <div class="price">
             <span>$150</span>
           </div>

@@ -60,26 +60,26 @@ const SweetNav = () => {
             </div>
           </div>
         </li>
-        <li><a href="">Blog</a></li>
+        <li><a href="">ChatCommunity</a></li>
         <li>
           <a href="" class="desktop-item">Vendors <span><i class="fas fa-chevron-down"></i></span></a>
           <input type="checkbox" id="showdrop1" />
           <label for="showdrop1" class="mobile-item">Vendors <span><i class="fas fa-chevron-down"></i></span></label>
           <ul class="drop-menu1">
-            <li><a href="">Vendor Store listings</a></li>
-            <li><a href="">Store Details</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">ContactUs</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="" class="desktop-item">Profile <span><i class="fas fa-chevron-down"></i></span></a>
+          <a href="" class="desktop-item"><i style={{fontSize:'2rem'}} class="far fa-user-circle"></i></a>
           <input type="checkbox" id="showdrop2" />
           <label for="showdrop2" class="mobile-item">Page <span><i class="fas fa-chevron-down"></i></span></label>
           <ul class="drop-menu2">
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">SignUp</a></li>
             <li><a href="">Faq</a></li>
-            <li><a href="">Page 404</a></li>
+            <li><a href="">Setting</a></li>
           </ul>
         </li>
         {/* <!-- icons --> */}

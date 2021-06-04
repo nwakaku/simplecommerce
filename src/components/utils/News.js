@@ -15,7 +15,7 @@ const News = () => {
               <div class="section__titles">
                 <div class="section__title active">
                   <span class="dot"></span>
-                  <h1 class="primary__title">Phone News</h1>
+                  <h1 class="primary__title">Customer Testimonies</h1>
                 </div>
               </div>
             </div>

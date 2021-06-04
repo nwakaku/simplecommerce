@@ -1,6 +1,11 @@
 import React, { useImperativeHandle, useEffect, useRef, forwardRef } from 'react'
 import banner_01 from '../../image/brand1.png';
 import banner_02 from '../../image/brand2.png';
+import banner_03 from '../../image/brand3.png';
+import banner_04 from '../../image/brand4.png';
+import banner_05 from '../../image/brand5.png';
+import banner_06 from '../../image/brand6.png';
+import banner_07 from '../../image/brand7.png';
 // import Glide from '@glidejs/glide'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -51,7 +56,8 @@ export const Hero = () => {
                         className='glide__arrow_right'
                         type="button" onClick={onClickHandler}
                         title={label}
-                        style={{ ...arrowStyles, right: 15,border: 'none' }}>
+                        style={{ ...arrowStyles, right: 15,border: 'none',
+                                borderRadius: '50%' }}>
                         <i><BsCaretRightFill/></i>
                     </button>
                 )
@@ -91,9 +97,9 @@ export const Hero = () => {
             <div className='hero'>
                 <div class="hero__center">
                 <div class="hero__left">
-                  <span class="">New Inspiration 2020</span>
-                  <h1 class="">PHONES MADE FOR YOU!</h1>
-                  <p>Trending from mobile and headphone style collection</p>
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
                   <a href="#"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
@@ -106,13 +112,78 @@ export const Hero = () => {
             <div className='hero'>
               <div class="hero__center">
                 <div class="hero__left">
-                  <span>New Inspiration 2020</span>
-                  <h1>PHONES MADE FOR YOU!</h1>
-                  <p>Trending from mobile and headphone style collection</p>
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
                   <a href="#"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <img class="banner_02" src={banner_02} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src={banner_03} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src={banner_04} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src={banner_05} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src={banner_06} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div class="hero__center">
+                <div class="hero__left">
+                  <span class="">New Inspiration 2021</span>
+                  <h1 class="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div class="hero__right">
+                  <img class="banner_02" src={banner_07} alt="banner2" />
                 </div>
               </div>
             </div>
