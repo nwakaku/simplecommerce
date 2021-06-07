@@ -354,12 +354,11 @@ h3, h4{
   display: inline-block;
   font-weight: 700;
   font-size: 1.4rem;
-  background-color: var(--black);
+  background-color: #ff4545;
   color: var(--primaryColor);
   cursor: pointer;
   margin-top: 1rem;
   padding: 1.5rem 4rem;
-  border: 1px solid var(--black);
   transition: all 0.3s ease-in-out;
 }
 
@@ -693,6 +692,7 @@ span.dot::before {
 .right__content a:link,
 .right__content a:visited {
   display: inline-block;
+  margin: 1.5rem;
   padding: 1.8rem 5rem;
   border-radius: 3rem;
   font-weight: 700;

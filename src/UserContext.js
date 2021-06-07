@@ -4,8 +4,24 @@ import data from './data'
 export const UserContext = createContext()
 
 export const UserProvider = ({children}) => {
-    const {products} = data
-    const [cartItems, setCartItems] = useState([])
+    //for individual wish
+    const [wish, setWish] = useState([])
+
+    const products = data;
+    const [mainItem, setMainItem] = useState(products.products)
+
+    const filterItems = (category) => {
+        if (category === 'all') {
+            setMainItem(products.products);
+            return;
+        }
+        const newItems = products.products.filter((product) => product.category 
+        === category)
+        setMainItem(newItems)
+    }
+    const [cartItems, setCartItems] = useState([]);
+    const [zoom, setZoom] = useState(true);
+
   const onAdd = (product) => {
     const exist = cartItems.find(x => x.id === product.id);
     if(exist) {
@@ -37,6 +53,10 @@ export const UserProvider = ({children}) => {
   
 
   const value = {
+      wish,
+      setWish,
+      filterItems,
+      mainItem,
       products,
       cartItems,
       setCartItems,
@@ -46,6 +66,8 @@ export const UserProvider = ({children}) => {
       taxPrice,
       shippingPrice,
       totalPrice,
+      zoom,
+      setZoom
   }
     return(
         <UserContext.Provider value={value}>

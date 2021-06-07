@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {UserContext} from '../../UserContext';
 import product1 from '../../image/product1.jpg';
 
@@ -6,27 +6,30 @@ import product1 from '../../image/product1.jpg';
 
 
 const Product = ({product}) => {
-    const {onAdd} =useContext(UserContext)
+    const {onAdd, setZoom} =useContext(UserContext)
     return (
-      <div class="product">
-        <div class="img-container">
+      <div className="product">
+        <div className="img-container">
           <img src={product1} alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
+          <div className="addCart">
+            <i className="fas fa-shopping-cart"></i>
           </div>
 
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
-            <span onClick={() => onAdd(product)}><i class="fas fa-shopping-basket"></i></span>
+          <ul className="side-icons">
+            <span onClick={() => setZoom(false, product)}><i className="fas fa-search" ></i></span>
+            <span><i className="far fa-heart"></i></span>
+            <span onClick={() => onAdd(product)}><i className="fas fa-shopping-basket"></i></span>
           </ul>
         </div>
-        <div class="bottom">
-          <a href="">{product.title}</a>
-          <div class="price">
-            <span>$150</span>
+        <div className="bottom">
+        <a href="">{product.title}</a>
+          <div className="price">
+            <span>${product.price}</span>
           </div>
         </div>
+
+        {/* //popup */}
+        
       </div>
     )
 }

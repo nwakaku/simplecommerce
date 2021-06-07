@@ -6,6 +6,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { UserProvider } from './UserContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ProductsArea from './components/pages/ProductsArea';
+import UserPage from './components/pages/UserPage';
+import Login from './components/utils/Login';
 
 
 function App() {
@@ -21,9 +24,20 @@ function App() {
           <Route path='/cart'>
             <Cart />
           </Route>
+          <Route path='/product'>
+            <ProductsArea/> 
+          </Route>
+          <Route path='/signup'>
+            <UserPage />
+          </Route>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path='/'>
             <Landing />
           </Route>
+          
+          
         </Switch>
       </UserProvider>        
       </Router>

@@ -2,7 +2,9 @@ import React,{useContext} from 'react'
 import {UserContext} from '../../UserContext';
 import {Link, useHistory } from 'react-router-dom'
 import {HiPlusSm} from 'react-icons/hi'
-import {HiMinusSm} from 'react-icons/hi'
+import {HiMinusSm} from 'react-icons/hi';
+import product1 from '../../image/product1.jpg';
+
 
 const BasketItems = () => {
     const {cartItems,
@@ -36,7 +38,7 @@ const BasketItems = () => {
                                         <tr key={item.id} >
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src={item.image} alt=""/>
+                                                <img src={product1} alt=""/>
                                             </a>
                                         </td>
                                         <td class="product__name">

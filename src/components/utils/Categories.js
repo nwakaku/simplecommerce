@@ -4,21 +4,8 @@ import Product from './Product';
 
 
 const Categories = () => {
-    const products = useContext(UserContext)
-    const [mainItem, setMainItem] = useState(products.products)
-
-    const filterItems = (category) => {
-        if (category === 'all') {
-            setMainItem(products.products);
-            return;
-        }
-        const newItems = products.products.filter((product) => product.category 
-        === category)
-        setMainItem(newItems)
-    }
-   console.log(products)
-
-    return (
+    const {filterItems, mainItem} = useContext(UserContext)
+      return (
         <section className="category__section section" id="category">
             <div className="tab__list">
             <div className="title__container tabs">
