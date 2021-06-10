@@ -1,7 +1,7 @@
 import React,{ useContext, useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
-// import { UserContext } from '../userContext';
+import { UserContext } from '../../UserContext';
 import TextError from './TextError';
 import { Link, useHistory } from "react-router-dom"
 import './signup.css'
@@ -12,7 +12,7 @@ import './signup.css'
 
 
 const Signup = () => {
-// const {signup, users} = useContext(UserContext);
+const {signup, users} = useContext(UserContext);
 const [error, setError] = useState('');
 const [test, setTest] = useState({})
 const [loading, setLoading] = useState(false)
@@ -36,7 +36,15 @@ const onSubmit = (values) => {
     const email = values.email;
     const password = values.password;
     const fullName = values.displayName;
-    
+    signup(email, password, fullName)
+      .then((ref) => {
+        setLoading(false);
+        history.push("/")
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
       console.log("clicked", values)
   };
       

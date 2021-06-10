@@ -9,7 +9,9 @@ import girl from '../../image/woman.jpg';
 
 
 const SweetNav = () => {
-  const {cartItems} =useContext(UserContext)
+  const {cartItems,
+    signout,
+     state} =useContext(UserContext)
 
     return (
         <div>
@@ -76,12 +78,18 @@ const SweetNav = () => {
           <a href="" className="desktop-item"><i style={{fontSize:'2rem'}} className="far fa-user-circle"></i></a>
           <input type="checkbox" id="showdrop2" />
           <label for="showdrop2" className="mobile-item">Page <span><i className="fas fa-chevron-down"></i></span></label>
+          {state.kite ? <ul className="drop-menu2">
+            <li><Link to='/login'>{state.kite.displayName}</Link></li>
+            <li><Link to='/signup' onClick={() => signout()}>logout</Link></li>
+            <li><Link to='/'>Faq</Link></li>
+            <li><Link to='/'>Setting</Link></li>
+          </ul>:
           <ul className="drop-menu2">
             <li><Link to='/login'>Login</Link></li>
             <li><Link to='/signup'>Signup</Link></li>
             <li><Link to='/'>Faq</Link></li>
             <li><Link to='/'>Setting</Link></li>
-          </ul>
+          </ul>}
         </li>
         {/* <!-- icons --> */}
         <li className="icons">

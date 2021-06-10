@@ -1,9 +1,117 @@
 import React, {createContext, useState, useReducer, useEffect} from 'react'
-import data from './data'
+import data from './data';
+import {db, auth } from './firebase';
 
 export const UserContext = createContext()
 
+const initialState = []
+
+const reducer = (state, action) => {
+  const kite = action.user
+  switch (action.type) {
+    case 'add' : 
+      return {
+        ...state,
+        kite
+      }
+    case 'minus' : 
+      return initialState
+  }
+}
+
 export const UserProvider = ({children}) => {
+
+  //user experience
+const [state, dispatch] = useReducer(reducer, initialState);
+  
+  //trying out something
+  // const [currentUser, setCurrentUser] = useState();
+  const [loading, setLoading] = useState(true);
+  const signup = (email, password, fullName) => {
+    let promise = new Promise(function (resolve, reject) {
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((ref) => {
+          ref.user.updateProfile({
+            displayName: fullName,
+          });
+          db.collection('userProfile')
+              .doc(fullName)
+              .set({
+                email,
+                fullName,
+                photoURL:
+                  'https://firebasestorage.googleapis.com/v0/b/instagram-clone-66f7a.appspot.com/o/BlankImage.jpg?alt=media&token=c4d05e11-5df1-4a8a-ba8a-9a6f0cd36c4b',
+                bio: '',
+                website: '',
+                phone: '',
+                cart: cartItems
+              })
+              .then(() => {
+                resolve(ref);
+              });
+        })
+        .catch((error) => reject(error));
+    });
+  
+    return promise;
+  };
+  const signin = (email, password) => {
+    let promise = new Promise(function (resolve, reject) {
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then((ref) => {
+                resolve(ref);
+              })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+    return promise;
+  };
+  
+  const signout = () => {
+    return auth.signOut();
+  };
+  const passwordReset = (email) => {
+    let promise = new Promise(function (resolve, reject) {
+      auth
+        .sendPasswordResetEmail(email)
+        .then(() => {
+          resolve(`Password Reset Email sent to ${email}`);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+    return promise;
+  };
+  
+  const updateEmail = (email) => {
+    return state.updateEmail(email);
+  };
+  
+  const updatePassword = (password) => {
+  return state.updatePassword(password);
+  };
+  
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if(user){
+        dispatch({
+          type: "add",
+          user
+      })
+    }else {
+      dispatch({
+        type: "minus"
+      })
+    }
+      // setCurrentUser(user);
+      setLoading(false);
+    });
+    return unsubscribe;
+  }, []);
     //for individual wish
     const [wish, setWish] = useState([])
 
@@ -53,21 +161,28 @@ export const UserProvider = ({children}) => {
   
 
   const value = {
-      wish,
-      setWish,
-      filterItems,
-      mainItem,
-      products,
-      cartItems,
-      setCartItems,
-      onAdd,
-      onRemove,
-      itemsPrice,
-      taxPrice,
-      shippingPrice,
-      totalPrice,
-      zoom,
-      setZoom
+    state,
+    updatePassword,
+    updateEmail,
+    passwordReset,
+    signout,
+    signup,
+    signin,
+    wish,
+    setWish,
+    filterItems,
+    mainItem,
+    products,
+    cartItems,
+    setCartItems,
+    onAdd,
+    onRemove,
+    itemsPrice,
+    taxPrice,
+    shippingPrice,
+    totalPrice,
+    zoom,
+    setZoom
   }
     return(
         <UserContext.Provider value={value}>

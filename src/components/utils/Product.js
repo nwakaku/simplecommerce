@@ -16,7 +16,7 @@ const Product = ({product}) => {
           </div>
 
           <ul className="side-icons">
-            <span onClick={() => setZoom(false, product)}><i className="fas fa-search" ></i></span>
+            <span onClick={() => setZoom(false)}><i className="fas fa-search" ></i></span>
             <span><i className="far fa-heart"></i></span>
             <span onClick={() => onAdd(product)}><i className="fas fa-shopping-basket"></i></span>
           </ul>
