@@ -49,42 +49,61 @@ const validationSchema = Yup.object({
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}>
-
-            <div className='signup-form'>
+            <div className='body'>
+                 <div className='form'>
                 <Form>
-                    {/* <div>{users.r.displayName}<br/>{users.r.email}<br/>{users.comfirmPassword}</div>  */}
-                    {error ? <div>{error}</div>: null }
-                    <div className='form-header'>
-                        <h2>Login</h2>
-                        <p>Fill carefully</p>
+                    <div className='form-logo'>
+                        <Link to='/'><h2>materialhub</h2></Link>
+                        {error ? <p className='form-error'>{error}</p>: null }
                     </div>
 
                     
                     <div className='form-group'>
-                        <label htmlFor='email'>Email</label>
-                        <Field type='text' id='email' name='email' className='form-control'/>
+                        <Field 
+                            placeholder='Email please'
+                            type='text' id='email' name='email' className='form-input'/>
                         <ErrorMessage name='email' component={TextError}/>
                     </div>  
                                 
                    <div className='form-group'>
-                        <label htmlFor='password'>Password</label>
-                        <Field type='password' id='password' name='password' className='form-control'/>
+                        <Field 
+                            placeholder='Your Password'
+                            type='password' id='password' name='password' className='form-input'/>
                         <ErrorMessage name='password' component={TextError}/>
                     </div>
 
                     <div className="form-group">
-                    <button className="btn btn-primary btn-block btn-lg" disabled={loading}  type='submit'>Log in</button>
+                    <button className="form-btn" disabled={loading}  type='submit'>Log in</button>
                     </div>
 
 
-                    <div className='text-center small'>
-                    <Link to="/passwordReset">Forgot Password</Link>
-                    Need an account?
-                    <br /> <Link to='/formatic'>Register</Link>
-                </div>
+                    <span class="form-delimiter">
+                                or connect with
+                            </span>
+                            <div class="form-social">
+                                <a href="#" class="form-social-item fb">
+                                <i class="fab fa-facebook-square"></i>
+                                </a>
+                                <a href="#" class="form-social-item tw">
+                                <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="form-social-item gg">
+                                <i class="fab fa-google"></i>
+                                </a>
+                            </div>
+                            <span class="form-txt">
+                                Don't have an account?
+                                <Link to='/login'>login</Link>
+                            </span>
+                            <span class="form-txt">
+                                <a href="#">Forgot password?</a>
+                            </span>
                 </Form>
             
             </div>
+            </div>
+
+           
                 
         </Formik>
     )
