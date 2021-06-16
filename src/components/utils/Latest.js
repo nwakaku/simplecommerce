@@ -19,6 +19,30 @@ const Latest = () => {
             <div class="promotion-content">
               <h3>SENATOR MATERIALS</h3>
             </div>
+            <div className="promotion-list">
+              <ul>
+              <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+              </ul>
+              <ul>
+              <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+                <li>Ankara</li>
+              </ul>
+            </div>
           </div>
     
           <div class="promotion-item">

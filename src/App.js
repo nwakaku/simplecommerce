@@ -24,7 +24,9 @@ function App() {
   });
   return (
     <div className="App">
-      <Router>
+      <div className="first"></div>
+      <div className="second">
+        <Router>
       <UserProvider>
         <Switch>
         <Route path='/cart'>
@@ -65,6 +67,8 @@ function App() {
         </Switch>
       </UserProvider>        
       </Router>
+      </div>
+      
 
     </div>
     

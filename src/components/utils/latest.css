@@ -42,9 +42,13 @@
     z-index: 0;
     background-color: white;
     padding: 1rem;
-    height: 60rem;
+    height: 62rem;
     grid-row: 1/3;
     grid-column: 1/3;
+  }
+
+  .promotion-itemy:hover {
+    background-color: blanchedalmond;
   }
   
   .promotion-item img {
@@ -116,6 +120,34 @@
   
   .promotion-item:hover::after {
     visibility: visible;
+    opacity: 1;
+  }
+
+  .promotion-list {
+    color: #ff4545;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    height: inherit;
+    width: 62rem;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+  }
+
+  .promotion-list li {
+    margin: 2rem;
+  }
+
+  .promotion-list:hover{
     opacity: 1;
   }
   
