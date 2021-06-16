@@ -63,7 +63,7 @@ const SweetNav = () => {
             </div>
           </div>
         </li>
-        <li><a href="">ChatCommunity</a></li>
+        <li><Link to="/chat">ChatCommunity</Link></li>
         <li>
           <a href="" className="desktop-item">Vendors <span><i className="fas fa-chevron-down"></i></span></a>
           <input type="checkbox" id="showdrop1" />

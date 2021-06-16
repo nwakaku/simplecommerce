@@ -36,7 +36,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
             displayName: fullName,
           });
           db.collection('userProfile')
-              .doc(fullName)
+              .doc(email)
               .set({
                 email,
                 fullName,
@@ -45,7 +45,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
                 bio: '',
                 website: '',
                 phone: '',
-                cart: cartItems
+                cart: cartItems,
+                admin: false
               })
               .then(() => {
                 resolve(ref);
@@ -113,7 +114,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
     return unsubscribe;
   }, []);
     //for individual wish
-    const [wish, setWish] = useState([])
+    const [wish, setWish] = useState({});
 
     const products = data;
     const [mainItem, setMainItem] = useState(products.products)
@@ -140,6 +141,12 @@ const [state, dispatch] = useReducer(reducer, initialState);
     }
     console.log(cartItems)
   }
+  
+  const individual = (product) => {
+    setWish(product)
+    console.log(wish)
+  }
+
   const onRemove = (product) => {
       const exist = cartItems.find((x) => x.id === product.id);
       if (exist.qty === 1 ){
@@ -157,6 +164,15 @@ const [state, dispatch] = useReducer(reducer, initialState);
   const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   //user experience
+  const [rate, setRate] = useState([])
+  useEffect(() => {
+    db.collection("products").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data());
+      });
+  });
+  }, [])
 
   
 
@@ -182,7 +198,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
     shippingPrice,
     totalPrice,
     zoom,
-    setZoom
+    setZoom,
+    individual
   }
     return(
         <UserContext.Provider value={value}>

@@ -16,27 +16,27 @@ const ItemPop = () => {
                  <i class="fas fa-times"></i>
                  </div> 
                     <div class="main">
-                    <img src={product1} alt="" />
+                    <img src={wish.image} alt="" />
                     </div>
                     <div class="thumbnails">
                     <div class="thumbnail">
-                        <img src={product1} alt="" />
+                        <img src={wish.image} alt="" />
                     </div>
                     <div class="thumbnail">
-                        <img src={product1} alt="" />
+                        <img src={wish.image} alt="" />
                     </div>
                     <div class="thumbnail">
-                        <img src={product1} alt="" />
+                        <img src={wish.image} alt="" />
                     </div>
                     <div class="thumbnail">
-                        <img src={product1} alt="" />
+                        <img src={wish.image} alt="" />
                     </div>
                     </div>
                 </div>
                 <div class="right">
                     <span>Home/T-shirt{wish ? wish.name : null}</span>
-                    <h1>Something Nice is coming</h1>
-                    <div class="price">$50</div>
+                    <h1>{wish ? wish.title : null}</h1>
+                    <div class="price">${wish.price}</div>
                     <form>
                     <div>
                         <select>

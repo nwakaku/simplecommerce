@@ -21,7 +21,7 @@ const ProductComponents = () => {
                   <li>
                     <input type="checkbox" name="" id=""/>
                     <label for="">
-                      <span>Shoes</span>
+                      <span>Men</span>
                       <small>(10)</small>
                     </label>
                   </li>
@@ -29,7 +29,7 @@ const ProductComponents = () => {
                   <li>
                     <input type="checkbox" name="" id=""/>
                     <label for="">
-                      <span>Bags</span>
+                      <span>Female</span>
                       <small>(7)</small>
                     </label>
                   </li>
@@ -37,7 +37,7 @@ const ProductComponents = () => {
                   <li>
                     <input type="checkbox" name="" id=""/>
                     <label for="">
-                      <span> Accessories</span>
+                      <span> Bedsheets</span>
                       <small>(3)</small>
                     </label>
                   </li>
@@ -45,7 +45,7 @@ const ProductComponents = () => {
                   <li>
                     <input type="checkbox" name="" id=""/>
                     <label for="">
-                      <span>Clothings</span>
+                      <span>Window_blind </span>
                       <small>(3)</small>
                     </label>
                   </li>
@@ -129,7 +129,7 @@ const ProductComponents = () => {
       
               {mainItem.map(product => <div className="product">
                   <div className="img-container">
-                    <img src={product1} alt="" />
+                    <img src={product.image} alt="" />
                     <div className="addCart">
                       <i className="fas fa-shopping-cart"></i>
                     </div>

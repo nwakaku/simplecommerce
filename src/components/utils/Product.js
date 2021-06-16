@@ -6,17 +6,17 @@ import product1 from '../../image/product1.jpg';
 
 
 const Product = ({product}) => {
-    const {onAdd, setZoom} =useContext(UserContext)
+    const {onAdd, setZoom, individual} =useContext(UserContext)
     return (
       <div className="product">
         <div className="img-container">
-          <img src={product1} alt="" />
+          <img src={product.image} alt="" />
           <div className="addCart">
             <i className="fas fa-shopping-cart"></i>
           </div>
 
           <ul className="side-icons">
-            <span onClick={() => setZoom(false)}><i className="fas fa-search" ></i></span>
+            <span onClick={() => {setZoom(false);individual(product)}}><i className="fas fa-search" ></i></span>
             <span><i className="far fa-heart"></i></span>
             <span onClick={() => onAdd(product)}><i className="fas fa-shopping-basket"></i></span>
           </ul>

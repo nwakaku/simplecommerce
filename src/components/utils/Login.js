@@ -1,15 +1,18 @@
-import React,{ useContext, useEffect, useState } from 'react'
+import React,{ useContext,useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 import { UserContext } from '../../UserContext';
 import TextError from './TextError';
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+import {db} from '../../firebase';
+
 
 
 const Login = () => {
-const {signin, users} = useContext(UserContext);
+const {signin, state} = useContext(UserContext);
 const [error, setError] = useState('');
-const [test, setTest] = useState({})
 const [loading, setLoading] = useState(false)
 const history = useHistory();
 
@@ -27,14 +30,27 @@ const onSubmit = (values) => {
     const password = values.password;
     signin(email, password )
       .then((ref) => {
-        setLoading(false);
-        history.push("/")
+          db.collection('userProfile')
+          .doc(email)
+          .get()
+          .then((data) => {
+              if(data.data().admin === true){
+                setLoading(false);
+                history.push("/admin") 
+              }else{
+                setLoading(false);
+                history.push("/")
+                console.log(data)
+              }
+          }).catch(err => {
+              console.log(err.message)
+          })
+       
       })
       .catch((err) => {
         setError(err.message);
         setLoading(false);
       });
-      console.log("clicked", values)
   };
       
   
@@ -44,7 +60,20 @@ const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required('Required'),
     password: Yup.string().required('Required'),
 }) 
-  return (
+
+    if(loading){
+        return (
+            <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={3000} //3 secs
+      />
+        )  
+    }
+    else{
+        return (
         <Formik 
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -93,7 +122,7 @@ const validationSchema = Yup.object({
                             </div>
                             <span class="form-txt">
                                 Don't have an account?
-                                <Link to='/login'>login</Link>
+                                <Link to='/signup'>Register</Link>
                             </span>
                             <span class="form-txt">
                                 <a href="#">Forgot password?</a>
@@ -107,6 +136,8 @@ const validationSchema = Yup.object({
                 
         </Formik>
     )
+    }
+        
 }
 
 export default Login

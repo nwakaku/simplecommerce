@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect} from 'react';
 import popup from '../../images/popup.jpg';
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom';
+import { UserContext } from '../../UserContext';
+
 
 
 const Popup = () => {
-    const [pop, setPop] = useState(false)
+    const [pop, setPop] = useState(false);
+    const {state} =useContext(UserContext)
+
+    useEffect(() => {
+        {state.kite ? setPop(true) : setPop(false)}
+        }
+    , [])
+    
 
     return (
         // <!-- PopUp -->

@@ -49,8 +49,16 @@ const Categories = () => {
             {/* <!-- Products --> */}
   <section class="section products" >
     <div class="product-layout" data-aos="fade-up" data-aos-duration="1200">
-    {mainItem.map((product, index) => <Product product={product, index}/>
+    {mainItem.map((product, index) => <Product product={product}/>
               )}
+
+               {/* <!-- PAGINATION --> */}
+               <ul className="pagination">
+                <span>1</span>
+                <span>2</span>
+                <span className="icon">››</span>
+                <span className="last">Last »</span>
+              </ul>
           </div>
   </section>
     </section>

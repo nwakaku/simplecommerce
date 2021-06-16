@@ -9,6 +9,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductsArea from './components/pages/ProductsArea';
 import UserPage from './components/pages/UserPage';
 import Login from './components/utils/Login';
+import AdminHome from './components/admin/pages/AdminHome';
+import NewProduct from './components/admin/pages/NewProduct';
+import Product from './components/admin/pages/Product';
+import User from './components/admin/pages/User';
+import UserList from './components/admin/pages/UserList';
+import ChatCommunity from './components/pages/ChatCommunity';
 
 
 function App() {
@@ -21,8 +27,26 @@ function App() {
       <Router>
       <UserProvider>
         <Switch>
-          <Route path='/cart'>
+        <Route path='/cart'>
             <Cart />
+          </Route>
+          <Route path='/chat'>
+            <ChatCommunity />
+          </Route>
+          <Route path='/admin'>
+            <AdminHome />
+          </Route>
+          <Route path='/newproduct'>
+            <NewProduct />
+          </Route>
+          <Route path='/adminproduct'>
+            <Product />
+          </Route>
+          <Route path='/user'>
+            <User />
+          </Route>
+          <Route path='/userlist'>
+            <UserList />
           </Route>
           <Route path='/product'>
             <ProductsArea/> 

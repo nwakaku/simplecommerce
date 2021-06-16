@@ -6,13 +6,19 @@
   
   .products-layout {
     display: grid;
-    grid-template-columns: 1.05fr 3fr;
+    grid-template-columns: 1.05fr 4fr;
     gap: 0 1rem;
     /* margin-top: 10rem; */
   }
+  .col-1-of-4 {
+    background-color: white;
+    padding: 2rem;
+    /* position: fixed; */
+    height: fit-content;
+  }
   
   .col-3-of-4 .product-layout {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   
   .col-3-of-4 {

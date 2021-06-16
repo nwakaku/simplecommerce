@@ -1,7 +1,7 @@
 
 .facility__section {
     background-color: var(--grey3);
-    padding: 6rem 0;
+    /* padding: 6rem 0; */
     margin-top: 5rem;
   }
   
@@ -29,7 +29,7 @@
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    border: 1.5px solid var(--white);
+    border: 1.5px solid #ff4545;
     z-index: 1;
     margin-bottom: 1.6rem;
   }
