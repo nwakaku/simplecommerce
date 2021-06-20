@@ -38,7 +38,7 @@ const BasketItems = () => {
                                         <tr key={item.id} >
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src={product1} alt=""/>
+                                                <img src={item.image} alt=""/>
                                             </a>
                                         </td>
                                         <td class="product__name">

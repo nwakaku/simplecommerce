@@ -20,11 +20,17 @@
   
   .promotion-layout {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     /* background-color: white; */
     padding: 1rem;
     justify-content: space-between;
+ }
+
+ .layout-2{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
  }
   
   .promotion-item {
@@ -43,12 +49,13 @@
     background-color: white;
     padding: 1rem;
     height: 62rem;
+    /* width: 62rem; */
     grid-row: 1/3;
     grid-column: 1/3;
   }
 
   .promotion-itemy:hover {
-    background-color: blanchedalmond;
+    background-color: rgb(250, 229, 199, 0.5);
   }
   
   .promotion-item img {
@@ -86,10 +93,10 @@
     transition: all 300ms ease-in-out;
   }
   
-  .promotion-content a {
-    transition: all 300ms ease-in-out;
-    font-size: 1.4rem;
-  }
+
+  /* .promotion-content h3:hover {
+    opacity: 0;
+  } */
   
   .promotion-content a:hover {
     color: var(--primary);
@@ -124,14 +131,18 @@
   }
 
   .promotion-list {
-    color: #ff4545;
+    color: rgb(63, 62, 62);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    justify-content: space-around;
-    align-items: center;
+    align-content: center;
     justify-items: center;
+    /* font-family: 'Lobster'; */
+    padding: 4rem;
+    font-size: 1.5rem;
+    justify-content: center;
     height: inherit;
+    text-align: center;
     width: 62rem;
     transition: .5s ease;
     opacity: 0;
@@ -140,11 +151,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245, 0.5);
   }
 
   .promotion-list li {
-    margin: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+  .promotion-list li:hover{
+    color: #ff4545;
   }
 
   .promotion-list:hover{
@@ -163,6 +179,19 @@
   @media only screen and (max-width: 996px) {
     .promotion-layout {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .promotion-itemy {
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      background-color: white;
+      padding: 1rem;
+      height: 62rem;
+      grid-row: 1;
+      grid-column: 1;
+    }
+    .promotion-list {
+      display: none;
     }
   }
   

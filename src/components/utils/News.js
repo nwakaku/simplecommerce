@@ -25,10 +25,9 @@ const News = () => {
                           <img src={new2} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <h3>Styling White Shirts After A Cool Day</h3>
-                          <span>By Admin</span>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
+                          <span>...By Admin</span>
                           <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
@@ -37,10 +36,9 @@ const News = () => {
                           <img src={new3} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <h3>Styling White Shirts After A Cool Day</h3>
-                          <span>By Admin</span>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
+                          <span>...By Admin</span>
                           <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
@@ -49,10 +47,9 @@ const News = () => {
                           <img src={new4} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <h3>Styling White Shirts After A Cool Day</h3>
-                          <span>By Admin</span>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
+                          <span>...By Admin</span>
                           <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
@@ -61,10 +58,9 @@ const News = () => {
                           <img src={new5} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <h3>Styling White Shirts After A Cool Day</h3>
-                          <span>By Admin</span>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
+                          <span>...By Admin</span>
                           <a href="#"><button>Read More</button></a>
                         </div>
                       </div>

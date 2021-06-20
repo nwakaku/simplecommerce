@@ -3,17 +3,26 @@
 .products {
     margin-top: 10rem;
   }
+
+.top_product{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-around;
+  background-color: #ff4545;
+  margin-top: -10rem;
+  padding: 5rem;
+}
   
   .products-layout {
     display: grid;
     grid-template-columns: 1.05fr 4fr;
     gap: 0 1rem;
-    /* margin-top: 10rem; */
+    margin-top: 15rem;
+    margin: auto, 5rem;
   }
   .col-1-of-4 {
     background-color: white;
     padding: 2rem;
-    /* position: fixed; */
     height: fit-content;
   }
   

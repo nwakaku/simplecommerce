@@ -4,6 +4,7 @@ import {AiFillCreditCard} from 'react-icons/ai';
 import {BiHeadphone} from 'react-icons/bi';
 import {ImAirplane} from 'react-icons/im';
 import {GiReceiveMoney} from 'react-icons/gi';
+import { Link } from 'react-router-dom'
 
 
 const Facility = () => {
@@ -11,33 +12,38 @@ const Facility = () => {
         //  Facility Section 
         <section class="facility__section section" id="facility">
           <div class="container">
-            <div class="facility__contianer" data-aos="fade-up" data-aos-duration="1200">
+              <h1><span>Why shop</span>with us ?</h1>
+            <div class="facility__contianer" >
               <div class="facility__box">
                 <div class="facility-img__container">
-                  <i><ImAirplane/></i>
+                  <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-1_200x.png?v=1616644389" />
                 </div>
                 <p>FREE SHIPPING WORLD WIDE</p>
+                <Link>learn more</Link>
               </div>
     
               <div class="facility__box">
                 <div class="facility-img__container">
-                  <i><GiReceiveMoney/></i>
+                  <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-4_200x.png?v=1616644419" />
                 </div>
                 <p>100% MONEY BACK GUARANTEE</p>
+                <Link>learn more</Link>
               </div>
     
               <div class="facility__box">
                 <div class="facility-img__container">
-                  <i><AiFillCreditCard/></i>
+                  <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-3_200x.png?v=1616644409" />
                 </div>
-                <p>MANY PAYMENT GATWAYS</p>
+                <p>ANNUAL PAYMENT DISCOUNT</p>
+                <Link>learn more</Link>
               </div>
     
               <div class="facility__box">
                 <div class="facility-img__container">
-                  <i><BiHeadphone/></i>
+                  <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-2_200x.png?v=1616644399" />
                 </div>
-                <p>24/7 ONLINE SUPPORT</p>
+                <p>WEEKLY FLASH SALE</p>
+                <Link>learn more</Link>
               </div>
             </div>
           </div>

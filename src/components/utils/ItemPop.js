@@ -12,9 +12,7 @@ const ItemPop = () => {
             <div class="section product-detail">
                 <div class="details container">
                 <div class="left">
-                <div class="popup__close" onClick={() => setZoom(true)}>
-                 <i class="fas fa-times"></i>
-                 </div> 
+                 
                     <div class="main">
                     <img src={wish.image} alt="" />
                     </div>
@@ -34,34 +32,32 @@ const ItemPop = () => {
                     </div>
                 </div>
                 <div class="right">
-                    <span>Home/T-shirt{wish ? wish.name : null}</span>
-                    <h1>{wish ? wish.title : null}</h1>
-                    <div class="price">${wish.price}</div>
-                    <form>
-                    <div>
-                        <select>
-                        <option value="Select Size" selected disabled>
-                            Select Size
-                        </option>
-                        <option value="1">32</option>
-                        <option value="2">42</option>
-                        <option value="3">52</option>
-                        <option value="4">62</option>
-                        </select>
-                        <span><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    </form>
+                <div class="pop-close" onClick={() => setZoom(true)}>
+                 <i class="fas fa-times"></i>
+                 </div>
 
-                    <form class="form">
-                    <input type="text" placeholder="1" />
-                    <a href="cart.html" class="addCart">Add To Cart</a>
-                    </form>
+                    <span>{wish ? wish.category : null}</span>
+                    <h1>{wish ? wish.title : null}</h1>
+                    <div className="reviews">
+                        <div>
+                            <p>Reviews</p>
+                            <p><span>Brand</span>: {wish.title}</p>
+                            <p><span>Availability</span>: 1000yards In stock</p>
+                        </div>
+                        <div className="red">
+                            <p><i class="fas fa-burn"></i> {wish.price} sold in the last 24hrs</p>
+                        </div>
+                    </div>  
+                  <div class="price">${wish.price}</div>
+                    
                     <h3>Product Detail</h3>
                     <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
                     delectus nulla voluptates nesciunt quidem laudantium, quisquam
                     voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
                     </p>
+                <button className='addCart'>Add to Cart</button>            <span><i className="far fa-heart"></i></span>
+                <p><i class="far fa-eye"></i> {wish.price} customers have view this material</p>
                 </div>
                 </div>
             </div>

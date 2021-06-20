@@ -12,6 +12,7 @@ import News from '../utils/News';
 import Newsletter from '../utils/Newsletter';
 import SweetNav from '../utils/SweetNav';
 import Hero from '../utils/Hero';
+import Multi from '../utils/Multi';
 
 
 const Landing = () => {
@@ -19,14 +20,15 @@ const Landing = () => {
         <div>
             <SweetNav />
             {/* hero area */}
-            <div className='container'>
+            {/* <div className='container'> */}
                 <Latest />
                 <Categories />
                 <Hero />
                 <Collection />
+                <Multi />
                 <Facility />
                 <Newsletter />
-            </div>
+            {/* </div> */}
                 <News />
                 <Footer />
             <Popup />

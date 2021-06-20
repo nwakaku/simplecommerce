@@ -1,7 +1,7 @@
 import React, { useImperativeHandle, useEffect, useRef, forwardRef } from 'react'
-import banner_01 from '../../image/bed.jpg';
-import banner_02 from '../../image/girl.jpg';
-import banner_03 from '../../image/sen.jpg';
+import banner_01 from '../../image/brand1.png';
+import banner_02 from '../../image/brand2.png';
+import banner_03 from '../../image/brand3.png';
 import banner_04 from '../../image/brand4.png';
 import banner_05 from '../../image/brand5.png';
 import banner_06 from '../../image/brand6.png';
@@ -98,8 +98,9 @@ export const Hero = () => {
                 <div class="hero__center">
                 <div class="hero__left">
                   <span class="">New Inspiration 2021</span>
-                  <h1 class="" style={{color: '#ff4545'}}>Designers Made For You</h1>
+                  <h1 class="" >Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
+                  <p>In the world of designers there are no blind people</p>
                   <a href="#"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
@@ -113,8 +114,9 @@ export const Hero = () => {
               <div class="hero__center">
                 <div class="hero__left">
                   <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
+                  <h1 class="">PROMO TIME</h1>
                   <p>Trending from fashion to designers style collection</p>
+                  <p>Shop With Us And Stand A Chance To Win FACEOFMATERIALHUB </p>
                   <a href="#"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
