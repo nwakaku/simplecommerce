@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import {UserContext} from '../../UserContext';
-import product1 from '../../image/product1.jpg';
 
 
 

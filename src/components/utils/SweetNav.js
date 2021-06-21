@@ -25,7 +25,7 @@ const SweetNav = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/product'>Products</Link></li>
         <li>
-          <a href="" className="desktop-item">Shop <span><i className="fas fa-chevron-down"></i></span></a>
+          <Link className="desktop-item">Shop <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showMega" />
           <label for="showMega" className="mobile-item">Shop <span><i className="fas fa-chevron-down"></i></span></label>
           <div className="mega-box">
@@ -34,30 +34,30 @@ const SweetNav = () => {
                 <img src={girl} alt="" />
               </div>
               <div className="row">
-                <header>Shop Layout</header>
+                <header>Categories</header>
                 <ul className="mega-links">
-                  <li><a href="#">Shop With Background</a></li>
-                  <li><a href="#">Shop Mini Categories</a></li>
-                  <li><a href="#">Shop Only Categories</a></li>
-                  <li><a href="#">Shop Icon Categories</a></li>
+                  <li><Link>Male</Link></li>
+                  <li><Link>Female</Link></li>
+                  <li><Link>Bedsheets</Link></li>
+                  <li><Link>Window Blinds</Link></li>
                 </ul>
               </div>
               <div className="row">
-                <header>Filter Layout</header>
+                <header>Others</header>
                 <ul className="mega-links">
-                  <li><a href="#">Sidebar</a></li>
-                  <li><a href="#">Filter Default</a></li>
-                  <li><a href="#">Filter Drawer</a></li>
-                  <li><a href="#">Filter Dropdown</a></li>
+                  <li><Link>Lace</Link></li>
+                  <li><Link>Cashmere</Link></li>
+                  <li><Link>Ankara</Link></li>
+                  <li><Link>Hollandis</Link></li>
                 </ul>
               </div>
               <div className="row">
-                <header>Product Layout</header>
+                <header>Affiliates</header>
                 <ul className="mega-links">
-                  <li><a href="#">Layout Zoom</a></li>
-                  <li><a href="#">Layout Sticky</a></li>
-                  <li><a href="#">Layout Sticky 2</a></li>
-                  <li><a href="#">Layout Scroll</a></li>
+                  <li><Link>Gucci</Link></li>
+                  <li><Link>Louis Vuitton</Link></li>
+                  <li><Link>Pradas</Link></li>
+                  <li><Link>Others</Link></li>
                 </ul>
               </div>
             </div>
@@ -65,17 +65,17 @@ const SweetNav = () => {
         </li>
         <li><Link to="/chat">ChatCommunity</Link></li>
         <li>
-          <a href="" className="desktop-item">Vendors <span><i className="fas fa-chevron-down"></i></span></a>
+          <Link className="desktop-item">Vendors <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showdrop1" />
           <label for="showdrop1" className="mobile-item">Vendors <span><i className="fas fa-chevron-down"></i></span></label>
           <ul className="drop-menu1">
-            <li><a href="">About</a></li>
-            <li><a href="">ContactUs</a></li>
+            <li><Link>About</Link></li>
+            <li><Link>ContactUs</Link></li>
           </ul>
         </li>
 
         <li>
-          <a href="" className="desktop-item"><i style={{fontSize:'2rem'}} className="far fa-user-circle"></i></a>
+          <Link className="desktop-item"><i style={{fontSize:'2rem'}} className="far fa-user-circle"></i></Link>
           <input type="checkbox" id="showdrop2" />
           <label for="showdrop2" className="mobile-item">Page <span><i className="fas fa-chevron-down"></i></span></label>
           {state.kite ? <ul className="drop-menu2">

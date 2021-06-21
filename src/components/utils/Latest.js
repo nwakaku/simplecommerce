@@ -21,9 +21,9 @@ const Latest = () => {
             showThumbs={false}
             swipeable={false}
             infiniteLoop={true}
-            interval={1000}
+            interval={3000}
             autoPlay={true}
-            transitionTime={500} >
+            transitionTime={2000} >
 
             <div class="promotion-itemy">
             <img src={promo1} alt="" />

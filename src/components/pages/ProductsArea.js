@@ -4,6 +4,7 @@ import Footer from '../utils/Footer'
 import ProductComponents from '../utils/ProductComponents'
 import SweetNav from '../utils/SweetNav';
 import Multi from '../utils/Multi';
+import ItemPop from '../utils/ItemPop';
 
 
 const ProductsArea = () => {
@@ -14,6 +15,7 @@ const ProductsArea = () => {
             <Multi />
             <Facility />
             <Footer />
+            <ItemPop />
         </div>
     )
 }

@@ -5,7 +5,7 @@ import './items.css'
 
 
 const ItemPop = () => {
-    const {zoom , setZoom, wish} =useContext(UserContext)
+    const {zoom , setZoom, wish, onAdd} =useContext(UserContext)
 
     return (
         <div class={`${zoom ?"popup hide__popup" : 'popup'}`}>
@@ -56,7 +56,7 @@ const ItemPop = () => {
                     delectus nulla voluptates nesciunt quidem laudantium, quisquam
                     voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
                     </p>
-                <button className='addCart'>Add to Cart</button>            <span><i className="far fa-heart"></i></span>
+                <button onClick={() => onAdd(wish)} className='addCart'>Add to Cart</button>            <span><i className="far fa-heart"></i></span>
                 <p><i class="far fa-eye"></i> {wish.price} customers have view this material</p>
                 </div>
                 </div>

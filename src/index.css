@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
 :root{
   --primaryColor: #f1f1f1;
@@ -42,8 +42,8 @@ body,input{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
   position: fixed; 
   top: -50%; 
   left: -50%; 
@@ -628,7 +628,7 @@ span.dot::before {
   left: 50%;
   width: 90%;
   margin: 0 auto;
-  height: 55rem;
+  height: 60rem;
   transform: translate(-50%, -50%);
   padding: 1.6rem;
   display: grid;
@@ -660,18 +660,19 @@ span.dot::before {
   text-align: center;
   width: 85%;
   margin: 0 auto;
+  font-family: 'Bangers';
 }
 
 .right__content h1 {
-  font-size: 4rem;
   color: rgb(255, 255, 255);
   margin-bottom: 1.6rem;
+  animation: slideInFromRight 1s ease-in;
 }
 
-.right__content h1 span {
+.right__content h3 {
   color: #ff4545;
-  font-size: 5rem;
-  font-family: 'Lobster';
+  font-size: 3rem;
+  animation: slideInFromLeft 1s ease-in;
 
 }
 
@@ -840,12 +841,15 @@ News Section
   padding: 1rem;
   border-radius: 2rem;
   text-align: center;
+  transition: transform 0.2s ease-in;
 }
 
+.new__card:hover{
+  transform: translateY(-15px);
+}
 .new__card img{
   padding: 0.5rem;
-  width: 100%;
-  height: 50%;
+  width: 25%;
   border-radius: 50%;
 }
 
@@ -1235,5 +1239,26 @@ Cart Area Media Query
 @media only screen and (max-width: 567px) {
   .prodouct-layout {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }

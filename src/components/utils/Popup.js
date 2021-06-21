@@ -22,11 +22,11 @@ const Popup = () => {
            
             <div className="popup__right">
                  <div className="popup__close" onClick={() => setPop(true)}>
-            <i className="fas fa-times"></i>*
+            <i className="fas fa-times"></i>
             </div><div className="right__content">
-                    <h3>ALMIGHTY GIVEAWAY</h3>
-                <h1 style={{fontSize:'7rem',fontFamily:'Permanent Marker'}}>ALL SUNDAYS IN AUGUST </h1>
-                <h2 style={{color:'#ff4545'}}>#2000OFF</h2>
+                    <h3 style={{fontSize:'2rem'}}>ALMIGHTY GIVEAWAY</h3>
+                <h1 style={{fontSize:'10rem',fontFamily:'Bangers'}}>ALL SUNDAYS IN AUGUST </h1>
+                <h3 style={{color:'#ff4545'}}>#2000OFF</h3>
                 <h3 style={{color:'#ff4545'}}>EVERY PURCHASE</h3>
                 <Link to='/signup'>CASH_IN</Link>
 

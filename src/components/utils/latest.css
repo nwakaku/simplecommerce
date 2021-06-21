@@ -131,7 +131,7 @@
   }
 
   .promotion-list {
-    color: rgb(63, 62, 62);
+    color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
@@ -151,7 +151,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(245, 245, 245, 0.5);
+    background-color: rgb(0, 0, 0, 0.5);
   }
 
   .promotion-list li {

@@ -19,8 +19,6 @@ const Landing = () => {
     return (
         <div>
             <SweetNav />
-            {/* hero area */}
-            {/* <div className='container'> */}
                 <Latest />
                 <Categories />
                 <Hero />
