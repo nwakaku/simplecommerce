@@ -43,7 +43,7 @@ const onSubmit = (values) => {
                 console.log(data)
               }
           }).catch(err => {
-              console.log(err.message)
+              setError(err.message)
           })
        
       })

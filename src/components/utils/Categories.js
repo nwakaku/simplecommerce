@@ -6,7 +6,7 @@ import Product from './Product';
 const Categories = () => {
     const {filterItems, mainItem} = useContext(UserContext)
       return (
-        <section className="category__section section" id="category">
+        <section className="category__section section container" id="category">
             <div className="tab__list">
             <div className="title__container tabs">
                 <div className="section__titles category__titles ">

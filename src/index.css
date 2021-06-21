@@ -84,7 +84,7 @@ h3, h4{
 
 .container{
   width: 100%;
-  max-width: 117rem;
+  max-width: 125rem;
   margin: 0 auto;
   padding: 0 1.6rem;
 }
@@ -1112,7 +1112,7 @@ Cart Area Media Query
 /* PRODUCTS */
 .section .product-layout {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   max-width: 130rem;
   margin: -12rem auto;
@@ -1129,13 +1129,13 @@ Cart Area Media Query
 .product .img-container {
   position: relative;
   cursor: pointer;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--white);
 }
 
 .product .img-container img {
   object-fit: cover;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
   transition: all 500ms ease-in-out;
 }

@@ -11,7 +11,6 @@ const NewProduct = () => {
         <>
             <Topbar />
             <div className="contener container">
-                <Sidebar />
                     <AddProduct />
                 </div>
                     

@@ -8,7 +8,7 @@ import new5 from '../../image/fs.jpeg';
 const News = () => {
     return (
         // <!--New Section  -->
-        <section className="section news" id="news">
+        <section className="container section news" id="news">
             <div className="title__container">
               <div className="section__titles">
                 <div className="section__title active">
@@ -26,7 +26,6 @@ const News = () => {
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
                           <span>...Elon Musk</span>
-                          <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
                       <div className="new__card">
@@ -37,7 +36,6 @@ const News = () => {
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
                           <span>...pst Grace</span>
-                          <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
                       <div className="new__card">
@@ -48,7 +46,6 @@ const News = () => {
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
                           <span>...Mark Zuckerburg</span>
-                          <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
                       <div className="new__card">
@@ -59,7 +56,6 @@ const News = () => {
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
                             provident rem sed minus natus unde vel modi!</p>
                           <span>...pst Focus</span>
-                          <a href="#"><button>Read More</button></a>
                         </div>
                       </div>
 

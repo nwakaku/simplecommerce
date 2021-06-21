@@ -94,8 +94,8 @@ export const Hero = () => {
                 interval={1000}
                 autoPlay={true}
                 transitionTime={500}>
-            <div className='hero'>
-                <div class="hero__center">
+            <div className='hero '>
+                <div class="hero__center ">
                 <div class="hero__left">
                   <span class="">New Inspiration 2021</span>
                   <h1 class="" >Designers Made For You</h1>

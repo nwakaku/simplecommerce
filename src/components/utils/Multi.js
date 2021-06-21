@@ -28,7 +28,7 @@ const Multi = () => {
       };
     return (
         // <!--New Section  -->
-        <section className="section news" id="news">
+        <section className="section news container" id="news">
           {/* <div className="container"> */}
             <div className="title__container">
               <div className="section__titles">

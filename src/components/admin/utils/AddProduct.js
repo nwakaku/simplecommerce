@@ -20,6 +20,11 @@ const [message, setMessage] = useState('');
     imageUrl: '',
     imagePrice: '',
     categories: '',
+    describtion: '',
+    likes: '',
+    viewed: '',
+    amountInStock: '',
+
 }
 
 
@@ -47,6 +52,8 @@ const validationSchema = Yup.object({
     imageUrl: Yup.string().required('Required'),
     imagePrice: Yup.string().required('Required'),
     categories: Yup.string().required('Required'),
+    describtion: Yup.string().required('Required'),
+    amountInStock: Yup.string().required('Required'),
 }) 
 
     return (
@@ -95,6 +102,24 @@ const validationSchema = Yup.object({
                                     name='categories' 
                                     className="form-input"/>
                                 <ErrorMessage name='categories' component={TextError}/>
+                            </div>
+                            <div className='form-group'>
+                            <Field 
+                                type='text'
+                                    placeholder='describtion'
+                                    id='describtion' 
+                                    name='describtion' 
+                                    className="form-input"/>
+                                <ErrorMessage name='describtion' component={TextError}/>
+                            </div>
+                            <div className='form-group'>
+                            <Field 
+                                type='text'
+                                    placeholder='amountInStock'
+                                    id='amountInStock' 
+                                    name='amountInStock' 
+                                    className="form-input"/>
+                                <ErrorMessage name='amountInStock' component={TextError}/>
                             </div>
 
 

@@ -13,7 +13,6 @@ const Product = () => {
         <>
           <Topbar />
           <div className="contener container">
-            <Sidebar />  
             <div className="prodcts">
       <div className="productTitleContainer">
         <h1 className="productTitle">Product</h1>
