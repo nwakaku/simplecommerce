@@ -25,9 +25,9 @@ const Landing = () => {
                 <Collection />
                 <Multi />
                 <Facility />
-                <Newsletter />
             {/* </div> */}
                 <News />
+                <Newsletter />
                 <Footer />
             <Popup />
             <ItemPop/>

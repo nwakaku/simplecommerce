@@ -1,72 +1,40 @@
-import React,{useContext, useEffect, useState, useRef} from 'react'
-import { useHistory } from 'react-router-dom';
-import { ChatEngine } from 'react-chat-engine';
+import React, { useState, useEffect, useRef, useContext } from 'react'
+import { db } from '../../firebase'
 import { UserContext } from '../../UserContext';
-import axios from 'axios';
+import SendMessage from './SendMessage';
+import girl from '../../image/woman.jpg';
 
 
-const Chat = () => {
+function Chat() {
     const { state } = useContext(UserContext);
-    const [loading, setLoading] = useState(true);
-    const history = useHistory();
-
-
-    console.log(state)
-
-    const getFile = async (url) => {
-        const response = await fetch(url);
-        const data = await response.blob();
-
-        return new File([data], "userPhoto.jpg", { type: 'image/jpeg' })
-    }
-
+    const scroll = useRef()
+    const [messages, setMessages] = useState([])
     useEffect(() => {
-        if(!state.kite){
-            history.push('/');
-
-            return;
-        }
-
-        axios.get('https://api.chatengine.io/users/me', {
-            headers: {
-                "project-id": "70bb9af1-ac44-48e2-b4e0-b3f89d053e25",
-                "user-name": state.kite.email,
-                "user-secret": state.kite.uid,
-            }
+        db.collection('messages').orderBy('createdAt').limit(50).onSnapshot(snapshot => {
+            setMessages(snapshot.docs.map(doc => doc.data()))
         })
-        .then(() => {
-            setLoading(false);
-        })
-        .catch(() => {
-            let formdata = new FormData();
-            formdata.append('email', state.kite.email);
-            formdata.append('username', state.kite.email);
-            formdata.append('secret', state.kite.uid );
-
-            getFile(state.kite.photoURL)
-                .then((avatar) => {
-                    formdata.append('avatar', avatar, avatar.name)
-
-                    axios.post(
-                        'https://api.chatengine.io/users/',
-                        formdata,
-                        { headers: { "private-key": "e37771ea-a625-421d-8ed6-aeccacf35ae6"}}
-                    )
-                      .then(() => setLoading(false))
-                      .catch(e => console.log('e', e.response))
-                })
-        })
-    }, [state, history])
-
+    }, [])
     return (
-        <div style={{marginTop:'6rem', padding:'2rem'}}>
-            <ChatEngine 
-                height="calc(100vh - 66px)"
-                projectID="70bb9af1-ac44-48e2-b4e0-b3f89d053e25"
-                userName={state.kite.email}
-                userSecret={state.kite.uid}
-            />
-        </div>
+        
+            <div style={{overflowY:"scroll"}}>
+                <div className="msgs">
+                    {messages ? messages.map(({ id, text, photoURL, uid, chater }) => (
+                        <div>
+                            <div key={id} className={`msg ${uid === state.kite.uid ? 'sent' : 'received'}`}>
+                                <div>
+                                    <img src={girl} alt="" /><br/>
+                                    <small>{chater}</small>
+                                </div>
+                               <p>{text}</p>
+                            </div>
+                        </div>
+                    )): null}
+                </div>
+                <SendMessage scroll={scroll} />
+                <div ref={scroll}></div>
+            </div>
+
+        
     )
 }
 

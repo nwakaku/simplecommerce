@@ -33,7 +33,7 @@ export const Hero = () => {
     
     return (
             
-            <Carousel
+            <Carousel className="container"
             statusFormatter={(current, total) => `Current slide: ${current} / Total: ${total}`}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (

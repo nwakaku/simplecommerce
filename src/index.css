@@ -17,6 +17,7 @@
   --secondaryColor:#2b1f4d;
   --yellow:#ffcc00;
   --green:#59b210;
+  --main: #ff4545;
 }
 
 *{
@@ -302,6 +303,7 @@ h3, h4{
   position: relative;
   width: 100%;
   height: 80vh;
+  font-family: 'Gabriela';
 }
 
 .hero .glide__bullet {
@@ -475,11 +477,13 @@ Hero Media Query
 /* Latest Product */
 .title__container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  margin: 0 auto 6rem;
+  margin: -5rem auto 6rem;
   padding: 2rem 2rem;
+  gap: 5rem;
   background-color: rgba(24, 24, 233, 0.8);
+
 }
 
 .section__titles:not(:last-child) {
@@ -491,6 +495,7 @@ Hero Media Query
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
 }
 
 .section__title h1 {
@@ -626,7 +631,7 @@ span.dot::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   height: 60rem;
   transform: translate(-50%, -50%);
@@ -1114,12 +1119,20 @@ Cart Area Media Query
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
-  max-width: 130rem;
-  margin: -12rem auto;
   padding: 0 1.6rem;
   background-color: rgb(228, 228, 228);
   padding: 2rem;
 }
+
+.product_header{
+  background-color: var(--yellow);
+  color: var(--black4);
+  padding: 3rem;
+  font-size: 2rem;
+  display: flex;
+}
+
+
 
 .product {
   overflow: hidden;
@@ -1261,4 +1274,37 @@ Cart Area Media Query
   100% {
     transform: translateX(0);
   }
+}
+
+/* categories menu */
+.category_menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: -4rem;
+  transition: transform 0.2s ease-in;
+  
+  /* margin: 2rem 0; */
+}
+
+.category_menu > div{
+  background-color: white;
+  height: 13rem;
+  border-radius: 10%;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category_menu img{
+  width: 50%;
+  object-fit: contain; 
+}
+
+.category_menu > div:hover{
+  transform: translateY(-8px);
+}
+
+.category_menu .active_Item{
+  background-color: var(--main);
 }

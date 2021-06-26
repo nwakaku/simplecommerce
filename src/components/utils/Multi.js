@@ -29,38 +29,32 @@ const Multi = () => {
     return (
         // <!--New Section  -->
         <section className="section news container" id="news">
-          {/* <div className="container"> */}
-            <div className="title__container">
-              <div className="section__titles">
-                <div className="section__title active">
-                  <span className="dot"></span>
-                  <h1 className="primary__title">Recommended For You</h1>
-                </div>
-              </div>
-            </div>
+          <div className="product_header">
+              <h3>Top Sellers</h3>
+            </div> 
 
             {/* carousel area */}
-            <Carousel
+            <div style={{padding:'1rem', backgroundColor:'white'}}>
+              <Carousel
                 swipeable={false}
                 draggable={false}
-                showDots={true}
+                showDots={false}
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
-                autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
-                transitionDuration={500}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
-                autoPlay={true}
-                autoPlaySpeed={1000}
+                autoPlay={false}
+                showThumbs={false}
                 >
                    {products.products.map((product, index) => <Product product={product}/>
                 )}  
-                </Carousel>
+              </Carousel>
+            </div>
+            
                            
               {/* </div> */}
         </section>

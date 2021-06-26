@@ -32,65 +32,55 @@ const Latest = () => {
             </div>
             <div className="promotion-list">
             <ul>
-              <li><strong>MATERIALS FOR MEN</strong></li>
-              <li><i class="fas fa-gift"></i>3 Star Cashmere</li>
-              <li><i class="fas fa-gift"></i>5 Star Cashmere</li>
-              <li><i class="fas fa-gift"></i>7 Star Cashmere</li>
-              <li><i class="fas fa-gift"></i>Jeans Material</li>
-              <li><i class="fas fa-gift"></i>Shirt Materials</li>
-              <li><i class="fas fa-gift"></i>Atiku Verieties</li>
-              <li><i class="fas fa-gift"></i>Ankara</li>
-              <li><i class="fas fa-gift"></i>Batiks</li>
-              <li><i class="fas fa-gift"></i>Brocades</li>
+              <li><strong>MATERIALS</strong></li>
+              <li>5 Star Cashmere</li>
+              <li>Aunty k</li>
+              <li>Hollandais</li>
+              <li>Exotic</li>
+              <li>Antique</li>
+              <li>SuperWax</li>
+              <li>Phoenix Hitarget</li>
+              <li>Fantastic</li>
               </ul>
               <ul>
-              <li><strong>MATERIALS FOR WOMEN</strong></li>
-              <li><i class="fas fa-gift"></i>Ankara</li>
-              <li><i class="fas fa-gift"></i>Ase oke</li>
-              <li><i class="fas fa-gift"></i>Atiku</li>
-              <li><i class="fas fa-gift"></i>Adire</li>
-              <li><i class="fas fa-gift"></i>Brocades</li>
-              <li><i class="fas fa-gift"></i>lace</li>
-              <li><i class="fas fa-gift"></i>Silk</li>
-              <li><i class="fas fa-gift"></i>Tulle</li>
-              <li><i class="fas fa-gift"></i>Velvet</li>
+              <li><strong>SHIRTS</strong></li>
+              <li>Ankara</li>
+              <li>Ase oke</li>
+              <li>Atiku</li>
+              <li>Adire</li>
+              <li>Brocades</li>
+              <li>lace</li>
+              <li>Silk</li>
+              <li>Tulle</li>
+              <li>Velvet</li>
               </ul>
               <ul>
-              <li><strong>WINDOW_BLINDS</strong></li>
-              <li><i class="fas fa-gift"></i>Venetian Blinds</li>
-              <li><i class="fas fa-gift"></i>Mini Blinds</li>
-              <li><i class="fas fa-gift"></i>Vertical Blinds</li>
-              <li><i class="fas fa-gift"></i>Panel Track</li>
-              <li><i class="fas fa-gift"></i>Smart Blinds</li>
-              <li><i class="fas fa-gift"></i>Designers Materia;s</li>
-              <li><i class="fas fa-gift"></i>Ankara</li>
-              <li><i class="fas fa-gift"></i>Ankara</li>
-              <li><i class="fas fa-gift"></i>Ankara</li>
+              <li><strong>POLOS</strong></li>
+              <li>Venetian Blinds</li>
+              <li>Mini Blinds</li>
+              <li>Vertical Blinds</li>
+              <li>Panel Track</li>
+              <li>Smart Blinds</li>
+              <li>Designers Materia;s</li>
               </ul>
             
               <ul>
-              <li><strong>BEDSHEETS</strong></li>
-              <li><i class="fas fa-gift"></i>Gucci designs</li>
-              <li><i class="fas fa-gift"></i>BurBerry designs</li>
-              <li><i class="fas fa-gift"></i>Givenchy designs</li>
-              <li><i class="fas fa-gift"></i>D&G designs</li>
-              <li><i class="fas fa-gift"></i>Valentino designs</li>
-              <li><i class="fas fa-gift"></i>Hogans designs</li>
-              <li><i class="fas fa-gift"></i>TODS designs</li>
-              <li><i class="fas fa-gift"></i>Porche designs</li>
-              <li><i class="fas fa-gift"></i>Ferrerie designs</li>
+              <li><strong>DOWNS</strong></li>
+              <li>Gucci designs</li>
+              <li>BurBerry designs</li>
+              <li>Givenchy designs</li>
+              <li>D&G designs</li>
+              <li>Valentino designs</li>
+              <li>Hogans designs</li>
               </ul>
               <ul>
               <li><strong>OTHERS</strong></li>
-              <li><i class="fas fa-gift"></i>Classy Everlasting</li>
-              <li><i class="fas fa-gift"></i>Aunty k</li>
-              <li><i class="fas fa-gift"></i>Hollandais</li>
-              <li><i class="fas fa-gift"></i>Assurance</li>
-              <li><i class="fas fa-gift"></i>Exotic</li>
-              <li><i class="fas fa-gift"></i>Antique</li>
-              <li><i class="fas fa-gift"></i>SuperWax</li>
-              <li><i class="fas fa-gift"></i>Phoenix Hitarget</li>
-              <li><i class="fas fa-gift"></i>Fantastic</li>
+              <li>Classy Everlasting</li>
+              <li>Aunty k</li>
+              <li>Hollandais</li>
+              <li>Assurance</li>
+              <li>Exotic</li>
+
               </ul>
               
               

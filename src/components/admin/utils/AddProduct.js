@@ -4,8 +4,9 @@ import * as Yup from 'yup'
 import TextError from '../../utils/TextError';
 import { Link, useHistory } from "react-router-dom"
 import '../../utils/signup.css';
-import {db } from '../../../firebase';
+import {db, storage } from '../../../firebase';
 import { v4 as uuidv4 } from 'uuid'
+import Loader from 'react-loader-spinner';
 
 
 const AddProduct = () => {
@@ -17,7 +18,7 @@ const [message, setMessage] = useState('');
     const initialValues = {
     id: uuidv4(),
     imageTitle: '',
-    imageUrl: '',
+    file: '',
     imagePrice: '',
     categories: '',
     describtion: '',
@@ -31,36 +32,74 @@ const [message, setMessage] = useState('');
 
 
 const onSubmit = (values) => {
-setLoading(true)
- db.collection("products").doc(values.categories)
- .set(values)
- .then(() => {
-     setMessage("successful")
- })
- .catch((error)=>{
-     setError(error)
- })
- setLoading(false)
-      console.log("clicked", values)
+    setLoading(true)
+    if (!values) return null;
+	db.collection('products')
+		.add({
+			// whatever you want to add other than file
+            id: values.id,
+            imageTitle: values.imageTitle,
+            imagePrice: values.imagePrice,
+            categories: values.categories,
+            describtion: values.describtion,
+            likes: values.likes,
+            viewed: values.viewed,
+            amountInStock: values.amountInStock,
+		})
+		.then((doc) => {
+			if (values.file) {
+                console.log("clicked")
+				// upload stuff
+				const uploadTask = storage
+					.ref(`products/${doc.id}`)
+					.putString(values.file, 'data_url');
+
+					// OPTIONAL: here you can remove the file from state
+
+				uploadTask.on(
+					'state_change',
+					null,
+					(error) => setError(error),
+					() => {
+						// when the upload completes
+						storage
+							.ref(`products/${doc.id}`)
+							.getDownloadURL()
+							.then((url) => {
+								db.collection('products').doc(doc.id).set(
+									{ postImage: url },
+									{ merge: true }
+								);
+							});
+					}
+				);
+			}
+		});
+        setLoading(false)
+        setMessage('successful')
   };
-      
   
 
 
 const validationSchema = Yup.object({
     imageTitle: Yup.string().required('Required'),
-    imageUrl: Yup.string().required('Required'),
     imagePrice: Yup.string().required('Required'),
     categories: Yup.string().required('Required'),
     describtion: Yup.string().required('Required'),
     amountInStock: Yup.string().required('Required'),
 }) 
 
+if (loading){
+    return (
+        <Loader/>
+    )
+}else{ 
     return (
         <Formik 
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={onSubmit}>
+            {({ setFieldValue }) => (
             <div className='body'>
                 <div className="form">
                     {message ? message : null}
@@ -76,13 +115,21 @@ const validationSchema = Yup.object({
                                 <ErrorMessage name='imageTitle' component={TextError}/>
                         </div>                        
                         <div className='form-group'>
-                            <Field 
-                                type='imageUrl'
-                                placeholder='imageUrl'
-                                id='imageUrl'
-                                name='imageUrl' 
-                                className="form-input"/>
-                                <ErrorMessage name='imageUrl' component={TextError}/>
+                            <input 
+                                id="file" 
+                                name="file" 
+                                type="file" 
+                                className="form-input"
+                                onChange={(e) => {
+                                    const reader = new FileReader();
+                                    if (e.target.files[0]) {
+                                        reader.readAsDataURL(e.target.files[0]);
+                                    }
+                                
+                                    reader.onload = (readerEvent) => {
+                                        setFieldValue("file", readerEvent.target.result);
+                                    };
+                                }} />
                         </div>                                          
                         <div className='form-group'>
                             <Field 
@@ -126,16 +173,22 @@ const validationSchema = Yup.object({
                             <div className="form-group">
                             <button className="form-btn" disabled={loading}  type='submit'>Add to Database</button>
                             </div>
+
+                            <Link to="/admin">
+                                Back to Admin
+                            </Link>
                     
                         
                     </Form>
                 </div>
             </div>
-            
+)}
                 
             
         </Formik>
-    )
+    )}
+
+   
 }
   
 

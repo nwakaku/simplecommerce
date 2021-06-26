@@ -24,6 +24,14 @@ const Collection = () => {
                 <a href="">Shop Now </a>
               </div>
             </div>
+            <div class="item">
+              <img src={promo2} alt=""/>
+              <div class="content  right">
+                <span>New Trending</span>
+                <h3>Designer Bags</h3>
+                <a href="">Shop Now </a>
+              </div>
+            </div>
           </div>
         </section>
     )

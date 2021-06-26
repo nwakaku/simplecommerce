@@ -7,7 +7,7 @@ import {UserContext} from '../../UserContext';
 const Product = ({product}) => {
     const {onAdd, setZoom, individual} =useContext(UserContext)
     return (
-      <div className="product">
+      <div className="product" key={product.id}>
         <div className="img-container">
           <img src={product.image} alt="" />
           <div className="addCart">
@@ -21,9 +21,9 @@ const Product = ({product}) => {
           </ul>
         </div>
         <div className="bottom">
-        <a href="">{product.title}</a>
+        <p>{product.title}</p>
           <div className="price">
-            <span>${product.price}</span>
+            <p>${product.price}</p>
           </div>
         </div>
 

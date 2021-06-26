@@ -52,6 +52,10 @@ nav {
   .nav-list li a:hover {
     color: #ff4545;
   }
+
+  .nav-list li .active{
+    color: #ff4545;
+  }
   
   .nav-list .drop-menu1,
   .nav-list .drop-menu2 {
@@ -179,6 +183,7 @@ nav {
     font-weight: 700;
     border-radius: 50%;
   }
+
   
   @media only screen and (max-width: 968px) {
     .wrapper .nav-list {

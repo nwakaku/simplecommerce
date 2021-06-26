@@ -3,7 +3,7 @@ import './sweet.css';
 import cart from '../../image/shoppingBag.svg'
 import search from '../../image/search.svg';
 import { UserContext } from '../../UserContext';
-import { Link, useHistory } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import girl from '../../image/woman.jpg';
 
 
@@ -22,8 +22,8 @@ const SweetNav = () => {
         <div className="top">
           <label for="" className="btn close-btn"><i className="fas fa-times"></i></label>
         </div>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/product'>Products</Link></li>
+        <li className="active"><NavLink exact activeClassName="active" to='/'>Home</NavLink></li>
+        <li><NavLink activeClassName="active" to='/product'>Products</NavLink></li>
         <li>
           <Link className="desktop-item">Shop <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showMega" />
@@ -63,7 +63,7 @@ const SweetNav = () => {
             </div>
           </div>
         </li>
-        <li><Link to="/chat">ChatCommunity</Link></li>
+        <li><NavLink activeClassName="active" to="/chat">ChatCommunity</NavLink></li>
         <li>
           <Link className="desktop-item">Vendors <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showdrop1" />

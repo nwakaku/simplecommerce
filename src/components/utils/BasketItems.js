@@ -103,7 +103,7 @@ const BasketItems = () => {
                         <div class="cart-btns">
                             <div class="continue__shopping">
                                 <Link to='/'>
-                                <a href="/">Continue Shopping</a>                                
+                            Continue Shopping                              
                                 </Link>
                             </div>
                             <div class="check__shipping">

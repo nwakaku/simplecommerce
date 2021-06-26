@@ -1,0 +1,151 @@
+.msg img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: -20px;
+  }
+  
+.msg p {
+    font-family: 'Gabriela';
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+  }
+  
+  .msg {
+    display: flex;
+    padding: 20px 10px 0 20px;
+    margin: 10px;
+    border-radius: 3000px;
+    box-shadow: 0 0 10px rgb(164, 164, 164);
+    align-items: center;
+  }
+  
+  .sent {
+    background-color: #395dff;
+    color: white;
+    border-top-right-radius: 1000px;
+    flex-direction: row-reverse;
+    padding: 20px 20px 0 10px;
+    text-align: end;
+    float: right;
+  }
+  
+  .received {
+    border: 1px solid lightgray;
+    background-color: #FAFAFA;
+    border-top-left-radius: 1000px;
+    float: left;
+  }
+  
+  .sendMsg {
+    position: fixed;
+    width: 60.5%;
+    bottom: 0;
+    z-index: 1;
+    margin-left: -5px;
+    padding: 10px;
+    padding-bottom: 30px;
+    background-color: #fafafa;
+    border-radius: 1rem;
+  }
+  
+  .msgs {
+    margin: 110px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat_content{
+    display: grid;
+    grid-template-columns: repeat(3, ifr);
+  }
+
+  .chat_profile{
+    padding: 1rem;
+    font-family: fantasy;
+    color: ghostwhite;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 2rem;
+    height: 87vh;
+    
+  }
+  .profile_pic{
+    text-align: center;
+    align-items: center;
+  }
+
+  .chat_profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 2rem 0;
+  }
+
+  .chat_profile ul li{
+    margin: 2rem 0;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .chat_profile li:hover{
+    color: #ff4545;
+  }
+
+  .profile_info{
+    margin: 2rem;
+
+  }
+
+  .user_profile{
+    display: flex;
+  }
+  .user_profile img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .header li{
+      display: flex;
+      padding: 1rem;
+      margin: 0 5rem
+  }
+  
+  
+  @media (max-width: 775px) {
+    p {
+      font-size: 20px;
+    }
+    .sent {
+      padding: 10px 10px 0 10px;
+    }
+    .received {
+      padding: 10px 10px 0 10px;
+    }
+    img {
+      height: 35px;
+      margin-top: -10px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    p {
+      font-size: 15px;
+    }
+    .sent {
+      padding: 7px 7px 0 7px;
+    }
+    .received {
+      padding: 7px 7px 0 7px;
+    }
+    img {
+      height: 30px;
+      margin-top: -7px;
+    }
+  }
+  
+  
+  

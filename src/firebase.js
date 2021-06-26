@@ -1,6 +1,7 @@
 import firebase from 'firebase';
 import 'firebase/auth';
-import 'firebase/firestore'
+import 'firebase/firestore';
+import "firebase/storage";
 
 
 const myApp = firebase.initializeApp({
@@ -12,8 +13,10 @@ const myApp = firebase.initializeApp({
   appId: "1:599415253706:web:a34dd98cc2dddae117e233"
 });
 
-export const db = myApp.firestore()
+ const db = myApp.firestore();
 
-export const auth = myApp.auth();
+ const auth = myApp.auth();
 
-export default myApp
+ const storage = myApp.storage();
+
+export {db, auth, storage}
