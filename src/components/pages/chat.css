@@ -1,14 +1,20 @@
+
+.mystyle{
+  margin-top: -8.5px;
+  background-color:aliceblue;
+  font-family: 'Gabriela';
+}
+
 .msg img {
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
   }
   
 .msg p {
-    font-family: 'Gabriela';
     font-weight: 500;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -43,13 +49,12 @@
   
   .sendMsg {
     position: fixed;
-    width: 60.5%;
+    width: 54%;
     bottom: 0;
     z-index: 1;
-    margin-left: -5px;
-    padding: 10px;
+    margin-left: -6px;
+    padding: 5px;
     padding-bottom: 30px;
-    background-color: #fafafa;
     border-radius: 1rem;
   }
   
@@ -66,11 +71,9 @@
 
   .chat_profile{
     padding: 1rem;
-    font-family: fantasy;
     color: ghostwhite;
     background-color: rgb(0, 0, 0, 0.7);
     border-radius: 2rem;
-    height: 87vh;
     
   }
   .profile_pic{
@@ -88,31 +91,61 @@
   .chat_profile ul li{
     margin: 2rem 0;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .chat_profile li:hover{
     color: #ff4545;
   }
 
-  .profile_info{
-    margin: 2rem;
-
+  div .profile_info{
+    padding: 1rem;
   }
 
   .user_profile{
     display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border: 0.5px solid white;
+    margin: 4px 0;
+    border-radius: 5px;
   }
   .user_profile img{
     width: 40px;
     height: 40px;
+    border-radius: 50%;
   }
 
-  .header li{
+  div .header{
       display: flex;
       padding: 1rem;
-      margin: 0 5rem
+      gap: 7rem;
+      margin: 1rem 0;
   }
+
+  div .header i {
+    margin: 0 1rem;
+  }
+
+  div .header i:hover{
+    color: #ff4545;
+    cursor: pointer;
+  }
+
+  div .search_group{
+    display: flex;
+    padding: 1rem;
+    background-color: thistle;
+  }
+
+  div .group_icons{
+    display: flex;
+    gap:5rem;
+    background-color: black;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+
   
   
   @media (max-width: 775px) {

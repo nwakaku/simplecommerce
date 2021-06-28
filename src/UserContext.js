@@ -128,6 +128,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
         === category)
         setMainItem(newItems)
     }
+
+    //for second products
     const [cartItems, setCartItems] = useState([]);
     const [zoom, setZoom] = useState(true);
 

@@ -33,38 +33,27 @@ const Latest = () => {
             <div className="promotion-list">
             <ul>
               <li><strong>MATERIALS</strong></li>
-              <li>5 Star Cashmere</li>
-              <li>Aunty k</li>
-              <li>Hollandais</li>
-              <li>Exotic</li>
-              <li>Antique</li>
-              <li>SuperWax</li>
-              <li>Phoenix Hitarget</li>
-              <li>Fantastic</li>
-              </ul>
-              <ul>
+              <li>NATIVE</li>
+              <li>LACE</li>
+              <li>JEANS</li>
+              <li>ETC</li>
+            </ul>
+            <ul>
               <li><strong>SHIRTS</strong></li>
-              <li>Ankara</li>
-              <li>Ase oke</li>
-              <li>Atiku</li>
-              <li>Adire</li>
+              <li>MALE</li>
+              <li>FEMALE</li>
+              <li>BABIES</li>
+              <li>ANIMALS</li>
               <li>Brocades</li>
-              <li>lace</li>
-              <li>Silk</li>
-              <li>Tulle</li>
-              <li>Velvet</li>
-              </ul>
-              <ul>
+            </ul>
+            <ul>
               <li><strong>POLOS</strong></li>
               <li>Venetian Blinds</li>
               <li>Mini Blinds</li>
               <li>Vertical Blinds</li>
               <li>Panel Track</li>
-              <li>Smart Blinds</li>
-              <li>Designers Materia;s</li>
-              </ul>
-            
-              <ul>
+            </ul>
+            <ul>
               <li><strong>DOWNS</strong></li>
               <li>Gucci designs</li>
               <li>BurBerry designs</li>
@@ -72,19 +61,16 @@ const Latest = () => {
               <li>D&G designs</li>
               <li>Valentino designs</li>
               <li>Hogans designs</li>
-              </ul>
-              <ul>
+            </ul>
+            <ul>
               <li><strong>OTHERS</strong></li>
               <li>Classy Everlasting</li>
               <li>Aunty k</li>
               <li>Hollandais</li>
               <li>Assurance</li>
               <li>Exotic</li>
-
-              </ul>
-              
-              
-            </div>
+            </ul>              
+          </div>
           </div>
           <div class="promotion-itemy">
             <img src={promo2} alt="" />

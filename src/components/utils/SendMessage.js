@@ -26,7 +26,7 @@ function SendMessage({ scroll }) {
         <div>
             <form onSubmit={sendMessage}>
                 <div className="sendMsg">
-                    <div style={{backgroundColor:"#ccc", padding:"1rem", display:"flex", marginBottom: '-2rem',borderRadius:'2rem'}}>
+                    <div style={{backgroundColor:"#ccc", display:"flex", marginBottom: '-3rem',borderRadius:'2rem'}}>
                         <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="fas fa-microphone"></i></Button>
                         <Input style={{ flexBasis: '78%', fontSize: '15px',flexGrow:'8', fontWeight: '550', marginLeft: '5px', marginBottom: '-3px' }} placeholder='Message...' type="text" value={msg} onChange={e => setMsg(e.target.value)} />
                         <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="far fa-smile-beam"></i></Button>

@@ -652,13 +652,6 @@ span.dot::before {
 }
 
 
-.popup__right {
-  width: 50%;
-  vertical-align: middle;
-  padding: 3rem 5rem;
-  align-items: center;
-}
-
 
 
 .right__content {
@@ -672,6 +665,7 @@ span.dot::before {
   color: rgb(255, 255, 255);
   margin-bottom: 1.6rem;
   animation: slideInFromRight 1s ease-in;
+  font-size: 10rem;
 }
 
 .right__content h3 {
@@ -704,6 +698,33 @@ span.dot::before {
   transform: scale(0.2);
   opacity: 0;
   visibility: hidden;
+}
+
+@media only screen and (max-width: 998px) {
+  .right__content{
+    background-color: #ffcc00;
+  }
+  div .right__content h1{
+    font-size: 7rem;
+
+  }
+  .right__content h3{
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  div .right__content h1{
+    font-size: 5rem;
+
+  }
+  div .right__content h1{
+    font-size: 5rem;
+
+  }
+  .right__content h3{
+    font-size: 70%;
+  }
 }
 
 /*
@@ -1117,11 +1138,14 @@ Cart Area Media Query
 /* PRODUCTS */
 .section .product-layout {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   padding: 0 1.6rem;
   background-color: rgb(228, 228, 228);
   padding: 2rem;
+}
+
+.product-layout{
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .product_header{
@@ -1238,19 +1262,19 @@ Cart Area Media Query
 }
 
 @media only screen and (max-width: 996px) {
-  .prodouct-layout {
+  div .product-layout {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .prodouct-layout {
+  div .product-layout {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 567px) {
-  .prodouct-layout {
+  .product-layout {
     grid-template-columns: 1fr;
   }
 }
@@ -1307,4 +1331,10 @@ Cart Area Media Query
 
 .category_menu .active_Item{
   background-color: var(--main);
+}
+
+@media only screen and (max-width: 768px) {
+  .category_menu{
+    display: none;
+  }  
 }

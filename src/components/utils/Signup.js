@@ -94,10 +94,10 @@ const validationSchema = Yup.object({
                                 <Field 
                                     type='password'
                                     placeholder='password'
-                                    placeholder='password' 
                                     id='password' 
                                     name='password' 
                                     className="form-input"/>
+                                   
                                 <ErrorMessage name='password' component={TextError}/>
                             </div>
 
@@ -106,7 +106,6 @@ const validationSchema = Yup.object({
                             <div className='form-group'>
                                 <Field 
                                     type='password'
-                                    placeholder='comfirmPassword'
                                     placeholder='comfirmPassword' 
                                     id='comfirmPassword' 
                                     name='comfirmPassword' 

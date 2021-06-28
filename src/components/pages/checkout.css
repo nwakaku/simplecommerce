@@ -1,0 +1,13 @@
+div .contact_form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-self: center;
+}
+.field_form{
+    width: 50rem;
+    padding: 2rem;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+}

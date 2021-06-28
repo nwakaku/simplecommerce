@@ -247,26 +247,29 @@ const ProductComponents = () => {
             </div>
             <div className="col-3-of-4">
               <form action="">
-                <div className="item">
-                  <label for="sort-by">Categories</label>
-                  <select name="sort-by" id="sort-by">
-                    <option value="title" selected="selected">Male</option>
-                    <option value="number">Female</option>
-                    <option value="search_api_relevance">Windows</option>
-                    <option value="created">Bedsheets</option>
-                  </select>
+                <div className='product_form'>
+                    <div className="item">
+                    <label for="sort-by">Categories</label>
+                    <select name="sort-by" id="sort-by">
+                      <option value="title" selected="selected">Male</option>
+                      <option value="number">Female</option>
+                      <option value="search_api_relevance">Windows</option>
+                      <option value="created">Bedsheets</option>
+                    </select>
+                  </div>
+                  <div className="item">
+                    <label for="order-by">Sort By</label>
+                    <select name="order-by" id="sort-by">
+                      <option value="ASC" selected="selected">Name</option>
+                      <option value="DESC">Price</option>
+                      <option value="DESC">Date</option>
+                      <option value="DESC">Newness</option>
+                      <option value="DESC">Relevance</option>
+                    </select>
+                  </div>
+                  <a href="">Apply</a>
                 </div>
-                <div className="item">
-                  <label for="order-by">Sort By</label>
-                  <select name="order-by" id="sort-by">
-                    <option value="ASC" selected="selected">Name</option>
-                    <option value="DESC">Price</option>
-                    <option value="DESC">Date</option>
-                    <option value="DESC">Newness</option>
-                    <option value="DESC">Relevance</option>
-                  </select>
-                </div>
-                <a href="">Apply</a>
+                
               </form>
 
               <div className="product-layout">
