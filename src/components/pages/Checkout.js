@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import Typography from '@material-ui/core/Typography';
+import {Button, Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 import TextError from '../utils/TextError';
 import './checkout.css'
+import Footer from '../utils/Footer';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +38,16 @@ export default function Checkout() {
     lastName: '',
     email: '',
     phone: '',
-
+    picked: '',
+    state: '',
+    city: '',
+    address: '',
+    paymentStyle: '',
+    nameCard: '',
+    cardNumber: '',
+    expiration: '',
+    cvv: '',
+    checked: []
 }
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -49,21 +59,23 @@ export default function Checkout() {
     firstName: Yup.string().required('Required'),
     lastName: Yup.string().required('Required'),
     phone: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
-    password: Yup.string().required('Required'),
+    state: Yup.string().required('Required'),
+    city: Yup.string().required('Required'),
+    address: Yup.string().required('Required'),
+    picked: Yup.string().required('Required'),
+    paymentStyle: Yup.string().required('Required'),
+
 }) 
 
   return (
-    <Formik 
+      <>
+  <Formik 
         initialValues={initialValues}
         validationSchema={validationSchema}
         >
+          {({ values}) => (
       <Form>
-          <div className='container section'>
+          <div className=' checkout container section'>
             <div className={classes.root}>
               <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
@@ -131,43 +143,73 @@ export default function Checkout() {
                 </AccordionSummary>
                 <AccordionDetails>
                 <div className='contact_form'>
-                    <div>
+                    <div className='field_form'>
+                      <label>
                       <Field 
-                        placeholder='Address'
-                        type='text' id='address' 
-                        name='address'
-                        className='field_form' />
+                        type='radio'
+                        name='picked'
+                        value='Pickup at nearest park'
+                       />Normal Delivery<br/>
+                      <span style={{color:'green'}}>Free</span>
+                      </label>
                         <br/>
-                      <ErrorMessage name='address' component={TextError}/>
+                      <ErrorMessage name='picked' component={TextError}/>
                     </div>
-                    <div>
+                    <div className='field_form'>
+                      <label>
                       <Field 
-                        placeholder='Closest park'
-                        type='option'
-                        id='lastName' 
-                        name='lastName'
-                        className='field_form' />
+                        type='radio'
+                        name='picked'
+                        value='Gets delivered at my place of choice
+                        note a service fee of $1000 is required;
+                        remember to put your phone number'
+                      />Special Delivery<br/>
+                      <span style={{color:'red'}}>$1000</span>
+                      </label>
                         <br/>
-                      <ErrorMessage name='lastName' component={TextError}/>
+                      <ErrorMessage name='picked' component={TextError}/>
                     </div>
-                    <div>
+                    <div>I choose: {values.picked}</div>
+                    <div
+                      >
                       <Field 
-                        placeholder='Email please'
-                        type='text'
-                        id='email' 
-                        name='email'
-                        className='field_form' />
+                        as='select'
+                        id='state' 
+                        name='state'
+                        className='field_form'>
+                          <option value='abia'>Abia state</option>
+                          <option value='imo'>Imo state</option>
+                          <option value='enugu'>Enugu state</option>
+                          <option value='anambra'>Anambra state</option>
+                      </Field>
                         <br/>
                         <ErrorMessage name='email' component={TextError}/>
                     </div>
                     <div>
                       <Field 
-                        placeholder='Your Password'
-                        type='password' 
-                        id='password' 
-                        name='password'
+                        as='select'
+                        id='city' 
+                        name='city'
+                        className='field_form'>
+                          <option value='aba'>Aba</option>
+                          <option value='owerri'>Owerri</option>
+                          <option value='enugu'>Enugu</option>
+                          <option value='awka'>Awka</option>
+                          <option value='umuahia'>Umuahia</option>
+                          <option value='eket'>Eket</option>
+                          <option value='uyo'>Uyo</option>
+                      </Field>
+                        <br/>
+                        <ErrorMessage name='email' component={TextError}/>
+                    </div>
+                    <div>
+                      <Field 
+                        placeholder='Address Describtion'
+                        type='text' 
+                        id='address' 
+                        name='address'
                         className='field_form'/>
-                        <ErrorMessage name='password' component={TextError}/>
+                        <ErrorMessage name='address' component={TextError}/>
                     </div>
                   </div>
                 </AccordionDetails>
@@ -184,10 +226,74 @@ export default function Checkout() {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                    vitae egestas augue. Duis vel est augue.
-                  </Typography>
+                <div className='contact_form'>
+                    <div className='field_form'>
+                      <label>
+                      <Field 
+                        type='radio'
+                        name='paymentStyle'
+                        id='paymentStyle'
+                        value='Transfer to Zenithbank:2219867315;nwakaku Izuchukwu wisdom'
+                       />Bank Transfer<br/>
+                       <small style={{color:'green'}}>...
+                       {values.paymentStyle === 'Transfer to Zenithbank:2219867315;nwakaku Izuchukwu wisdom' ? values.paymentStyle : null}</small>
+                      </label>
+                        <br/>
+                      <ErrorMessage name='picked' component={TextError}/>
+                    </div>
+                    <div className='field_form'>
+                      <label>
+                      <Field 
+                        type='radio'
+                        name='paymentStyle'
+                        id='paymentStyle'
+                        value='Credit Card'
+                      />Credit Card<br/>
+                       <small style={{color:'green'}}>
+                       {values.paymentStyle === 'Credit Card' ? values.paymentStyle : null}</small>
+                      </label>
+                        <br/>
+                      <ErrorMessage name='picked' component={TextError}/>
+                    </div>
+                    <div>
+                      <Field 
+                        placeholder='Name on Card'
+                        type='text' id='nameCard' 
+                        name='nameCard'
+                        className='field_form' />
+                        <br/>
+                      <ErrorMessage name='nameCard' component={TextError}/>
+                    </div>
+                    <div>
+                      <Field 
+                        placeholder='Card Number'
+                        type='text'
+                        id='cardNumber' 
+                        name='cardNumber'
+                        className='field_form' />
+                        <br/>
+                      <ErrorMessage name='cardNumber' component={TextError}/>
+                    </div>
+                    <div>
+                      <Field 
+                        placeholder='DD//MM//YY'
+                        type='text' id='expiration' 
+                        name='expiration'
+                        className='field_form' />
+                        <br/>
+                      <ErrorMessage name='expiration' component={TextError}/>
+                    </div>
+                    <div>
+                      <Field 
+                        placeholder='CVV'
+                        type='text'
+                        id='cvv' 
+                        name='cvv'
+                        className='field_form' />
+                        <br/>
+                      <ErrorMessage name='cvv' component={TextError}/>
+                    </div>
+                    </div>
                 </AccordionDetails>
               </Accordion>
               <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
@@ -199,17 +305,30 @@ export default function Checkout() {
                   <Typography className={classes.heading}>Terms And Conditions</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                    vitae egestas augue. Duis vel est augue.
-                  </Typography>
+                  <div className={classes.secondaryHeading}>
+                  <label>
+                  <Field type="checkbox" name="checked" value="Terms and Conditions" />
+                  Terms And Conditions 
+                </label><br/>
+                  <Button
+                    style={{
+                      width: '40rem',
+                      backgroundColor: 'blue',
+                      color: 'white'
+                    }}>Confirm Payment</Button>
+                  </div>
+
                 </AccordionDetails>
               </Accordion>
               </div>
           </div>
       </Form>
+      )}
           
     </Formik>
+    <Footer/>
+        </>
+    
     
    
   );

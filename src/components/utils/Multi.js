@@ -50,7 +50,7 @@ const Multi = () => {
                 autoPlay={false}
                 showThumbs={false}
                 >
-                   {products.products.map((product, index) => <Product product={product}/>
+                   {products.products.map((product, index) => <Product product={product} key={product.id}/>
                 )}  
               </Carousel>
             </div>

@@ -10,36 +10,36 @@ import { Link } from 'react-router-dom'
 const Facility = () => {
     return (
         //  Facility Section 
-        <section class="facility__section section container" id="facility">
-          <div class="container">
+        <section className="facility__section section container" id="facility">
+          <div className="container">
               <h1><span>Why shop</span>with us ?</h1>
-            <div class="facility__contianer" >
-              <div class="facility__box">
-                <div class="facility-img__container">
+            <div className="facility__contianer" >
+              <div className="facility__box">
+                <div className="facility-img__container">
                   <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-1_200x.png?v=1616644389" />
                 </div>
                 <p>FREE SHIPPING WORLD WIDE</p>
                 <Link>learn more</Link>
               </div>
     
-              <div class="facility__box">
-                <div class="facility-img__container">
+              <div className="facility__box">
+                <div className="facility-img__container">
                   <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-4_200x.png?v=1616644419" />
                 </div>
                 <p>100% MONEY BACK GUARANTEE</p>
                 <Link>learn more</Link>
               </div>
     
-              <div class="facility__box">
-                <div class="facility-img__container">
+              <div className="facility__box">
+                <div className="facility-img__container">
                   <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-3_200x.png?v=1616644409" />
                 </div>
                 <p>ANNUAL PAYMENT DISCOUNT</p>
                 <Link>learn more</Link>
               </div>
     
-              <div class="facility__box">
-                <div class="facility-img__container">
+              <div className="facility__box">
+                <div className="facility-img__container">
                   <img src="https://cdn.shopify.com/s/files/1/0064/4435/1539/files/icon-us-2_200x.png?v=1616644399" />
                 </div>
                 <p>WEEKLY FLASH SALE</p>

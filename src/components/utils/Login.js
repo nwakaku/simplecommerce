@@ -106,25 +106,25 @@ const validationSchema = Yup.object({
                     </div>
 
 
-                    <span class="form-delimiter">
+                    <span className="form-delimiter">
                                 or connect with
                             </span>
-                            <div class="form-social">
-                                <a href="#" class="form-social-item fb">
-                                <i class="fab fa-facebook-square"></i>
+                            <div className="form-social">
+                                <a href="#" className="form-social-item fb">
+                                <i className="fab fa-facebook-square"></i>
                                 </a>
-                                <a href="#" class="form-social-item tw">
-                                <i class="fab fa-twitter"></i>
+                                <a href="#" className="form-social-item tw">
+                                <i className="fab fa-twitter"></i>
                                 </a>
-                                <a href="#" class="form-social-item gg">
-                                <i class="fab fa-google"></i>
+                                <a href="#" className="form-social-item gg">
+                                <i className="fab fa-google"></i>
                                 </a>
                             </div>
-                            <span class="form-txt">
+                            <span className="form-txt">
                                 Don't have an account?
                                 <Link to='/signup'>Register</Link>
                             </span>
-                            <span class="form-txt">
+                            <span className="form-txt">
                                 <a href="#">Forgot password?</a>
                             </span>
                 </Form>

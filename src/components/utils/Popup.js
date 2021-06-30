@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect} from 'react';
-import popup from '../../images/popup.jpg';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 
 

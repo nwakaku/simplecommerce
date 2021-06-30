@@ -4,10 +4,25 @@ div .contact_form{
     gap: 2rem;
     align-self: center;
 }
+div .checkout {
+    padding: 2rem;
+}
 .field_form{
     width: 50rem;
     padding: 2rem;
     background-color: aliceblue;
     color: black;
     border-radius: 5px;
+}
+
+
+
+@media only screen and (max-width: 996px) {
+    div .contact_form{
+        grid-template-columns: 1fr;
+    }
+
+    .field_form{
+        width:max-content;
+    }
 }

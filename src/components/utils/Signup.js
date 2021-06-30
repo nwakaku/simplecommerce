@@ -65,7 +65,6 @@ const validationSchema = Yup.object({
             <div className='body'>
                 <div className="form">
                     <Form>
-                        {/* <div class={`${pop ?"popup hide__popup" : 'popup'}`}> */}
                             <div className='form-logo'>
                                 <Link to='/'><h2>materialhub</h2></Link>
                                 {error ? <p className='form-error'>{error}</p>: null }
@@ -117,25 +116,25 @@ const validationSchema = Yup.object({
                             <button className="form-btn" disabled={loading}  type='submit'>Register</button>
                             </div>
 
-                            <span class="form-delimiter">
+                            <span className="form-delimiter">
                                 or connect with
                             </span>
-                            <div class="form-social">
-                                <a href="#" class="form-social-item fb">
-                                <i class="fab fa-facebook-square"></i>
+                            <div className="form-social">
+                                <a href="#" className="form-social-item fb">
+                                <i className="fab fa-facebook-square"></i>
                                 </a>
-                                <a href="#" class="form-social-item tw">
-                                <i class="fab fa-twitter"></i>
+                                <a href="#" className="form-social-item tw">
+                                <i className="fab fa-twitter"></i>
                                 </a>
-                                <a href="#" class="form-social-item gg">
-                                <i class="fab fa-google"></i>
+                                <a href="#" className="form-social-item gg">
+                                <i className="fab fa-google"></i>
                                 </a>
                             </div>
-                            <span class="form-txt">
+                            <span className="form-txt">
                                 Don't have an account?
                                 <Link to='/login'>login</Link>
                             </span>
-                            <span class="form-txt">
+                            <span className="form-txt">
                                 <a href="#">Forgot password?</a>
                             </span>
                         {/* </div> */}

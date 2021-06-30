@@ -20,14 +20,14 @@ const SweetNav = () => {
       <div className="logo"><Link to='/'>MaterialHub</Link></div>
       <ul className="nav-list">
         <div className="top">
-          <label for="" className="btn close-btn"><i className="fas fa-times"></i></label>
+          <label htmlFor="" className="btn close-btn"><i className="fas fa-times"></i></label>
         </div>
         <li className="active"><NavLink exact activeClassName="active" to='/'>Home</NavLink></li>
         <li><NavLink activeClassName="active" to='/product'>Products</NavLink></li>
         <li>
           <Link className="desktop-item">Shop <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showMega" />
-          <label for="showMega" className="mobile-item">Shop <span><i className="fas fa-chevron-down"></i></span></label>
+          <label htmlFor="showMega" className="mobile-item">Shop <span><i className="fas fa-chevron-down"></i></span></label>
           <div className="mega-box">
             <div className="content">
               <div className="row">
@@ -67,7 +67,7 @@ const SweetNav = () => {
         <li>
           <Link className="desktop-item">Vendors <span><i className="fas fa-chevron-down"></i></span></Link>
           <input type="checkbox" id="showdrop1" />
-          <label for="showdrop1" className="mobile-item">Vendors <span><i className="fas fa-chevron-down"></i></span></label>
+          <label htmlFor="showdrop1" className="mobile-item">Vendors <span><i className="fas fa-chevron-down"></i></span></label>
           <ul className="drop-menu1">
             <li><Link>About</Link></li>
             <li><Link>ContactUs</Link></li>
@@ -77,7 +77,7 @@ const SweetNav = () => {
         <li>
           <Link className="desktop-item"><i style={{fontSize:'2rem'}} className="far fa-user-circle"></i></Link>
           <input type="checkbox" id="showdrop2" />
-          <label for="showdrop2" className="mobile-item">Page <span><i className="fas fa-chevron-down"></i></span></label>
+          <label htmlFor="showdrop2" className="mobile-item">Page <span><i className="fas fa-chevron-down"></i></span></label>
           {state.kite ? <ul className="drop-menu2">
             <li><Link to='/login'>{state.kite.displayName}</Link></li>
             <li><Link to='/signup' onClick={() => signout()}>logout</Link></li>
@@ -105,7 +105,7 @@ const SweetNav = () => {
           <span><img src={search} alt="" /></span>
         </li>
       </ul>
-      <label htmlfor="" className="btn "><i className="fas fa-bars"></i></label>
+      <label htmlFor="" className="btn "><i className="fas fa-bars"></i></label>
     </div>
   </nav>
         </div>

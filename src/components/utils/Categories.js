@@ -14,21 +14,25 @@ import fab from '../../image/fab.png'
             "id":1,
             "img":fab,
             "text":"Materials",
+            "to": "all"
         },
         {
             "id":2,
             "img":polo,
             "text":"Polos",
+            "to": "Trending Products"
         },
         {
             "id":3,
             "img":trousers,
             "text":"Trousers",
+            "to": "Special Products"
         },
         {
             "id":4,
             "img":shirts,
             "text":"Shirts",
+            "to": "Featured Products"
         },
         {
             "id":5,
@@ -46,7 +50,8 @@ import fab from '../../image/fab.png'
 const Categories = () => {
   // for category
 
-const [activeLink, SetActiveLink] = useState(null)
+const [activeLink, SetActiveLink] = useState(null);
+const [catItem, setCatItem] = useState(null);
 
 const { file } = category;
     const {filterItems, mainItem} = useContext(UserContext)
@@ -57,13 +62,13 @@ console.log(file)
             <div className="tab__list container">
               <div className="category_menu ">
                   {file.map((data) => {
-                      const {id,img,text} = data;
+                      const {id,img,text,to} = data;
                       return (
                          <div key={id} 
-                         onClick={() => SetActiveLink(id)}
+                         onClick={() => {SetActiveLink(id);filterItems(to);setCatItem(text)}}
                        className={id === activeLink ? "active_Item" : ""}>
                       <img src={img} alt="" />
-                      <p>{text}{id === activeLink && <i class="fas fa-medal"></i>}</p>
+                      <p>{text}{id === activeLink && <i className="fas fa-medal"></i>}</p>
                     </div>
                       )               
                   })}
@@ -73,13 +78,13 @@ console.log(file)
             </div>
           </section>
 
-        <section class="section products container">
+        <section className="section products container">
             <div className="product_header">
-              <h3>Materials</h3>
+              <h3>{catItem}<i className="fas fa-medal"></i></h3>
             </div> 
-           <div class="product-layout" >
+           <div className="product-layout" >
 
-          {mainItem.map((product, index) => <Product product={product}/>
+          {mainItem.map((product, index) => <Product product={product} key={product.id}/>
                     )}
 
                     {/* <!-- PAGINATION --> */}

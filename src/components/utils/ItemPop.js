@@ -8,32 +8,32 @@ const ItemPop = () => {
     const {zoom , setZoom, wish, onAdd} =useContext(UserContext)
 
     return (
-        <div class={`${zoom ?"popup hide__popup" : 'popup'}`}>
-            <div class="section product-detail">
-                <div class="details container">
-                <div class="left">
+        <div className={`${zoom ?"popup hide__popup" : 'popup'}`}>
+            <div className="section product-detail">
+                <div className="details container">
+                <div className="left">
                  
-                    <div class="main">
+                    <div className="main">
                     <img src={wish.image} alt="" />
                     </div>
-                    <div class="thumbnails">
-                    <div class="thumbnail">
+                    <div className="thumbnails">
+                    <div className="thumbnail">
                         <img src={wish.image} alt="" />
                     </div>
-                    <div class="thumbnail">
+                    <div className="thumbnail">
                         <img src={wish.image} alt="" />
                     </div>
-                    <div class="thumbnail">
+                    <div className="thumbnail">
                         <img src={wish.image} alt="" />
                     </div>
-                    <div class="thumbnail">
+                    <div className="thumbnail">
                         <img src={wish.image} alt="" />
                     </div>
                     </div>
                 </div>
-                <div class="right">
-                <div class="pop-close" onClick={() => setZoom(true)}>
-                 <i class="fas fa-times"></i>
+                <div className="right">
+                <div className="pop-close" onClick={() => setZoom(true)}>
+                 <i className="fas fa-times"></i>
                  </div>
 
                     <span>{wish ? wish.category : null}</span>
@@ -45,10 +45,10 @@ const ItemPop = () => {
                             <p><span>Availability</span>: 1000yards In stock</p>
                         </div>
                         <div className="red">
-                            <p><i class="fas fa-burn"></i> {wish.price} sold in the last 24hrs</p>
+                            <p><i className="fas fa-burn"></i> {wish.price} sold in the last 24hrs</p>
                         </div>
                     </div>  
-                  <div class="price">${wish.price}</div>
+                  <div className="price">${wish.price}</div>
                     
                     <h3>Product Detail</h3>
                     <p>
@@ -57,7 +57,7 @@ const ItemPop = () => {
                     voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
                     </p>
                 <button onClick={() => onAdd(wish)} className='addCart'>Add to Cart</button>            <span><i className="far fa-heart"></i></span>
-                <p><i class="far fa-eye"></i> {wish.price} customers have view this material</p>
+                <p><i className="far fa-eye"></i> {wish.price} customers have view this material</p>
                 </div>
                 </div>
             </div>

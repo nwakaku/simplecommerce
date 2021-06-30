@@ -40,8 +40,8 @@ const MessagerGroup = () => {
                 <div className="header">
                         <h3>ChatGroups</h3>
                         <div>
-                           <i class="fas fa-plus borderd"></i>
-                           <i class="fas fa-ellipsis-v"></i> 
+                           <i className="fas fa-plus borderd"></i>
+                           <i className="fas fa-ellipsis-v"></i> 
                         </div>
                 </div>
                 <Paper component="form" className={classes.root}>

@@ -27,17 +27,17 @@ function SendMessage({ scroll }) {
             <form onSubmit={sendMessage}>
                 <div className="sendMsg">
                     <div style={{backgroundColor:"#ccc", display:"flex", marginBottom: '-3rem',borderRadius:'2rem'}}>
-                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="fas fa-microphone"></i></Button>
+                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i className="fas fa-microphone"></i></Button>
                         <Input style={{ flexBasis: '78%', fontSize: '15px',flexGrow:'8', fontWeight: '550', marginLeft: '5px', marginBottom: '-3px' }} placeholder='Message...' type="text" value={msg} onChange={e => setMsg(e.target.value)} />
-                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="far fa-smile-beam"></i></Button>
-                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="fas fa-camera-retro"></i></Button>
-                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i class="fas fa-paperclip"></i></Button>
+                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i className="far fa-smile-beam"></i></Button>
+                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i className="fas fa-camera-retro"></i></Button>
+                        <Button style={{  fontSize: '15px', fontWeight: '550'}} type="submit"><i className="fas fa-paperclip"></i></Button>
                         <Button style={{ 
                                 fontSize: '25px', 
                                 fontWeight: '650', 
                                 maxWidth: '50px', 
                                 color:'#395dff', 
-                                padding:'1rem'}} type="submit"><i class="fas fa-paper-plane"></i></Button>
+                                padding:'1rem'}} type="submit"><i className="fas fa-paper-plane"></i></Button>
                     </div>
                     
                 </div>

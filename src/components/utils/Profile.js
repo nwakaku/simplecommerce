@@ -14,10 +14,10 @@ const Profile = () => {
             </div>
             <div className="profile_info">
                 <ul>
-                    <li><i class="fas fa-mobile-alt"></i> +2347083519662</li>
-                    <li><i class="fas fa-sign-in-alt"></i> Register as Member</li>
-                    <li><i class="fas fa-envelope-open-text"></i> Nwakakucc@gmail.com</li>
-                    <li><i class="fas fa-user-cog"></i> Settings</li>
+                    <li><i className="fas fa-mobile-alt"></i> +2347083519662</li>
+                    <li><i className="fas fa-sign-in-alt"></i> Register as Member</li>
+                    <li><i className="fas fa-envelope-open-text"></i> Nwakakucc@gmail.com</li>
+                    <li><i className="fas fa-user-cog"></i> Settings</li>
                 </ul>
             </div>
         </div>

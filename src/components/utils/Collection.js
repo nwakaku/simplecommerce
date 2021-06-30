@@ -6,27 +6,27 @@ import './collection.css';
 const Collection = () => {
     return (
         // <!-- ADVERT -->
-        <section class="section advert">
-          <div class="advert-layout container">
-            <div class="item ">
+        <section className="section advert">
+          <div className="advert-layout container">
+            <div className="item ">
               <img src={promo1} alt=""/>
-              <div class="content left">
+              <div className="content left">
                 <span>Exclusive Sales</span>
                 <h3>Spring Collections</h3>
                 <a href="">View Collection</a>
               </div>
             </div>
-            <div class="item">
+            <div className="item">
               <img src={promo2} alt=""/>
-              <div class="content  right">
+              <div className="content  right">
                 <span>New Trending</span>
                 <h3>Designer Bags</h3>
                 <a href="">Shop Now </a>
               </div>
             </div>
-            <div class="item">
+            <div className="item">
               <img src={promo2} alt=""/>
-              <div class="content  right">
+              <div className="content  right">
                 <span>New Trending</span>
                 <h3>Designer Bags</h3>
                 <a href="">Shop Now </a>

@@ -47,7 +47,7 @@
 .col-3-of-4 form {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 3rem;
   background-color: beige;
   padding: 2rem;

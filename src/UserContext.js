@@ -160,6 +160,15 @@ const [state, dispatch] = useReducer(reducer, initialState);
           );
       }
   }
+
+  const onDelete = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1 ){
+        setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    }
+}
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
@@ -195,6 +204,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
     setCartItems,
     onAdd,
     onRemove,
+    onDelete,
     itemsPrice,
     taxPrice,
     shippingPrice,

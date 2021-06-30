@@ -15,21 +15,25 @@ const category = {
           "id":1,
           "img":fab,
           "text":"Materials",
+          "to": "all"
       },
       {
           "id":2,
           "img":polo,
           "text":"Polos",
+          "to": "Trending Products"
       },
       {
           "id":3,
           "img":trousers,
           "text":"Trousers",
+          "to": "Special Products"
       },
       {
           "id":4,
           "img":shirts,
           "text":"Shirts",
+          "to": "Featured Products"
       },
       {
           "id":5,
@@ -58,13 +62,13 @@ const ProductComponents = () => {
             <div className="tab__list container section">
               <div className="category_menu ">
                   {file.map((data) => {
-                      const {id,img,text} = data;
+                      const {id,img,text,to} = data;
                       return (
                          <div key={id} 
-                         onClick={() => SetActiveLink(id)}
+                         onClick={() => {SetActiveLink(id);filterItems(to)}}
                        className={id === activeLink ? "active_Item" : ""}>
                       <img src={img} alt="" />
-                      <p>{text}{id === activeLink && <i class="fas fa-medal"></i>}</p>
+                      <p>{text}{id === activeLink && <i className="fas fa-medal"></i>}</p>
                     </div>
                       )               
                   })}
@@ -86,7 +90,7 @@ const ProductComponents = () => {
                 <ul className="block-content">
                   <li                      
                   onClick = {() => filterItems("all")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Tailors</span>
                       <small>(10)Categories</small>
                     </label>
@@ -94,7 +98,7 @@ const ProductComponents = () => {
 
                   <li                     
                   onClick = {() => filterItems("Trending Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Materials</span>
                       <small>(600k)Categories</small>
                     </label>
@@ -102,7 +106,7 @@ const ProductComponents = () => {
 
                   <li                     
                   onClick = {() => filterItems("Special Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Shirts</span>
                       <small>(6k)Categories</small>
                     </label>
@@ -110,7 +114,7 @@ const ProductComponents = () => {
 
                   <li                     
                   onClick = {() => filterItems("Featured Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Trousers</span>
                       <small>(3k)Categories</small>
                     </label>
@@ -118,7 +122,7 @@ const ProductComponents = () => {
 
                   <li                     
                   onClick = {() => filterItems("Featured Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Polos</span>
                       <small>(103)Categories</small>
                     </label>
@@ -126,7 +130,7 @@ const ProductComponents = () => {
 
                   <li                     
                   onClick = {() => filterItems("Featured Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Gowns</span>
                       <small>(223)Categories</small>
                     </label>
@@ -144,35 +148,35 @@ const ProductComponents = () => {
                 <ul className="block-content">
                   <li                      
                   onClick = {() => filterItems("all")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>#100 - #1000</span>
                     </label>
                   </li>
 
                   <li                     
                   onClick = {() => filterItems("Trending Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>#1k - #5k</span>
                     </label>
                   </li>
 
                   <li                     
                   onClick = {() => filterItems("Special Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>#5k - #10k</span>
                     </label>
                   </li>
 
                   <li                     
                   onClick = {() => filterItems("Featured Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>#10k - #15k</span>
                     </label>
                   </li>
 
                   <li                     
                   onClick = {() => filterItems("Featured Products")}>
-                    <label for="">
+                    <label htmlFor="">
                       <span>#15k - 20k</span>
                     </label>
                   </li>
@@ -188,56 +192,56 @@ const ProductComponents = () => {
 
                 <ul className="block-content">
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Gucci</span>
                       <small>(10)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Burberry</span>
                       <small>(7)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Accessories</span>
                       <small>(3)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Valentino</span>
                       <small>(3)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Dolce & Gabbana</span>
                       <small>(3)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Hogan</span>
                       <small>(3)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Moreschi</span>
                       <small>(3)</small>
                     </label>
                   </li>
 
                   <li>
-                    <label for="">
+                    <label htmlFor="">
                       <span>Givenchy</span>
                       <small>(3)</small>
                     </label>
@@ -249,7 +253,7 @@ const ProductComponents = () => {
               <form action="">
                 <div className='product_form'>
                     <div className="item">
-                    <label for="sort-by">Categories</label>
+                    <label htmlFor="sort-by">Categories</label>
                     <select name="sort-by" id="sort-by">
                       <option value="title" selected="selected">Male</option>
                       <option value="number">Female</option>
@@ -258,7 +262,7 @@ const ProductComponents = () => {
                     </select>
                   </div>
                   <div className="item">
-                    <label for="order-by">Sort By</label>
+                    <label htmlFor="order-by">Sort By</label>
                     <select name="order-by" id="sort-by">
                       <option value="ASC" selected="selected">Name</option>
                       <option value="DESC">Price</option>

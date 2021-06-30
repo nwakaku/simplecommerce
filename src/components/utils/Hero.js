@@ -93,99 +93,100 @@ export const Hero = () => {
                 infiniteLoop={true}
                 interval={1000}
                 autoPlay={true}
+                showThumbs={false}
                 transitionTime={500}>
             <div className='hero '>
-                <div class="hero__center ">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="" >Designers Made For You</h1>
+                <div className="hero__center ">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="" >Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
                   <p>In the world of designers there are no blind people</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <div class="hero__img-container">
-                    <img class="banner_01" src={banner_01} alt="banner2" />
+                <div className="hero__right">
+                  <div className="hero__img-container">
+                    <img className="banner_01" src={banner_01} alt="banner2" />
                   </div>
                 </div>
               </div>
             </div>
             <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">PROMO TIME</h1>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">PROMO TIME</h1>
                   <p>Trending from fashion to designers style collection</p>
                   <p>Shop With Us And Stand A Chance To Win FACEOFMATERIALHUB </p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_02} alt="banner2" />
-                </div>
-              </div>
-            </div>
-            <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
-                  <p>Trending from fashion to designers style collection</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
-                </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_03} alt="banner2" />
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_02} alt="banner2" />
                 </div>
               </div>
             </div>
             <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_04} alt="banner2" />
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_03} alt="banner2" />
                 </div>
               </div>
             </div>
             <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_05} alt="banner2" />
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_04} alt="banner2" />
                 </div>
               </div>
             </div>
             <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_06} alt="banner2" />
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_05} alt="banner2" />
                 </div>
               </div>
             </div>
             <div className='hero'>
-              <div class="hero__center">
-                <div class="hero__left">
-                  <span class="">New Inspiration 2021</span>
-                  <h1 class="">Designers Made For You</h1>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">Designers Made For You</h1>
                   <p>Trending from fashion to designers style collection</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
                 </div>
-                <div class="hero__right">
-                  <img class="banner_02" src={banner_07} alt="banner2" />
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_06} alt="banner2" />
+                </div>
+              </div>
+            </div>
+            <div className='hero'>
+              <div className="hero__center">
+                <div className="hero__left">
+                  <span className="">New Inspiration 2021</span>
+                  <h1 className="">Designers Made For You</h1>
+                  <p>Trending from fashion to designers style collection</p>
+                  <a href="#"><button className="hero__btn">SHOP NOW</button></a>
+                </div>
+                <div className="hero__right">
+                  <img className="banner_02" src={banner_07} alt="banner2" />
                 </div>
               </div>
             </div>
