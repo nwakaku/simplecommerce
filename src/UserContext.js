@@ -118,6 +118,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
     const products = data;
     const [mainItem, setMainItem] = useState(products.products)
+    const [messagerGroup, setMessagerGroup] = useState(null);
 
     const filterItems = (category) => {
         if (category === 'all') {
@@ -189,6 +190,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
   const value = {
     state,
+    messagerGroup,
+    setMessagerGroup,
     updatePassword,
     updateEmail,
     passwordReset,

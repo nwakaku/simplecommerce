@@ -6,14 +6,19 @@ import girl from '../../image/woman.jpg';
 
 
 function Chat() {
-    const { state } = useContext(UserContext);
+    const { state, messagerGroup } = useContext(UserContext);
     const scroll = useRef()
     const [messages, setMessages] = useState([])
     useEffect(() => {
-        db.collection('messages').orderBy('createdAt').limit(50).onSnapshot(snapshot => {
+        if(messagerGroup){
+        db.collection(`${messagerGroup.name}`).orderBy('createdAt').limit(50).onSnapshot(snapshot => {
             setMessages(snapshot.docs.map(doc => doc.data()))
-        })
-    }, [])
+        })            
+        }else{
+            setMessages(null)
+        }
+
+    }, [messagerGroup])
     return (
         
             <div style={{overflowY:"scroll"}}>

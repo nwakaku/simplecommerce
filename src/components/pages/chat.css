@@ -1,29 +1,29 @@
 
 .mystyle{
-  margin-top: -8.5px;
   background-color:aliceblue;
   font-family: 'Gabriela';
+  overflow: hidden;
 }
 
 .msg img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-top: -10px;
   }
   
 .msg p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     overflow-wrap: break-word;
   }
   
   .msg {
     display: flex;
-    padding: 20px 10px 0 20px;
+    padding: 5px 0px 0 20px;
     margin: 10px;
     border-radius: 3000px;
     box-shadow: 0 0 10px rgb(164, 164, 164);
@@ -44,6 +44,7 @@
     border: 1px solid lightgray;
     background-color: #FAFAFA;
     border-top-left-radius: 1000px;
+    padding: 20px 20px 0 10px;
     float: left;
   }
   
@@ -109,6 +110,16 @@
     border: 0.5px solid white;
     margin: 4px 0;
     border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .active_profile{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 4px 0;
+    border-radius: 5px;
+    background-color: rgb(23, 134, 168);
   }
   .user_profile img{
     width: 40px;
@@ -116,15 +127,21 @@
     border-radius: 50%;
   }
 
-  div .header{
+  .active_profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+ .header{
       display: flex;
       padding: 1rem;
-      gap: 7rem;
+      gap: 1rem;
       margin: 1rem 0;
   }
 
   div .header i {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
 
   div .header i:hover{
@@ -138,17 +155,55 @@
     background-color: thistle;
   }
 
-  div .group_icons{
+  .group_icons{
     display: flex;
-    gap:5rem;
+    gap:4rem;
     background-color: black;
     padding: 2rem;
     margin: 2rem 0;
   }
 
+  .messager_group{
+      color:white;
+      background-color:blue;
+      height: 89vh;
+      padding: 1rem;
+      overflow-y: scroll;
+  }
+
+  .sim_btn{
+    border: none;
+    padding: 1.5rem;
+    background-color: transparent;
+  }
+  .sim_btn:hover{
+    font-size: 2rem;
+  }
+
+  .send_btn{
+    border-radius: 50%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    background-color: #ff4545;
+  }
+
   
   
   @media (max-width: 775px) {
+    .sendMsg {
+      width: 100%;
+      display: none;
+    }
+
+    .mystyle{
+      grid-template-columns: 1fr;
+    }
+    .chat_profile{
+      display: none;
+    }
+    .messager_group{
+      display: none;
+    }
     p {
       font-size: 20px;
     }
@@ -177,6 +232,9 @@
     img {
       height: 30px;
       margin-top: -7px;
+    }
+    .sim_btn{
+      display: none;
     }
   }
   

@@ -1,5 +1,8 @@
+import React, { useContext, useState } from 'react'
 import { Button, Input } from '@material-ui/core';
-import girl from '../../image/woman.jpg';
+import woman from '../../image/woman.jpg';
+import girl from '../../image/girl.jpg';
+import bed from '../../image/bed.jpg';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
@@ -9,13 +12,43 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import GroupIcon from '@material-ui/icons/Group';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import StorageIcon from '@material-ui/icons/Storage';
+import { UserContext } from '../../UserContext';
+
+  const groups = {
+    file : [
+      {
+        "id": 1,
+        "img": woman,
+        "name": "MaterialHubers",
+        "logo": 'No blind Peole Club',
+        "products": 'Assorted Materials',
+        "email": 'nwakaku@gmail.com'
+      },
+      {
+        "id": 2,
+        "img": bed,
+        "name": "Gucci_Gang",
+        "logo": "just Swag",
+        "products": 'Foam Covers',
+        "email": 'gracejosh454@gmail.com'
+      },
+      {
+        "id": 3,
+        "img": girl,
+        "name": "Under_Nap",
+        "logo": "Pushing soft",
+        "products": 'Female Gowns',
+        "email": 'nwakaku123@gmail.com'
+      }
+    ]
+  }
 
 const useStyles = makeStyles((theme) => ({
     root: {
       padding: '2px 4px',
       display: 'flex',
       alignItems: 'center',
-      width: 250,
+      width: 200,
       margin: '10px 7px',
     },
     input: {
@@ -29,16 +62,16 @@ const useStyles = makeStyles((theme) => ({
 
 
 const MessagerGroup = () => {
+  const [activeLink, SetActiveLink] = useState(null);
+  const {setMessagerGroup} = useContext(UserContext);
+  
+  const { file } = groups;
     const classes = useStyles();
     return (
-        <div style={{
-            color:'white',
-            backgroundColor:'blue',
-            height: '89vh'
-        }}>
+        <div className='messager_group'>
             <div>
                 <div className="header">
-                        <h3>ChatGroups</h3>
+                        <h3>DesignerGroups</h3>
                         <div>
                            <i className="fas fa-plus borderd"></i>
                            <i className="fas fa-ellipsis-v"></i> 
@@ -61,15 +94,24 @@ const MessagerGroup = () => {
                 <ContactsIcon />
                 <StorageIcon />
             </div>
-            <div className="user_profile">
-                <img src={girl} alt='' />
+            {file.map((data) =>{
+              const {id,img,name,logo} = data;
+              return (
+                <div key={id}
+                onClick={() => {SetActiveLink(id);setMessagerGroup(data)}}
+               className={id === activeLink ? "active_profile" : "user_profile"}>
+                <img src={img} alt='' />
                 <div>
-                  <p>MaterialHub</p> 
-                  <small>Sons of fashion</small> 
+                  <p>{name}</p> 
+                  <small>{logo}</small> 
                 </div>
-            </div>
+              </div>
+              )
+              
+            })}
+            
             <div className="user_profile">
-                <img src={girl} alt='' />
+                <img src={woman} alt='' />
                 <div>
                   <p>Gucci Designs</p> 
                   <small>"Iconic Stars"</small> 

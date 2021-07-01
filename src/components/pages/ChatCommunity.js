@@ -28,8 +28,8 @@ const ChatCommunity = () => {
     }else{
         return (
             <div>
-                loading
-            </div>
+            Signup to enjoy serve 
+        </div>
         )
     }
 

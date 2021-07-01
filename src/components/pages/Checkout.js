@@ -10,6 +10,8 @@ import * as Yup from 'yup'
 import TextError from '../utils/TextError';
 import './checkout.css'
 import Footer from '../utils/Footer';
+import { Link } from 'react-router-dom'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -305,7 +307,7 @@ export default function Checkout() {
                   <Typography className={classes.heading}>Terms And Conditions</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className={classes.secondaryHeading}>
+                  <div className={classes.secondaryHeading} style={{display:'flex',gap: 5}}>
                   <label>
                   <Field type="checkbox" name="checked" value="Terms and Conditions" />
                   Terms And Conditions 
@@ -316,6 +318,11 @@ export default function Checkout() {
                       backgroundColor: 'blue',
                       color: 'white'
                     }}>Confirm Payment</Button>
+                    <div className="continue__shopping">
+                                <Link to='/'>
+                            Continue Shopping                              
+                                </Link>
+                            </div>
                   </div>
 
                 </AccordionDetails>
