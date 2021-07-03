@@ -14,11 +14,7 @@ const ChatCommunity = () => {
         return (
         <div>
             <SweetNav/>
-            <div className=" mystyle container section" style={{
-                display:'grid',
-                gridTemplateColumns:'1fr 3fr 1fr',
-                height:'100vh'
-            }}>
+            <div className=" mystyle container section">
                 <MessagerGroup />
                 <Chat />
                 <Profile/>

@@ -42,7 +42,7 @@ import fab from '../../image/fab.png'
         {
             "id":6,
             "img":tailor,
-            "text":"Tailor Services",
+            "text":"Designers",
         }
     ]
 }
@@ -81,20 +81,31 @@ console.log(file)
         <section className="section products container">
             <div className="product_header">
               <h3>{catItem}<i className="fas fa-medal"></i></h3>
+              <div className="product_header_item">
+                    <label htmlFor="order-by">Categories</label>
+                    <select name="order-by" id="sort-by">
+                      <option value="ASC" selected="selected">Materials</option>
+                      <option value="DESC">Polos</option>
+                      <option value="DESC">shirts</option>
+                      <option value="DESC">Trousers</option>
+                      <option value="DESC">Designers</option>
+                    </select>
+                  </div>
             </div> 
            <div className="product-layout" >
 
           {mainItem.map((product, index) => <Product product={product} key={product.id}/>
                     )}
 
-                    {/* <!-- PAGINATION --> */}
+                  
+                </div>
+                  {/* <!-- PAGINATION --> */}
                     <ul className="pagination">
                       <span>1</span>
                       <span>2</span>
                       <span className="icon">››</span>
                       <span className="last">Last »</span>
                     </ul>
-                </div>
         </section>
         </>
        

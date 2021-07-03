@@ -74,7 +74,6 @@ const MessagerGroup = () => {
                         <h3>DesignerGroups</h3>
                         <div>
                            <i className="fas fa-plus borderd"></i>
-                           <i className="fas fa-ellipsis-v"></i> 
                         </div>
                 </div>
                 <Paper component="form" className={classes.root}>
@@ -88,12 +87,12 @@ const MessagerGroup = () => {
                     </IconButton>
                 </Paper>
             </div>
-            <div className='group_icons'>
+            {/* <div className='group_icons'>
                 <RestoreIcon />
                 <GroupIcon />
                 <ContactsIcon />
                 <StorageIcon />
-            </div>
+            </div> */}
             {file.map((data) =>{
               const {id,img,name,logo} = data;
               return (

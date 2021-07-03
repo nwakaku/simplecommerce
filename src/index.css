@@ -1160,13 +1160,18 @@ Cart Area Media Query
 }
 
 .product_header{
-  background-color: var(--yellow);
-  color: var(--black4);
+  background-color: #ff4545;
+  color: white;
   padding: 3rem;
   font-size: 2rem;
   display: flex;
+  gap: 3rem;
 }
-
+.product_header_item{
+  display: none;
+  padding: 0.5rem;
+  background-color: var(--green);
+}
 
 
 .product {
@@ -1272,10 +1277,16 @@ Cart Area Media Query
   transform: translate(0%, -50%);
 }
 
+
 @media only screen and (max-width: 996px) {
 .product-layout {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 1rem;
   }
+
+.product_header_item{
+  display: block;
+}
 }
 
 @media only screen and (max-width: 768px) {
