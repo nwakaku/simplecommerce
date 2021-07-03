@@ -153,6 +153,7 @@
 
   div .header i:hover{
     color: #ff4545;
+    background-color: aliceblue;
     cursor: pointer;
   }
 

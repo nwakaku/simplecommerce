@@ -87,12 +87,12 @@ const MessagerGroup = () => {
                     </IconButton>
                 </Paper>
             </div>
-            {/* <div className='group_icons'>
+            <div className='group_icons'>
                 <RestoreIcon />
                 <GroupIcon />
                 <ContactsIcon />
                 <StorageIcon />
-            </div> */}
+            </div>
             {file.map((data) =>{
               const {id,img,name,logo} = data;
               return (
