@@ -13,31 +13,32 @@ import fab from '../../image/fab.png'
         {
             "id":1,
             "img":fab,
-            "text":"Materials",
-            "to": "all"
+            "text":"Accessories",
+            "to": "Material"
         },
         {
             "id":2,
             "img":polo,
             "text":"Polos",
-            "to": "Trending Products"
+            "to": "Polo"
         },
         {
             "id":3,
             "img":trousers,
             "text":"Trousers",
-            "to": "Special Products"
+            "to": "Trousers"
         },
         {
             "id":4,
             "img":shirts,
             "text":"Shirts",
-            "to": "Featured Products"
+            "to": "Shirts"
         },
         {
             "id":5,
             "img":gown,
             "text":"Gown",
+            "to": "gown"
         },
         {
             "id":6,

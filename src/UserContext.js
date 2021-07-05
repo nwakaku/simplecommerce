@@ -117,7 +117,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
     const [wish, setWish] = useState({});
 
     const products = data;
-    const [mainItem, setMainItem] = useState(products.products)
+    const present = products.products.filter((product) => product.category === 'Material')
+    const [mainItem, setMainItem] = useState(present)
     const [messagerGroup, setMessagerGroup] = useState(null);
 
     const filterItems = (category) => {
