@@ -1,6 +1,8 @@
 import React from 'react';
 import promo1 from '../../image/promo3.jpg';
 import promo2 from '../../image/sen.jpg';
+import catem2 from '../../image/car6.jpg'
+import collect from '../../image/collection.jpg'
 import './collection.css';
 
 const Collection = () => {
@@ -9,7 +11,7 @@ const Collection = () => {
         <section className="section advert">
           <div className="advert-layout container">
             <div className="item ">
-              <img src={promo1} alt=""/>
+              <img src={collect} alt=""/>
               <div className="content left">
                 <span>Exclusive Sales</span>
                 <h3>Spring Collections</h3>
@@ -19,13 +21,13 @@ const Collection = () => {
             <div className="item">
               <img src={promo2} alt=""/>
               <div className="content  right">
-                <span>New Trending</span>
-                <h3>Designer Bags</h3>
+                <span>Splash Sells</span>
+                <h3>New Collection Roll Outs</h3>
                 <a href="">Shop Now </a>
               </div>
             </div>
             <div className="item">
-              <img src={promo2} alt=""/>
+              <img src={catem2} alt=""/>
               <div className="content  right">
                 <span>New Trending</span>
                 <h3>Designer Bags</h3>

@@ -4,7 +4,9 @@ import promo2 from '../../image/Ankara.jpg'
 import promo3 from '../../image/lace2.jpg'
 import promo4 from '../../image/Cotton.jpeg'
 import promo5 from '../../image/jeans.jpg'
-import promo6 from '../../image/shirt.jpg'
+import catem from '../../image/car7.jpg'
+import catem2 from '../../image/car6.jpg'
+import catem3 from '../../image/car5.jpg'
 import { Carousel } from 'react-responsive-carousel';
 
 
@@ -27,6 +29,147 @@ const Latest = () => {
 
             <div className="promotion-itemy">
             <img src={promo1} alt="" />
+            <div className="promotion-content">
+              <h3 className="promain">MATERIALHUB</h3>
+            </div>
+            <div className="promotion-list">
+            <ul>
+              <li><strong>MATERIALS</strong></li>
+              <li>NATIVE</li>
+              <li>LACE</li>
+              <li>JEANS</li>
+              <li>ETC</li>
+            </ul>
+            <ul>
+              <li><strong>SHIRTS</strong></li>
+              <li>MALE</li>
+              <li>FEMALE</li>
+              <li>BABIES</li>
+              <li>ANIMALS</li>
+              <li>Brocades</li>
+            </ul>
+            <ul>
+              <li><strong>POLOS</strong></li>
+              <li>Venetian Blinds</li>
+              <li>Mini Blinds</li>
+              <li>Vertical Blinds</li>
+              <li>Panel Track</li>
+            </ul>
+            <ul>
+              <li><strong>DOWNS</strong></li>
+              <li>Gucci designs</li>
+              <li>BurBerry designs</li>
+              <li>Givenchy designs</li>
+              <li>D&G designs</li>
+              <li>Valentino designs</li>
+              <li>Hogans designs</li>
+            </ul>
+            <ul>
+              <li><strong>OTHERS</strong></li>
+              <li>Classy Everlasting</li>
+              <li>Aunty k</li>
+              <li>Hollandais</li>
+              <li>Assurance</li>
+              <li>Exotic</li>
+            </ul>              
+          </div>
+          </div>
+          <div className="promotion-itemy">
+            <img src={catem} alt="" />
+            <div className="promotion-content">
+              <h3 className="promain">MATERIALHUB</h3>
+            </div>
+            <div className="promotion-list">
+            <ul>
+              <li><strong>MATERIALS</strong></li>
+              <li>NATIVE</li>
+              <li>LACE</li>
+              <li>JEANS</li>
+              <li>ETC</li>
+            </ul>
+            <ul>
+              <li><strong>SHIRTS</strong></li>
+              <li>MALE</li>
+              <li>FEMALE</li>
+              <li>BABIES</li>
+              <li>ANIMALS</li>
+              <li>Brocades</li>
+            </ul>
+            <ul>
+              <li><strong>POLOS</strong></li>
+              <li>Venetian Blinds</li>
+              <li>Mini Blinds</li>
+              <li>Vertical Blinds</li>
+              <li>Panel Track</li>
+            </ul>
+            <ul>
+              <li><strong>DOWNS</strong></li>
+              <li>Gucci designs</li>
+              <li>BurBerry designs</li>
+              <li>Givenchy designs</li>
+              <li>D&G designs</li>
+              <li>Valentino designs</li>
+              <li>Hogans designs</li>
+            </ul>
+            <ul>
+              <li><strong>OTHERS</strong></li>
+              <li>Classy Everlasting</li>
+              <li>Aunty k</li>
+              <li>Hollandais</li>
+              <li>Assurance</li>
+              <li>Exotic</li>
+            </ul>              
+          </div>
+          </div>
+          <div className="promotion-itemy">
+            <img src={catem2} alt="" />
+            <div className="promotion-content">
+              <h3 className="promain">MATERIALHUB</h3>
+            </div>
+            <div className="promotion-list">
+            <ul>
+              <li><strong>MATERIALS</strong></li>
+              <li>NATIVE</li>
+              <li>LACE</li>
+              <li>JEANS</li>
+              <li>ETC</li>
+            </ul>
+            <ul>
+              <li><strong>SHIRTS</strong></li>
+              <li>MALE</li>
+              <li>FEMALE</li>
+              <li>BABIES</li>
+              <li>ANIMALS</li>
+              <li>Brocades</li>
+            </ul>
+            <ul>
+              <li><strong>POLOS</strong></li>
+              <li>Venetian Blinds</li>
+              <li>Mini Blinds</li>
+              <li>Vertical Blinds</li>
+              <li>Panel Track</li>
+            </ul>
+            <ul>
+              <li><strong>DOWNS</strong></li>
+              <li>Gucci designs</li>
+              <li>BurBerry designs</li>
+              <li>Givenchy designs</li>
+              <li>D&G designs</li>
+              <li>Valentino designs</li>
+              <li>Hogans designs</li>
+            </ul>
+            <ul>
+              <li><strong>OTHERS</strong></li>
+              <li>Classy Everlasting</li>
+              <li>Aunty k</li>
+              <li>Hollandais</li>
+              <li>Assurance</li>
+              <li>Exotic</li>
+            </ul>              
+          </div>
+          </div>
+          <div className="promotion-itemy">
+            <img src={catem3} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -172,20 +315,7 @@ const Latest = () => {
               <li><i className="fas fa-gift"></i>Silk</li>
               <li><i className="fas fa-gift"></i>Tulle</li>
               <li><i className="fas fa-gift"></i>Velvet</li>
-              </ul>
-              <ul>
-              <li><strong>WINDOW_BLINDS</strong></li>
-              <li><i className="fas fa-gift"></i>Venetian Blinds</li>
-              <li><i className="fas fa-gift"></i>Mini Blinds</li>
-              <li><i className="fas fa-gift"></i>Vertical Blinds</li>
-              <li><i className="fas fa-gift"></i>Panel Track</li>
-              <li><i className="fas fa-gift"></i>Smart Blinds</li>
-              <li><i className="fas fa-gift"></i>Designers Materia;s</li>
-              <li><i className="fas fa-gift"></i>Ankara</li>
-              <li><i className="fas fa-gift"></i>Ankara</li>
-              <li><i className="fas fa-gift"></i>Ankara</li>
-              </ul>
-            
+              </ul>           
               <ul>
               <li><strong>BEDSHEETS</strong></li>
               <li><i className="fas fa-gift"></i>Gucci designs</li>

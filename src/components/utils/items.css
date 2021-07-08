@@ -10,7 +10,6 @@
     gap: 5rem;
     background-color: rgb(255, 255, 255);
     padding: 5rem;
-    overflow-y: scroll;
 }
   
   .product-detail .left {
@@ -23,11 +22,11 @@
     background-color: rgb(255, 69, 69, 0.5);
     margin-bottom: 2rem;
     height: 30rem;
-    padding: 3rem;
+    padding: 1rem;
   }
   
   .product-detail .left .main img {
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
     width: 100%;
   }
