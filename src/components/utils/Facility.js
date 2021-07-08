@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Facility = () => {
     return (
         //  Facility Section 
-        <section className="facility__section section container" id="facility">
+        <section className="facility__section section" id="facility">
           <div className="container">
               <h1><span>Why shop</span>with us ?</h1>
             <div className="facility__contianer" >

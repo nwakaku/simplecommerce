@@ -43,7 +43,7 @@ const Multi = () => {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 keyBoardControl={true}
-                customTransition="all .5"
+                customTransition="all .5s"
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 itemClass="carousel-item-padding-40-px"

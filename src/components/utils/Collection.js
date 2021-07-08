@@ -1,6 +1,6 @@
 import React from 'react';
-import promo1 from '../../image/promo7.jpg';
-import promo2 from '../../image/promo8.jpg';
+import promo1 from '../../image/promo3.jpg';
+import promo2 from '../../image/sen.jpg';
 import './collection.css';
 
 const Collection = () => {

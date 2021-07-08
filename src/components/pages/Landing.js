@@ -13,6 +13,7 @@ import Newsletter from '../utils/Newsletter';
 import SweetNav from '../utils/SweetNav';
 import Hero from '../utils/Hero';
 import Multi from '../utils/Multi';
+import Tailors from '../utils/Tailors';
 
 
 const Landing = () => {
@@ -22,6 +23,7 @@ const Landing = () => {
                 <Latest />
                 <Categories />
                 <Hero />
+                <Tailors />
                 <Collection />
                 <Multi />
                 <Facility />

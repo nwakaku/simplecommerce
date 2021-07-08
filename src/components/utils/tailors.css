@@ -1,0 +1,113 @@
+.fonter img{
+    width: 100%;
+}
+
+
+.message{
+  text-align: center;
+  justify-items: center;
+  color: white;
+  font-size: 5rem;
+  font-family: 'Bangers';
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.designer_hub{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.card{
+    height: 300px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0px -1px 18px;
+    overflow: hidden;
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Gabriela';
+
+}
+
+.card span{
+    color: #ff4545;
+    margin: 2rem;
+}
+.card span:hover{
+    color: purple;
+    cursor: pointer;
+}
+
+.dh{
+    color: white;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    font-family: 'Lobster';
+    text-shadow: 0.5rem 0.5rem 1rem #b8a1a1;
+    text-align: center;
+    border-bottom: 2rem solid #ff4545;
+}
+i .fa-facebook-square{
+    color: blue;
+}
+i .fa-whatsapp-square{
+    color: green;
+}
+
+.bg_image img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 45% 100%, 0 70%);
+}
+
+.image img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #222;
+    margin-top: -40px;
+    position: relative;
+}
+
+.info h3{
+    color: var(--black3);
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.info span{
+    font-size: 15px;
+    color: #ff4545;
+}
+
+.info p{
+    font-size: 13px;
+    padding: 0px 20px;
+    color: #999;
+}
+
+.icons i{
+    font-size: 25px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0 5px;
+}
+
+.icons i:hover{
+    color: aliceblue;
+}
+ 
+.tailors_subheading{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}

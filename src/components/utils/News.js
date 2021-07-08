@@ -9,14 +9,7 @@ const News = () => {
     return (
         // <!--New Section  -->
         <section className="container section news" id="news">
-            <div className="title__container">
-              <div className="section__titles">
-                <div className="section__title active">
-                  <span className="dot"></span>
-                  <h1 className="primary__title">What our Customers Say</h1>
-                </div>
-              </div>
-            </div>
+                <h1 className='dhan'>What Our Customers Say</h1>
             <div className="news__container container">
                       <div className="new__card">
                         <div className="card__header">
