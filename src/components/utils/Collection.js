@@ -1,8 +1,8 @@
 import React from 'react';
-import promo1 from '../../image/promo3.jpg';
 import promo2 from '../../image/sen.jpg';
 import catem2 from '../../image/car6.jpg'
-import collect from '../../image/collection.jpg'
+import collect from '../../image/collection.jpg';
+import { Link } from 'react-router-dom'
 import './collection.css';
 
 const Collection = () => {
@@ -15,7 +15,7 @@ const Collection = () => {
               <div className="content left">
                 <span>Exclusive Sales</span>
                 <h3>Spring Collections</h3>
-                <a href="">View Collection</a>
+                <Link>View Collection</Link>
               </div>
             </div>
             <div className="item">
@@ -23,7 +23,7 @@ const Collection = () => {
               <div className="content  right">
                 <span>Splash Sells</span>
                 <h3>New Collection Roll Outs</h3>
-                <a href="">Shop Now </a>
+                <Link>Shop Now </Link>
               </div>
             </div>
             <div className="item">
@@ -31,7 +31,7 @@ const Collection = () => {
               <div className="content  right">
                 <span>New Trending</span>
                 <h3>Designer Bags</h3>
-                <a href="">Shop Now </a>
+                <Link>Shop Now </Link>
               </div>
             </div>
           </div>

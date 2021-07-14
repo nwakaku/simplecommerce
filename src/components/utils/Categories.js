@@ -43,7 +43,7 @@ import fab from '../../image/fab.png'
         {
             "id":6,
             "img":tailor,
-            "text":"Designers",
+            "text":"Customize",
         }
     ]
 }
@@ -85,10 +85,11 @@ console.log(file)
               <div className="product_header_item">
                     <label htmlFor="order-by">Categories</label>
                     <select name="order-by" id="sort-by">
-                      <option value="ASC" selected="selected">Materials</option>
-                      <option value="DESC">Polos</option>
-                      <option value="DESC">shirts</option>
-                      <option value="DESC">Trousers</option>
+                      <option value="ASC" selected="selected" onClick={() => filterItems('Material')}>Materials</option>
+                      <option value="polo" onClick={() => filterItems('Polo')}>Polos</option>
+                      <option value="shirts" onClick={() => filterItems('Shirts')}>shirts</option>
+                      <option value="trouser" onClick={() => filterItems('Trousers')}>Trousers</option>
+                      <option value="trouser" onClick={() => filterItems('gown')}>Gown</option>
                       <option value="DESC">Designers</option>
                     </select>
                   </div>

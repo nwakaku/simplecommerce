@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import './sweet.css';
 import cart from '../../image/shoppingBag.svg'
 import search from '../../image/search.svg';
@@ -12,6 +12,8 @@ const SweetNav = () => {
   const {cartItems,
     signout,
      state} =useContext(UserContext)
+     const [searcher, setSearcher] = useState(false);
+
 
     return (
         <div>
@@ -102,12 +104,27 @@ const SweetNav = () => {
             </Link>
             
           
-          <span><img src={search} alt="" /></span>
+          <span onClick={() => setSearcher(!searcher)}><img src={search} alt="" /></span>
         </li>
       </ul>
-      <label htmlFor="" className="btn "><i className="fas fa-bars"></i></label>
+      <label htmlFor="" className="btn ">
+                      <select name="order-by" id="sort-by">
+                      <option value="materials" selected="selected" >Materials</option>
+                      <option value="polos" >Polos</option>
+                      <option value="shirts" >shirts</option>
+                      <option value="trousers" >Trousers</option>
+                      <option value="gown" >Gown</option>
+                      <option value="designers">Designers</option>
+                    </select>
+                    <i className="fas fa-bars"></i>
+      </label>
+
     </div>
-  </nav>
+    <div className={`${searcher ? 'search' : "hide_search"}`}>
+      <input type="text" placeholder='search anything' />
+    </div> 
+   </nav>
+
         </div>
     )
 }

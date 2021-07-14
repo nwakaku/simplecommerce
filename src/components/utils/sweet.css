@@ -10,6 +10,17 @@ nav {
     height: 6.5rem;
     line-height: 6.5rem;
   }
+
+  .search{
+    display: inline-block;
+  }
+  .search input{
+    border: none;
+    border-bottom: 1px solid #ff4545;
+  }
+  .hide_search{
+    display: none;
+  }
   
   .nav.fix-nav {
     width: 100%;
