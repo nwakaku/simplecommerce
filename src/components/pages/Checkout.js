@@ -32,8 +32,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Checkout() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState('panel1');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+
 
   const initialValues = {
     firstName: '',
@@ -74,6 +73,17 @@ export default function Checkout() {
   <Formik 
         initialValues={initialValues}
         validationSchema={validationSchema}
+        onSubmit={(values, { setSubmitting }) => {
+
+          setTimeout(() => {
+ 
+            alert(JSON.stringify(values, null, 2));
+ 
+            setSubmitting(false);
+ 
+          }, 400);
+ 
+        }}
         >
           {({ values}) => (
       <Form>
@@ -307,17 +317,12 @@ export default function Checkout() {
                   <Typography className={classes.heading}>Terms And Conditions</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className={classes.secondaryHeading} style={{display:'flex',gap: 5}}>
+                  <div className={classes.secondaryHeading} style={{display:'flex',flexWrap:'wrap'}}>
                   <label>
                   <Field type="checkbox" name="checked" value="Terms and Conditions" />
                   Terms And Conditions 
                 </label><br/>
-                  <Button
-                    style={{
-                      width: '40rem',
-                      backgroundColor: 'blue',
-                      color: 'white'
-                    }}>Confirm Payment</Button>
+                <button className="form-btn"  type='submit'>Register</button>
                     <div className="continue__shopping">
                                 <Link to='/'>
                             Continue Shopping                              

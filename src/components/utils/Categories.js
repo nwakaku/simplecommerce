@@ -84,12 +84,12 @@ console.log(file)
               <h3>{catItem}<i className="fas fa-medal"></i></h3>
               <div className="product_header_item">
                     <label htmlFor="order-by">Categories</label>
-                    <select name="order-by" id="sort-by">
-                      <option value="ASC" selected="selected" onClick={() => filterItems('Material')}>Materials</option>
-                      <option value="polo" onClick={() => filterItems('Polo')}>Polos</option>
-                      <option value="shirts" onClick={() => filterItems('Shirts')}>shirts</option>
-                      <option value="trouser" onClick={() => filterItems('Trousers')}>Trousers</option>
-                      <option value="trouser" onClick={() => filterItems('gown')}>Gown</option>
+                    <select name="order-by" id="sort-by" >
+                      <option value="ASC" selected="selected" onClick={() => filterItems('Polo')}><span onClick={() => filterItems('Material')}>Materials</span></option>
+                      <option value="polo" ><span>Polos</span></option>
+                      <option value="shirts" ><span onClick={() => filterItems('Shirts')}>shirts</span></option>
+                      <option value="trouser" ><span onClick={() => filterItems('Trousers')}>Trousers</span></option>
+                      <option value="trouser" ><span onClick={() => filterItems('gown')}>Gown</span></option>
                       <option value="DESC">Designers</option>
                     </select>
                   </div>

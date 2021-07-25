@@ -1051,7 +1051,8 @@ Cart Area
 
 .cart-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--primaryColor);
   padding-bottom: 4rem;
   margin: 3rem 0;
@@ -1072,6 +1073,9 @@ Cart Area
   background-color: var(--black);
   color: var(--white);
   border: 1px solid var(--black);
+}
+.continue__shopping{
+  margin: 2rem 0;
 }
 
 .cart__totals {
@@ -1307,7 +1311,7 @@ Cart Area Media Query
 
 @media only screen and (max-width: 567px) {
   .product-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

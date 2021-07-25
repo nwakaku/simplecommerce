@@ -28,7 +28,7 @@ function Chat() {
                             <div key={id} className={`msg ${uid === state.kite.uid ? 'sent' : 'received'}`}>
                                 <div>
                                     <img src={girl} alt="" /><br/>
-                                    <small style={{fontSize:'10px',fontStyle:'italic'}}>{chater}</small>
+                                    <small style={{fontSize:'10px',fontStyle:'italic', marginTop:'-10px'}}>{chater}</small>
                                 </div>
                                <p>{text}</p>
                             </div>

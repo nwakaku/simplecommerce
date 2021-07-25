@@ -108,15 +108,14 @@ const SweetNav = () => {
         </li>
       </ul>
       <label htmlFor="" className="btn ">
-                      <select name="order-by" id="sort-by">
-                      <option value="materials" selected="selected" >Materials</option>
-                      <option value="polos" >Polos</option>
+                      <select name="order-by" id="sort-by" >
+                      <option><a><NavLink activeClassName="active" to='/product'>Products</NavLink></a></option>
+                      <a>Polos</a>
                       <option value="shirts" >shirts</option>
                       <option value="trousers" >Trousers</option>
                       <option value="gown" >Gown</option>
                       <option value="designers">Designers</option>
                     </select>
-                    <i className="fas fa-bars"></i>
       </label>
 
     </div>

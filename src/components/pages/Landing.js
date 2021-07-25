@@ -14,12 +14,14 @@ import SweetNav from '../utils/SweetNav';
 import Hero from '../utils/Hero';
 import Multi from '../utils/Multi';
 import Tailors from '../utils/Tailors';
+import LastNav from '../utils/LastNav';
 
 
 const Landing = () => {
     return (
         <div>
-            <SweetNav />
+            <LastNav/>
+            {/* <SweetNav /> */}
                 <Latest />
                 <Categories />
                 <Hero />
