@@ -18,14 +18,16 @@ const LastNav = () => {
                     <ul className={`${close ? 'nav-list' : 'show' }`}>
                         <div className='top'>
                             <label for='' className='btn close-btn' onClick={() => setClose(!close)}> 
-                                <i>x</i>
+                            <i class="fas fa-times"></i>
                             </label>
                         </div>
 
-                        <li className='active' onClick={() => setClose(!close)}>
-                            <NavLink exact activeClassName="active" to='/'>Home</NavLink></li>
+                        <li className='active'>
+                            <NavLink exact activeClassName="active" to='/' onClick={() => setClose(!close)}>
+                                Home</NavLink></li>
                         <li onClick={() => setClose(!close)}>
-                            <NavLink activeClassName="active" to='/product'>Products</NavLink>
+                            <NavLink activeClassName="active" to='/product' onClick={() => setClose(!close)}>
+                                Products</NavLink>
                         </li>
                         <li>
                             <Link className='desktop-item'>
@@ -74,8 +76,9 @@ const LastNav = () => {
                                 </div>
                             </div>
                         </li>
-                        <li onClick={() => setClose(!close)}
-                        ><NavLink activeClassName="active" to="/chat">ChatCommunity</NavLink></li>
+                        <li
+                        ><NavLink activeClassName="active" to="/chat"  onClick={() => setClose(!close)}>
+                            ChatCommunity</NavLink></li>
                         <li>
                             <Link  className='desktop-item'>Vendors 
                                 <span><i class="fas fa-chevron-down"></i></span>

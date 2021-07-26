@@ -14,7 +14,7 @@ import './signup.css'
 const Signup = () => {
 const {signup, users} = useContext(UserContext);
 const [error, setError] = useState('');
-const [test, setTest] = useState({})
+// const [test, setTest] = useState({})
 const [loading, setLoading] = useState(false)
 const [pop, setPop] = useState(true)
 const history = useHistory();

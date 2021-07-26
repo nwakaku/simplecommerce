@@ -92,9 +92,9 @@
   form .product_form a{
     margin: 10px 0;
   }
-  .products-layout {
+  /* .products-layout {
     padding: 0 5rem;
-  }
+  } */
 
   .col-3-of-4 form {
     flex-direction: column;

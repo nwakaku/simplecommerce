@@ -177,7 +177,6 @@ const [state, dispatch] = useReducer(reducer, initialState);
   const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   //user experience
-  const [rate, setRate] = useState([])
   useEffect(() => {
     db.collection("products").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
