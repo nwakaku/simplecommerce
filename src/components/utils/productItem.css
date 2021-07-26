@@ -13,6 +13,7 @@
 
 .product_form{
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -46,6 +47,7 @@
 
 .col-3-of-4 form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 3rem;
@@ -113,6 +115,7 @@
 
 @media only screen and (max-width: 567px) {
   .col-3-of-4 .product-layout {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -182,6 +185,7 @@
 
 @media only screen and (max-width: 768px) {
   .products-layout {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 4rem 0;
   }

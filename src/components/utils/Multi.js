@@ -37,7 +37,7 @@ const Multi = () => {
             <div style={{padding:'1rem', backgroundColor:'white'}}>
               <Carousel
                 swipeable={false}
-                draggable={false}
+                draggable={true}
                 showDots={false}
                 responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
@@ -45,7 +45,7 @@ const Multi = () => {
                 keyBoardControl={true}
                 customTransition="all .5s"
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
+                removeArrowOnDeviceType={["tablet"]}
                 itemClass="carousel-item-padding-40-px"
                 autoPlay={false}
                 showThumbs={false}

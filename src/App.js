@@ -19,10 +19,6 @@ import ChatCommunity from './components/pages/ChatCommunity';
 
 
 function App() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  });
   return (
     <div className="App">
       <div className="first"></div>

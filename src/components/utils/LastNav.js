@@ -101,14 +101,10 @@ const LastNav = () => {
                             {state.kite ? <ul className="drop-menu2">
                                 <li><Link to='/login'>{state.kite.displayName}</Link></li>
                                 <li><Link to='/signup' onClick={() => signout()}>logout</Link></li>
-                                <li><Link to='/'>Faq</Link></li>
-                                <li><Link to='/'>Setting</Link></li>
                             </ul>:
                             <ul className="drop-menu2">
                                 <li><Link to='/login'>Login</Link></li>
                                 <li><Link to='/signup'>Signup</Link></li>
-                                <li><Link to='/'>Faq</Link></li>
-                                <li><Link to='/'>Setting</Link></li>
                             </ul>}
                         </li>
                         <li className='icons'>
