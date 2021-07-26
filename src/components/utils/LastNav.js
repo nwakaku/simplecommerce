@@ -22,9 +22,9 @@ const LastNav = () => {
                             </label>
                         </div>
 
-                        <li className='active'>
+                        <li className='active' onClick={() => setClose(!close)}>
                             <NavLink exact activeClassName="active" to='/'>Home</NavLink></li>
-                        <li>
+                        <li onClick={() => setClose(!close)}>
                             <NavLink activeClassName="active" to='/product'>Products</NavLink>
                         </li>
                         <li>
@@ -74,7 +74,8 @@ const LastNav = () => {
                                 </div>
                             </div>
                         </li>
-                        <li><NavLink activeClassName="active" to="/chat">ChatCommunity</NavLink></li>
+                        <li onClick={() => setClose(!close)}
+                        ><NavLink activeClassName="active" to="/chat">ChatCommunity</NavLink></li>
                         <li>
                             <Link  className='desktop-item'>Vendors 
                                 <span><i class="fas fa-chevron-down"></i></span>
