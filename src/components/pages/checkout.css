@@ -14,6 +14,29 @@ div .checkout {
     color: black;
     border-radius: 5px;
 }
+.comfirm{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: rgb(67, 67, 241);
+    color: var(--primaryColor);
+    cursor: pointer;
+    border-radius: 1.5rem;
+    padding: 1.5rem 4rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.continue{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.4rem;
+        background-color: #ff4545;
+        color: var(--primaryColor);
+        cursor: pointer;
+        border-radius: 1.5rem;
+        padding: 1.5rem 4rem;
+        transition: all 0.3s ease-in-out;
+}
 
 
 

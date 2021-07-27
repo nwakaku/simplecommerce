@@ -945,6 +945,12 @@ Newsletter Media Query
 ======================
 */
 @media only screen and (max-width: 768px) {
+  .new__card img{
+    padding: 0.5rem;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+  }
   .news__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -952,6 +958,15 @@ Newsletter Media Query
     grid-gap: 1.5rem;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .news__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
+}
+
 
 
 /*

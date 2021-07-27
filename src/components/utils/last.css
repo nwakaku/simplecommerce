@@ -187,7 +187,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 968px){
+@media only screen and (max-width: 996px) {
     .wrapper .nav-list{
         position: fixed;
         top: 0;

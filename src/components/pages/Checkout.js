@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import {Button, Typography} from '@material-ui/core';
+import {Typography} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
@@ -11,6 +11,7 @@ import TextError from '../utils/TextError';
 import './checkout.css'
 import Footer from '../utils/Footer';
 import { Link } from 'react-router-dom'
+import PaystackHookExample from '../utils/PaystackHookExample';
 
 
 
@@ -44,10 +45,6 @@ export default function Checkout() {
     city: '',
     address: '',
     paymentStyle: '',
-    nameCard: '',
-    cardNumber: '',
-    expiration: '',
-    cvv: '',
     checked: []
 }
 
@@ -229,101 +226,19 @@ export default function Checkout() {
               <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel3bh-content"
-                  id="panel3bh-header"
-                >
-                  <Typography className={classes.heading}>Payment Plan</Typography>
-                  <Typography className={classes.secondaryHeading}>
-                    Choose payment gateway
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                <div className='contact_form'>
-                    <div className='field_form'>
-                      <label>
-                      <Field 
-                        type='radio'
-                        name='paymentStyle'
-                        id='paymentStyle'
-                        value='Transfer to Zenithbank:2219867315;nwakaku Izuchukwu wisdom'
-                       />Bank Transfer<br/>
-                       <small style={{color:'green'}}>...
-                       {values.paymentStyle === 'Transfer to Zenithbank:2219867315;nwakaku Izuchukwu wisdom' ? values.paymentStyle : null}</small>
-                      </label>
-                        <br/>
-                      <ErrorMessage name='picked' component={TextError}/>
-                    </div>
-                    <div className='field_form'>
-                      <label>
-                      <Field 
-                        type='radio'
-                        name='paymentStyle'
-                        id='paymentStyle'
-                        value='Credit Card'
-                      />Credit Card<br/>
-                       <small style={{color:'green'}}>
-                       {values.paymentStyle === 'Credit Card' ? values.paymentStyle : null}</small>
-                      </label>
-                        <br/>
-                      <ErrorMessage name='picked' component={TextError}/>
-                    </div>
-                    <div>
-                      <Field 
-                        placeholder='Name on Card'
-                        type='text' id='nameCard' 
-                        name='nameCard'
-                        className='field_form' />
-                        <br/>
-                      <ErrorMessage name='nameCard' component={TextError}/>
-                    </div>
-                    <div>
-                      <Field 
-                        placeholder='Card Number'
-                        type='text'
-                        id='cardNumber' 
-                        name='cardNumber'
-                        className='field_form' />
-                        <br/>
-                      <ErrorMessage name='cardNumber' component={TextError}/>
-                    </div>
-                    <div>
-                      <Field 
-                        placeholder='DD//MM//YY'
-                        type='text' id='expiration' 
-                        name='expiration'
-                        className='field_form' />
-                        <br/>
-                      <ErrorMessage name='expiration' component={TextError}/>
-                    </div>
-                    <div>
-                      <Field 
-                        placeholder='CVV'
-                        type='text'
-                        id='cvv' 
-                        name='cvv'
-                        className='field_form' />
-                        <br/>
-                      <ErrorMessage name='cvv' component={TextError}/>
-                    </div>
-                    </div>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel4bh-content"
                   id="panel4bh-header"
                 >
                   <Typography className={classes.heading}>Terms And Conditions</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <div className={classes.secondaryHeading} style={{display:'flex',flexWrap:'wrap'}}>
+                  <div className={classes.secondaryHeading} style={{display:'flex',flexWrap:'wrap', gap: '5rem',justifyContent:'space-between'}}>
                   <label>
                   <Field type="checkbox" name="checked" value="Terms and Conditions" />
                   Terms And Conditions 
-                </label><br/>
-                <button className="form-btn"  type='submit'>Register</button>
-                    <div className="continue__shopping">
+                </label>
+                <PaystackHookExample value={values}/>
+                    <div className="continue">
                                 <Link to='/'>
                             Continue Shopping                              
                                 </Link>
