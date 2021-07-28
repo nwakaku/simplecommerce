@@ -12,6 +12,7 @@ import './checkout.css'
 import Footer from '../utils/Footer';
 import { Link } from 'react-router-dom'
 import PaystackHookExample from '../utils/PaystackHookExample';
+import Multi from '../utils/Multi';
 
 
 
@@ -253,6 +254,7 @@ export default function Checkout() {
       )}
           
     </Formik>
+    <Multi/>
     <Footer/>
         </>
     

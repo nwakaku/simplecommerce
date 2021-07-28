@@ -45,25 +45,26 @@
   }
 }
 
-.col-3-of-4 form {
+ .toNav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 1rem;
   justify-content: flex-end;
   margin-bottom: 3rem;
   background-color: beige;
   padding: 2rem;
 }
 
-.col-3-of-4 form .item {
+.toNav .item {
   margin-right: 1rem;
 }
 
-.col-3-of-4 form label {
+.toNav label {
   color: var(--grey1);
 }
 
-.col-3-of-4 form select {
+.toNav select {
   font-family: "Open Sans", sans-serif;
   padding: 1rem;
   width: 10rem;
@@ -71,7 +72,7 @@
   outline: none;
 }
 
-.col-3-of-4 form a {
+.toNav a {
   display: inline-block;
   padding: 1rem 3rem;
   border-radius: 4rem;
@@ -81,7 +82,7 @@
   transition: all 300ms ease-in-out;
 }
 
-.col-3-of-4 form a:hover {
+.toNav a:hover {
   background-color: var(--black);
 }
 
@@ -91,23 +92,23 @@
     /* gap: 10px; */
 
   }
-  form .product_form a{
+  .toNav .product_form a{
     margin: 10px 0;
   }
   /* .products-layout {
     padding: 0 5rem;
   } */
 
-  .col-3-of-4 form {
+  .toNav {
     flex-direction: column;
     align-items: end;
   }
 
-  .col-3-of-4 form a {
+  .toNav a {
     margin-right: 0;
   }
 
-  .col-3-of-4 form .item {
+  .toNav .item {
     margin-right: 0;
     margin-bottom: 1rem;
   }

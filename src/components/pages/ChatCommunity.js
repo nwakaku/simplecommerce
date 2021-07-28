@@ -15,7 +15,7 @@ const ChatCommunity = () => {
         <div>
             {/* <SweetNav/> */}
             <LastNav/>
-            <div className=" mystyle container section">
+            <div className=" mystyle ">
                 <MessagerGroup />
                 <Chat />
                 <Profile/>

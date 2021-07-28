@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext, useState} from 'react';
 import promo1 from '../../image/_.jpeg'
 import promo2 from '../../image/Ankara.jpg'
 import promo3 from '../../image/lace2.jpg'
@@ -8,12 +8,16 @@ import catem from '../../image/car7.jpg'
 import catem2 from '../../image/car6.jpg'
 import catem3 from '../../image/car5.jpg'
 import { Carousel } from 'react-responsive-carousel';
+import { UserContext } from '../../UserContext';
+
 
 
 
 import './latest.css'
 
 const Latest = () => {
+  const {filterItems } = useContext(UserContext)
+
     return (
         <section className="section promotion">
     
@@ -348,28 +352,28 @@ const Latest = () => {
           </Carousel>
           
           <div className="layout-2">
-            <div className="promotion-item">
+            <div className="promotion-item" onClick={() => filterItems("Trousers")}>
               <img src={promo2} alt="" />
               <div className="promotion-content">
                 <h3>ANKARA MATERIALS</h3>
               </div>
             </div>
       
-            <div className="promotion-item">
+            <div className="promotion-item" onClick={() => filterItems("gown")}>
               <img src={promo3} alt="" />
               <div className="promotion-content">
                 <h3>FEMALE MATERIALS</h3>
               </div>
             </div>
       
-            <div className="promotion-item">
+            <div className="promotion-item" onClick={() => filterItems("Polo")}>
               <img src={promo4} alt="" />
               <div className="promotion-content">
                 <h3>BED SHEETS</h3>
               </div>
             </div>
       
-            <div className="promotion-item">
+            <div className="promotion-item" onClick={() => filterItems("Shirts")}>
               <img src={promo5} alt="" />
               <div className="promotion-content">
                 <h3>JEANS MATERIALS</h3>

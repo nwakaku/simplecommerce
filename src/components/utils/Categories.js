@@ -6,7 +6,9 @@ import polo from '../../image/polo.png'
 import shirts from '../../image/shirts.png'
 import gown from '../../image/gown.png'
 import tailor from '../../image/tailor.png'
-import fab from '../../image/fab.png'
+import fab from '../../image/fab.png';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup'
 
   const category = {
     file : [
@@ -56,61 +58,79 @@ const [catItem, setCatItem] = useState(null);
 
 const { file } = category;
     const {filterItems, mainItem} = useContext(UserContext)
-console.log(file)
-      return (
-        <>
-         <section >
-            <div className="tab__list container">
-              <div className="category_menu ">
-                  {file.map((data) => {
-                      const {id,img,text,to} = data;
-                      return (
-                         <div key={id} 
-                         onClick={() => {SetActiveLink(id);filterItems(to);setCatItem(text)}}
-                       className={id === activeLink ? "active_Item" : ""}>
-                      <img src={img} alt="" />
-                      <p>{text}{id === activeLink && <i className="fas fa-medal"></i>}</p>
-                    </div>
-                      )               
-                  })}
+    const initialValues = {
+      categories: '',
+  }
 
-                
-              </div>
-            </div>
-          </section>
+    const validationSchema = Yup.object({
+      categories: Yup.string().required('Required'),
+  }) 
+    return (
+        <Formik 
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={(values) => {
+          filterItems(values.categories)
+        }}>
+          <Form>
+                <section >
+                <div className="tab__list container">
+                  <div className="category_menu ">
+                      {file.map((data) => {
+                          const {id,img,text,to} = data;
+                          return (
+                            <div key={id} 
+                            onClick={() => {SetActiveLink(id);filterItems(to);setCatItem(text)}}
+                          className={id === activeLink ? "active_Item" : ""}>
+                          <img src={img} alt="" />
+                          <p>{text}{id === activeLink && <i className="fas fa-medal"></i>}</p>
+                        </div>
+                          )               
+                      })}
 
-        <section className="section products container">
-            <div className="product_header">
-              <h3>{catItem}<i className="fas fa-medal"></i></h3>
-              <div className="product_header_item">
-                    <label htmlFor="order-by">Categories</label>
-                    <select name="order-by" id="sort-by" >
-                      <option value="ASC" selected="selected" onClick={() => filterItems('Polo')}><span onClick={() => filterItems('Material')}>Materials</span></option>
-                      <option value="polo" ><span>Polos</span></option>
-                      <option value="shirts" ><span onClick={() => filterItems('Shirts')}>shirts</span></option>
-                      <option value="trouser" ><span onClick={() => filterItems('Trousers')}>Trousers</span></option>
-                      <option value="trouser" ><span onClick={() => filterItems('gown')}>Gown</span></option>
-                      <option value="DESC">Designers</option>
-                    </select>
+                    
                   </div>
-            </div> 
-           <div className="product-layout" >
-
-          {mainItem.map((product, index) => <Product product={product} key={product.id}/>
-                    )}
-
-                  
                 </div>
-                  {/* <!-- PAGINATION --> */}
-                    <ul className="pagination">
-                      <span>1</span>
-                      <span>2</span>
-                      <span className="icon">››</span>
-                      <span className="last">Last »</span>
-                    </ul>
-        </section>
-        </>
-       
+              </section>
+            <section className="section products container">
+                <div className="product_header">
+                  <h3>{catItem}<i className="fas fa-medal"></i></h3>
+                  <div className="product_header_item">
+                        <label htmlFor="order-by">Categories</label>
+                        <Field 
+                            as='select'
+                            id='categories' 
+                            name='categories'
+                            className='field_form'>
+                              <option value='Material'>Materials</option>
+                              <option value='Trousers'>Trousers</option>
+                              <option value='Polo'>Polo</option>
+                              <option value='Shirts'>Shirts</option>
+                              <option value='Bedsheets'>Bedsheets</option>
+                              <option value='Designers'>Designers</option>
+                              <option value='gown'>Gowns</option>
+                          </Field>
+                          <button type='submit'>ok</button>
+                      </div>
+                </div> 
+              <div className="product-layout" >
+
+              {mainItem.map((product, index) => <Product product={product} key={product.id}/>
+                        )}
+
+                      
+                    </div>
+                      {/* <!-- PAGINATION --> */}
+                        <ul className="pagination">
+                          <span>1</span>
+                          <span>2</span>
+                          <span className="icon">››</span>
+                          <span className="last">Last »</span>
+                        </ul>
+            </section>
+          </Form>
+          
+        </Formik>       
 
    )
 }
