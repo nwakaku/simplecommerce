@@ -1,5 +1,5 @@
 import React from 'react';
-import AddProduct from '../utils/AddProduct';
+import AddProduct from '../../admin2/utils/AddProduct';
 import Sidebar from '../utils/sidebar/Sidebar';
 import Topbar from '../utils/topbar/Topbar';
 import "./newProduct.css";

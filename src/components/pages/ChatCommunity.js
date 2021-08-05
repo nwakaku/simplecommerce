@@ -1,6 +1,5 @@
 import React,{useContext} from 'react'
 import { UserContext } from '../../UserContext';
-// import SweetNav from '../utils/SweetNav';
 import Chat from '../utils/Chat';
 import './chat.css'
 import Profile from '../utils/Profile';
@@ -13,7 +12,6 @@ const ChatCommunity = () => {
     if(state.kite){
         return (
         <div>
-            {/* <SweetNav/> */}
             <LastNav/>
             <div className=" mystyle ">
                 <MessagerGroup />
@@ -25,7 +23,6 @@ const ChatCommunity = () => {
     }else{
         return (
             <div>
-            {/* <SweetNav/> */}
             <LastNav/>
             <div className=" mystyle container section">
                 welcome most esteemed customer to enjoy more signup

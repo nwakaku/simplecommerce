@@ -15,7 +15,7 @@ const LastNav = () => {
             <nav className='nav'>
                 <div className='wrapper container'>
                     <div className='logo'><Link to='/'>MaterialHub</Link></div>
-                    <ul className={`${close ? 'nav-list' : 'show' }`}>
+                    <ul className={`${close ? 'nav-list' : 'nav-list show' }`}>
                         <div className='top'>
                             <label for='' className='btn close-btn' onClick={() => setClose(!close)}> 
                             <i class="fas fa-times"></i>
@@ -123,6 +123,7 @@ const LastNav = () => {
                     </ul>
                     <label for='' className='btn open-btn' onClick={() => setClose(!close)}>
                     <i class="fas fa-bars"></i>
+                    <small className='count d-flex' style={{fontSize:"1.5rem", color:"red"}}>{cartItems.length}</small>
                     </label>
                 </div>
                  <div className={`${searcher ? 'search' : "hide_search"}`}>

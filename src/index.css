@@ -155,50 +155,6 @@ h3, h4{
   color: var(--orange);
 }
 
-.nav__icons{
-  display: flex;
-  position: relative;
-}
-
-.nav__icons .nav__item i{
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.nav__icons .icon__item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: .7rem;
-  border: 1px solid var(--black);
-  border-radius: 50%;
-  transition: all .3s ease-in-out;
-}
-
-.nav__icons .icons__item:link,
-.nav__icons .icons__item:visited{
-  color: var(--black);
-}
-
-.nav__icons .icon__item:hover{
-  background-color: var(--orange);
-  border: 1px solid var(--black);
-}
-
-.nav__icons .icon__item:not(:last-child){
-  margin-right: 1rem;
-}
-
-.nav__icons .cart__total{
-  font-size: 1.2rem;
-  position: absolute;
-  top: 2px;
-  right: -5px;
-  background-color: var(--orange);
-  padding: .2rem .4rem;
-  border-radius: 100%;
-  color: var(--primaryColor);
-}
 
 /* Navigation */
 @media only screen and (max-width: 768px) {

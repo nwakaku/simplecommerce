@@ -34,12 +34,14 @@
     position: relative;
 }
 
-.wrapper .logo a{
-    color: var(--primary);
+.wrapper .logo a {
+    color: #ff4545;
     font-size: 2.7rem;
     font-weight: 600;
     padding: 0.5rem;
-}
+    font-family: 'Lobster';
+    text-shadow: 0.5rem 0.5rem 1rem #b8a1a1;
+  }
 
 .wrapper .nav-list {
     display: inline-flex;
@@ -49,16 +51,21 @@
     color: var(--grey2);
 }
 
-.nav-list a{
+.nav-list a {
+    color: var(--black);
     font-size: 1.5rem;
     padding: 0.9rem 1.5rem;
     border-radius: 0.5rem;
     transition: all 300ms ease;
-}
+  }
 
-.nav-list a:hover{
-    color: var(--primary);
-}
+  .nav-list li a:hover {
+    color: #ff4545;
+  }
+
+  .nav-list li .active{
+    color: #ff4545;
+  }
 
 .nav-list .icons span{
     display: inline-block;
@@ -67,14 +74,12 @@
 }
 
 .count{
-    justify-content: center;
     position: absolute;
-    top: 0;
-    right: -0.8rem;
-    background-color: var(--primary);
+    display: grid;
+    top: -35%;
     height: 2rem;
     padding: 0.5rem;
-    color: var(--white);
+    color: #ff4545;
     font-weight: 700;
     border-radius: 50%;
 }
@@ -191,7 +196,7 @@
     .wrapper .nav-list{
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         height: 100%;
         width: 90%;
         max-width: 35rem;
@@ -203,14 +208,9 @@
         transition: all 300ms linear;
     }
 
-    .wrapper .show{
-       display: none;
-
+    .wrapper .nav-list.show{
+        left: 0;
     }
-
-    /* .wrapper .nav-list .ture{
-        display: block;
-    } */
 
     .nav-list li {
         margin: 1.5rem 1rem;
@@ -314,7 +314,7 @@
 .top{
     position: relative;
     display: block;
-    background-color: var(--primary);
+    background-color: #ff4545;
     width: 100%;
     height: 8rem;
 }

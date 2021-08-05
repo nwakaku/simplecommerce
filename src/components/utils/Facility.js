@@ -1,9 +1,5 @@
 import React from 'react'
 import './Facility.css'
-import {AiFillCreditCard} from 'react-icons/ai';
-import {BiHeadphone} from 'react-icons/bi';
-import {ImAirplane} from 'react-icons/im';
-import {GiReceiveMoney} from 'react-icons/gi';
 import { Link } from 'react-router-dom'
 
 

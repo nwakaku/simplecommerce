@@ -4,11 +4,10 @@
   font-family: 'Gabriela';
   overflow: hidden;
   display: grid;
-  height: 100vh;
+  height: 90vh;
   justify-content: space-between;
   grid-template-columns:23% 52% 23%;
   margin-top: 6.5rem;
-  overflow: hidden;
 }
 
 .msg img {

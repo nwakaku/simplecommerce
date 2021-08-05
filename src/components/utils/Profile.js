@@ -1,8 +1,4 @@
-import { Input } from '@material-ui/core'
 import React, { useContext } from 'react'
-import woman from '../../image/woman.jpg';
-import girl from '../../image/girl.jpg';
-import bed from '../../image/bed.jpg';
 import { UserContext } from '../../UserContext';
 
 
