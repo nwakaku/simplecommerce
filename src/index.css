@@ -1151,13 +1151,13 @@ Cart Area Media Query
 .product_header{
   background-color: #ff4545;
   color: white;
-  padding: 3rem;
+  padding: 1.5rem;
   font-size: 2rem;
   display: flex;
-  gap: 3rem;
+  justify-content: space-around;
 }
 .product_header_item{
-  display: none;
+  display: flex;
   padding: 0.5rem;
   background-color: var(--green);
 }

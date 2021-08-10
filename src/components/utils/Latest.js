@@ -9,6 +9,7 @@ import catem2 from '../../image/car6.jpg'
 import catem3 from '../../image/car5.jpg'
 import { Carousel } from 'react-responsive-carousel';
 import { UserContext } from '../../UserContext';
+import footie from '../../image/footie.jpeg'
 
 
 
@@ -374,7 +375,7 @@ const Latest = () => {
             </div>
       
             <div className="promotion-item" onClick={() => filterItems("Shirts")}>
-              <img src={promo5} alt="" />
+              <img src={footie} alt="" />
               <div className="promotion-content">
                 <h3>FOOTIES</h3>
               </div>
