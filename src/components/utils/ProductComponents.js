@@ -292,9 +292,12 @@ const ProductComponents = () => {
                           <option value="DESC">Relevance</option>
                         </select>
                       </div>
-                      <button type='submit' style={{border:'none'}}>
-                        <a>Apply</a>
-                      </button>
+                      <div>
+                        <button type='submit' style={{border:'none'}}>
+                          <a>Apply</a>
+                        </button>
+                      </div>
+
                     </div>
                     
                   </div>
@@ -317,7 +320,7 @@ const ProductComponents = () => {
                       <div className="bottom">
                         <p>{product.title}</p>
                         <div className="price">
-                          <p>${product.price}</p>
+                          <small>${product.price}</small>
                         </div>
                       </div>
                     </div>

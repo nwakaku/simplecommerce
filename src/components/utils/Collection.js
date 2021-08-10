@@ -27,7 +27,31 @@ const Collection = () => {
               </div>
             </div>
             <div className="item">
+              <img src={promo2} alt=""/>
+              <div className="content  right">
+                <span>New Trending</span>
+                <h3>Designer Bags</h3>
+                <Link>Shop Now </Link>
+              </div>
+            </div>
+            <div className="item ">
               <img src={catem2} alt=""/>
+              <div className="content left">
+                <span>Exclusive Sales</span>
+                <h3>Spring Collections</h3>
+                <Link>View Collection</Link>
+              </div>
+            </div>
+            <div className="item">
+              <img src={catem2} alt=""/>
+              <div className="content  right">
+                <span>Splash Sells</span>
+                <h3>New Collection Roll Outs</h3>
+                <Link>Shop Now </Link>
+              </div>
+            </div>
+            <div className="item">
+              <img src={collect} alt=""/>
               <div className="content  right">
                 <span>New Trending</span>
                 <h3>Designer Bags</h3>

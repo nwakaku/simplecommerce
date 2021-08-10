@@ -8,11 +8,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductsArea from './components/pages/ProductsArea';
 import UserPage from './components/pages/UserPage';
 import Login from './components/utils/Login';
-// // import AdminHome from './components/admin/pages/AdminHome';
-// import NewProduct from './components/admin/pages/NewProduct';
-// import Product from './components/admin/pages/Product';
-// import User from './components/admin/pages/User';
-import UserList from './components/admin/pages/UserList';
 import ChatCommunity from './components/pages/ChatCommunity';
 import MainAdmin from './components/admin2/pages/MainAdmin';
 import AdminUser from './components/admin2/pages/AdminUser';
@@ -31,12 +26,11 @@ function App() {
       <UserProvider>
         <Switch>
 
-          {/* <PrivateRoute path='/admin' components={MainAdmin}>
-            </PrivateRoute> */}
+          <PrivateRoute path='/admin' component={MainAdmin} exact/>
 
-            <Route path='/admin'>
+            {/* <Route path='/admin'>
               <MainAdmin/>
-            </Route>
+            </Route> */}
 
 
             <Route path='/cart'>
@@ -65,10 +59,6 @@ function App() {
 
             <Route path='/purchases'>
               <AdminPurchases/>
-            </Route>
-
-            <Route path='/userlist'>
-              <UserList />
             </Route>
 
             <Route path='/product'>

@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Sidebar from '../utils/sidebar';
 import {FaBars, FaRegHeart, FaRegComments} from 'react-icons/fa';
 import {ImSearch} from 'react-icons/im';
 import {BiHeadphone} from 'react-icons/bi'
-import TableOne from '../utils/TableOne';
+import TableTwo from '../utils/TableTwo';
+import ProductTableOne from '../utils/ProductTableOne';
+import { UserContext } from '../../../UserContext';
+
 
 const AdminPurchases = () => {
+    const {state, setPages, pages} =useContext(UserContext)
+
     return (
         <div>
             <Sidebar/>
@@ -33,7 +38,7 @@ const AdminPurchases = () => {
                 </div>
             </div>
             <main>
-            <TableOne/>
+                <ProductTableOne/> 
             </main>
 
             </div>

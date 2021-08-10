@@ -48,7 +48,11 @@ const ItemPop = () => {
                             <p><i className="fas fa-burn"></i> {wish.price} sold in the last 24hrs</p>
                         </div>
                     </div>  
-                  <div className="price">${wish.price}</div>
+                  <div className="price">
+                      <small>
+                          NGN {wish.price}
+                      </small>
+                    </div>
                     
                     <h3>Product Detail</h3>
                     <p>

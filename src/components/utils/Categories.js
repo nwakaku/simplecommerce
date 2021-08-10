@@ -8,7 +8,9 @@ import gown from '../../image/gown.png'
 import tailor from '../../image/tailor.png'
 import fab from '../../image/fab.png';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup'
+import * as Yup from 'yup';
+import { Link } from 'react-router-dom'
+
 
   const category = {
     file : [
@@ -93,15 +95,20 @@ const { file } = category;
                 </div>
               </section>
             <section className="section products container">
+              <marquee>
+                First customer and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
+                First customer and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
+                First customer and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit
+              </marquee>
                 <div className="product_header">
                   <h3>{catItem}<i className="fas fa-medal"></i></h3>
                   <div className="product_header_item">
-                        <label htmlFor="order-by">Categories</label>
                         <Field 
                             as='select'
                             id='categories' 
                             name='categories'
                             className='field_form'>
+                              <option>Categories</option>
                               <option value='Material'>Materials</option>
                               <option value='Trousers'>Trousers</option>
                               <option value='Polo'>Polo</option>
@@ -109,9 +116,10 @@ const { file } = category;
                               <option value='Bedsheets'>Bedsheets</option>
                               <option value='Designers'>Designers</option>
                               <option value='gown'>Gowns</option>
+                              <option value='foot'>Footies</option>
                           </Field>
-                          <button type='submit'>ok</button>
-                      </div>
+                          <button type='submit'>Apply</button>
+                      </div>                  
                 </div> 
               <div className="product-layout" >
 
@@ -122,10 +130,10 @@ const { file } = category;
                     </div>
                       {/* <!-- PAGINATION --> */}
                         <ul className="pagination">
-                          <span>1</span>
-                          <span>2</span>
-                          <span className="icon">››</span>
-                          <span className="last">Last »</span>
+                        <Link to='/product'><span>1</span></Link>
+                        <Link to='/product'><span>2</span></Link>
+                        <Link to='/product'><span className="icon">››</span></Link>
+                        <Link to='/product'><span className="last">Last »</span></Link>
                         </ul>
             </section>
           </Form>

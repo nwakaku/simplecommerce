@@ -3,7 +3,6 @@ import Sidebar from '../utils/sidebar';
 import {FaBars, FaRegHeart, FaRegComments} from 'react-icons/fa';
 import {ImSearch} from 'react-icons/im';
 import {BiHeadphone} from 'react-icons/bi'
-import TableOne from '../utils/TableOne';
 import AddProduct from '../utils/AddProduct';
 
 const AdminAddProducts = () => {

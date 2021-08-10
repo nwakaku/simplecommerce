@@ -23,7 +23,7 @@ const Product = ({product}) => {
         <div className="bottom">
         <p>{product.title}</p>
           <div className="price">
-            <p>${product.price}</p>
+            <small>NGN{product.price}</small>
           </div>
         </div>
 

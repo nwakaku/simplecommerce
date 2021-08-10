@@ -22,7 +22,6 @@ function Chat() {
     return (
         
             <div style={{overflowY:"scroll"}}>
-                wisdom
                 <div className="msgs">
                     {messages ? messages.map(({ id, text, photoURL, uid, chater }) => (
                         <div>

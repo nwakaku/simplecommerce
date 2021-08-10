@@ -19,7 +19,6 @@
 
 .block-title{
   font-size: 0.5rem;
-  font-family: 'Gabriela';
 }
 
 .col-1-of-4{
@@ -65,7 +64,6 @@
 }
 
 .toNav select {
-  font-family: "Open Sans", sans-serif;
   padding: 1rem;
   width: 10rem;
   border: 1px solid #f2f2f2;
@@ -95,9 +93,7 @@
   .toNav .product_form a{
     margin: 10px 0;
   }
-  /* .products-layout {
-    padding: 0 5rem;
-  } */
+
 
   .toNav {
     flex-direction: column;

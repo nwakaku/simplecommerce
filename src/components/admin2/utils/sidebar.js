@@ -15,7 +15,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 
 const Sidebar = () => {
-    const {state} =useContext(UserContext)
+    const {state, setPage, page} =useContext(UserContext)
     return (
         <>
             <input type='checkbox' id='menu-toggle' />

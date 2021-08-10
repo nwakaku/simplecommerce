@@ -34,7 +34,7 @@ input, button{
     width: 65px;
 }
 
-#menu-toggle:checked ~ .main-content header {
+#menu-toggle:checked ~ .main-content .header {
     left: calc(65px + 1rem);
 }
 
@@ -121,10 +121,10 @@ input, button{
 }
 
 .sidemenu a:hover {
-    background: var(--main);
-    color: #fff;
-    border-radius: 4px;
-    height: 45px;
+    /* background: var(--main); */
+    color:  var(--main);
+    /* border-radius: 4px; */
+    /* height: 45px; */
 }
 
 .main-content{
@@ -145,10 +145,10 @@ input, button{
     position: fixed;
     left: calc(280px + 1rem);
     right: 1rem;
-    top: .5rem;
     border-radius: 3px;
     transition: left 300ms;
     z-index: 100;
+    top:-1rem;
 }
 
 .menu-toggle {
@@ -336,7 +336,7 @@ main{
         width: 65px;
     }
     
-    #menu-toggle ~ .main-content header {
+    #menu-toggle ~ .main-content .header {
         left: calc(65px + 1rem);
     }
     

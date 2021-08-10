@@ -355,14 +355,14 @@ const Latest = () => {
             <div className="promotion-item" onClick={() => filterItems("Trousers")}>
               <img src={promo2} alt="" />
               <div className="promotion-content">
-                <h3>ANKARA MATERIALS</h3>
+                <h3>FABRIC /MATERIALS</h3>
               </div>
             </div>
       
             <div className="promotion-item" onClick={() => filterItems("gown")}>
               <img src={promo3} alt="" />
               <div className="promotion-content">
-                <h3>FEMALE MATERIALS</h3>
+                <h3>CLOTHS/ CUSTOMIZED</h3>
               </div>
             </div>
       
@@ -376,7 +376,7 @@ const Latest = () => {
             <div className="promotion-item" onClick={() => filterItems("Shirts")}>
               <img src={promo5} alt="" />
               <div className="promotion-content">
-                <h3>JEANS MATERIALS</h3>
+                <h3>FOOTIES</h3>
               </div>
             </div>
           </div>

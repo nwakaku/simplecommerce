@@ -9,20 +9,22 @@ const Footer = () => {
         <div className="container">
           <div className="footer-container">
             <div className="footer-center">
-              <h3>EXTRAS</h3>
-              <a href="#">Brands</a>
-              <a href="#">Gift Certificates</a>
-              <a href="#">Affiliate</a>
-              <a href="#">Specials</a>
-              <a href="#">Site Map</a>
+              <h3>LET US HELP YOU</h3>
+                <a href="#">Help Center</a>
+                <a href="#">How to shop on MH?</a>
+                <a href="#">Delivery options and timelines</a>
+                <a href="#">How to return a product on MH</a>
+                <a href="#">Corporate and bulk purchases</a>
+                <a href="#">Report a Product</a>
             </div>
             <div className="footer-center">
-              <h3>INFORMATION</h3>
-              <a href="#">About Us</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms & Conditions</a>
-              <a href="#">Contact Us</a>
-              <a href="#">Site Map</a>
+              <h3>ABOUT MATERIALHUB</h3>
+                <a href="#">About Us</a>
+                <a href="#">MaterialHub Cares</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Site Map</a>
             </div>
             <div className="footer-center">
               <h3>MY ACCOUNT</h3>
@@ -38,19 +40,19 @@ const Footer = () => {
                 <span>
                   <i className="fas fa-map-marker-alt"></i>
                 </span>
-                42 Dream House, Dreammy street, 7131 Dreamville, USA
+                #24 Wetheral-Junction,Owerri Imo State,Nigeria
               </div>
               <div>
                 <span>
                   <i className="far fa-envelope"></i>
                 </span>
-                company@gmail.com
+                MaterialHub@gmail.com
               </div>
               <div>
                 <span>
                   <i className="fas fa-phone"></i>
                 </span>
-                456-456-4512
+                +234-708-3419-662
               </div>
               <div className="payment-methods">
                 <img src={payment} alt=""/>

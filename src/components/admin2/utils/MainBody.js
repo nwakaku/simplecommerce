@@ -3,7 +3,6 @@ import g from '../../../gowns/g1.jpg';
 import {HiUserGroup} from 'react-icons/hi';
 import {FcLike} from 'react-icons/fc';
 import {FaCommentDots} from 'react-icons/fa';
-import TableOne from './TableOne';
 import Polar from './Polar';
 import CrazyChart from './CrazyChart';
 
@@ -71,7 +70,6 @@ const MainBody = () => {
                                 <span><HiUserGroup/></span>
                             </div>       
                             <div>                   
-                            {/* <TableOne/> */}
                             <CrazyChart/>
                             </div>
                         </div>

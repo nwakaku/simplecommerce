@@ -172,13 +172,7 @@ if (loading){
 
                             <div className="form-group">
                             <button className="form-btn" disabled={loading}  type='submit'>Add to Database</button>
-                            </div>
-
-                            <Link to="/admin">
-                                Back to Admin
-                            </Link>
-                    
-                        
+                            </div>                        
                     </Form>
                 </div>
             </div>

@@ -23,6 +23,8 @@ export const UserProvider = ({children}) => {
 
   //user experience
 const [state, dispatch] = useReducer(reducer, initialState);
+const [pages, setPages] = useState()
+
   
   //trying out something
   // const [currentUser, setCurrentUser] = useState();
@@ -186,6 +188,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
   });
   }, [])
 
+  //admin context
+
   
 
   const value = {
@@ -214,7 +218,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
     totalPrice,
     zoom,
     setZoom,
-    individual
+    individual,
+    pages,
+    setPages
   }
     return(
         <UserContext.Provider value={value}>
