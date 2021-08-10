@@ -724,7 +724,7 @@ NewsLetter
   display: inline-block;
   width: 37rem;
   padding: 1.6rem;
-  background-color: aliceblue;
+  background-color: rgb(173, 212, 247);
   border: none;
   text-indent: 1rem;
 }
