@@ -96,9 +96,9 @@ const { file } = category;
               </section>
             <section className="section products container">
               <marquee>
-                First Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
-                First Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
-                First Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit
+                First and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
+                First and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit;  
+                First and Last customer everyday from 0:00'oclock to make a purchase gets a NGN10000 credit
               </marquee>
                 <div className="product_header">
                   <h3>{catItem}<i className="fas fa-medal"></i></h3>

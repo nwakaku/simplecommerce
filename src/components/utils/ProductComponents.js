@@ -1,6 +1,5 @@
 import React,{useContext, useState} from 'react';
 import { UserContext } from '../../UserContext';
-import product1 from '../../image/product1.jpg';
 import './productItem.css';
 import trousers from '../../image/trousers.png'
 import polo from '../../image/polo.png'
@@ -10,6 +9,8 @@ import tailor from '../../image/tailor.png'
 import fab from '../../image/fab.png';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import Pagination from './Pagination';
+
 
 const category = {
   file : [
@@ -52,11 +53,20 @@ const category = {
 }
 
 const ProductComponents = () => {
-  const [activeLink, SetActiveLink] = useState(null)
-
-  const { file } = category;
-
+    const [activeLink, SetActiveLink] = useState(null)
+    const { file } = category;
     const { mainItem,onAdd, setZoom, individual,filterItems } = useContext(UserContext);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(20);
+
+     //pagination effect
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = mainItem.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     const initialValues = {
       categories: '',
   }
@@ -164,35 +174,35 @@ const ProductComponents = () => {
                       <li                      
                       onClick = {() => filterItems("all")}>
                         <label htmlFor="">
-                          <span>#100 - #1000</span>
+                          <span>NGN100 - NGN1000</span>
                         </label>
                       </li>
 
                       <li                     
                       onClick = {() => filterItems("Trending Products")}>
                         <label htmlFor="">
-                          <span>#1k - #5k</span>
+                          <span>NGN1k - NGN5k</span>
                         </label>
                       </li>
 
                       <li                     
                       onClick = {() => filterItems("Special Products")}>
                         <label htmlFor="">
-                          <span>#5k - #10k</span>
+                          <span>NGN5k - NGN10k</span>
                         </label>
                       </li>
 
                       <li                     
                       onClick = {() => filterItems("Featured Products")}>
                         <label htmlFor="">
-                          <span>#10k - #15k</span>
+                          <span>NGN10k - NGN15k</span>
                         </label>
                       </li>
 
                       <li                     
                       onClick = {() => filterItems("Featured Products")}>
                         <label htmlFor="">
-                          <span>#15k - 20k</span>
+                          <span>NGN15k - NGN20k</span>
                         </label>
                       </li>
 
@@ -273,6 +283,7 @@ const ProductComponents = () => {
                                 as='select'
                                 id='categories' 
                                 name='categories'>
+                                  <option>Categories</option>
                                   <option value='Material'>Materials</option>
                                   <option value='Trousers'>Trousers</option>
                                   <option value='Polo'>Polo</option>
@@ -285,7 +296,7 @@ const ProductComponents = () => {
                       <div className="item">
                         <label htmlFor="order-by">Sort By</label>
                         <select name="order-by" id="sort-by">
-                          <option value="ASC" selected="selected">Name</option>
+                          <option value="ASC" selected="selected">Sort By</option>
                           <option value="DESC">Price</option>
                           <option value="DESC">Date</option>
                           <option value="DESC">Newness</option>
@@ -304,7 +315,7 @@ const ProductComponents = () => {
 
                   <div className="product-layout">
 
-                  {mainItem.map((product, index) => <div className="product">
+                  {currentPosts.map((product, index) => <div className="product">
                       <div className="img-container">
                         <img src={product.image} alt="" />
                         <div className="addCart">
@@ -320,21 +331,18 @@ const ProductComponents = () => {
                       <div className="bottom">
                         <p>{product.title}</p>
                         <div className="price">
-                          <small>${product.price}</small>
+                          <small>NGN{product.price}</small>
                         </div>
                       </div>
                     </div>
                         )}
 
                   </div>
-
-                  {/* <!-- PAGINATION --> */}
-                  <ul className="pagination">
-                    <span>1</span>
-                    <span>2</span>
-                    <span className="icon">››</span>
-                    <span className="last">Last »</span>
-                  </ul>
+                  {/* pagination */}
+                  <Pagination 
+                          postsPerPage={postsPerPage} 
+                          totalPosts={mainItem.length}
+                          paginate={paginate} />
                 </div>
               </div>
             </section>

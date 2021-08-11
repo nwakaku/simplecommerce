@@ -34,6 +34,9 @@
 .col-3-of-4 {
   text-align: center;
 }
+.toNav label {
+ display: none;
+}
 
 @media only screen and (max-width: 996px) {
   .col-1-of-4 {
