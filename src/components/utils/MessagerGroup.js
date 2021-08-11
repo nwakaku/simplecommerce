@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Button, Input } from '@material-ui/core';
 import woman from '../../image/woman.jpg';
-import girl from '../../image/girl.jpg';
-import bed from '../../image/bed.jpg';
+import girl from '../../image/chur.jpeg';
+import bed from '../../image/Cotton.jpeg';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';

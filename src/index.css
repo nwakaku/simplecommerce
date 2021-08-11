@@ -1160,6 +1160,7 @@ Cart Area Media Query
   display: flex;
   padding: 0.5rem;
   background-color: var(--green);
+  display: none;
 }
 
 

@@ -1,15 +1,14 @@
 import React,{useContext, useState} from 'react';
-import promo1 from '../../image/_.jpeg'
-import promo2 from '../../image/Ankara.jpg'
-import promo3 from '../../image/lace2.jpg'
-import promo4 from '../../image/Cotton.jpeg'
-import promo5 from '../../image/jeans.jpg'
-import catem from '../../image/car7.jpg'
-import catem2 from '../../image/car6.jpg'
-import catem3 from '../../image/car5.jpg'
+import alibaba from '../../image/alibaba1.jpg';
+import couples from '../../image/couple2.jpg'
+import couples2 from '../../image/couple3.jpg'
+import bedsheet from '../../image/Cotton.jpeg'
+import shoes1 from '../../image/shoes1.jpg'
+import shoes2 from '../../image/shoes2.jpg'
+import bags from '../../image/bags.jpg'
+import customize from '../../image/customize2.jpg'
 import { Carousel } from 'react-responsive-carousel';
 import { UserContext } from '../../UserContext';
-import footie from '../../image/footie.jpeg'
 
 
 
@@ -33,7 +32,7 @@ const Latest = () => {
             transitionTime={2000} >
 
             <div className="promotion-itemy">
-            <img src={promo1} alt="" />
+            <img src={alibaba} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -80,7 +79,7 @@ const Latest = () => {
           </div>
           </div>
           <div className="promotion-itemy">
-            <img src={catem} alt="" />
+            <img src={bags} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -127,7 +126,7 @@ const Latest = () => {
           </div>
           </div>
           <div className="promotion-itemy">
-            <img src={catem2} alt="" />
+            <img src={couples} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -174,7 +173,7 @@ const Latest = () => {
           </div>
           </div>
           <div className="promotion-itemy">
-            <img src={catem3} alt="" />
+            <img src={shoes1} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -221,7 +220,7 @@ const Latest = () => {
           </div>
           </div>
           <div className="promotion-itemy">
-            <img src={promo2} alt="" />
+            <img src={couples2} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -292,7 +291,7 @@ const Latest = () => {
             </div>
           </div>
           <div className="promotion-itemy">
-            <img src={promo3} alt="" />
+            <img src={shoes1} alt="" />
             <div className="promotion-content">
               <h3 className="promain">MATERIALHUB</h3>
             </div>
@@ -354,28 +353,28 @@ const Latest = () => {
           
           <div className="layout-2">
             <div className="promotion-item" onClick={() => filterItems("Trousers")}>
-              <img src={promo2} alt="" />
+              <img src={couples} alt="" />
               <div className="promotion-content">
                 <h3>FABRIC /MATERIALS</h3>
               </div>
             </div>
       
             <div className="promotion-item" onClick={() => filterItems("gown")}>
-              <img src={promo3} alt="" />
+              <img src={customize} alt="" />
               <div className="promotion-content">
                 <h3>CLOTHS/ CUSTOMIZED</h3>
               </div>
             </div>
       
             <div className="promotion-item" onClick={() => filterItems("Polo")}>
-              <img src={promo4} alt="" />
+              <img src={bedsheet} alt="" />
               <div className="promotion-content">
                 <h3>BED SHEETS</h3>
               </div>
             </div>
       
             <div className="promotion-item" onClick={() => filterItems("Shirts")}>
-              <img src={footie} alt="" />
+              <img src={shoes2} alt="" />
               <div className="promotion-content">
                 <h3>FOOTIES</h3>
               </div>

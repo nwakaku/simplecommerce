@@ -16,8 +16,8 @@ const News = () => {
                           <img src={new2} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                            provident rem sed minus natus unde vel modi!</p>
+                          <p>Clothes aren't going to change the world.
+                            The wearer who wear them will  .....!</p>
                           <span>...Elon Musk</span>
                         </div>
                       </div>
@@ -26,8 +26,8 @@ const News = () => {
                           <img src={new4} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                            provident rem sed minus natus unde vel modi!</p>
+                          <p>I love shopping online at MH because its frown upon
+                             to be in a store with no bra, sweatpants and a glass of wine!</p>
                           <span>...pst Grace</span>
                         </div>
                       </div>
@@ -36,8 +36,8 @@ const News = () => {
                           <img src={new4} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                            provident rem sed minus natus unde vel modi!</p>
+                          <p>If you can't stop thinking about it....
+                            BUY IT!</p>
                           <span>...Mark Zuckerburg</span>
                         </div>
                       </div>
@@ -46,8 +46,7 @@ const News = () => {
                           <img src={new5} alt=""/>
                         </div>
                         <div className="card__footer">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                            provident rem sed minus natus unde vel modi!</p>
+                          <p>"Happiness is not in money, but in shopping.!"</p>
                           <span>...pst Focus</span>
                         </div>
                       </div>
