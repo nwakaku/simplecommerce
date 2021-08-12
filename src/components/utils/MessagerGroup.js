@@ -48,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
       padding: '2px 4px',
       display: 'flex',
       alignItems: 'center',
-      width: 200,
-      margin: '10px 7px',
+      width: '100%',
+      margin: '10px 0px',
     },
     input: {
       marginLeft: theme.spacing(1),
@@ -70,7 +70,7 @@ const MessagerGroup = () => {
     return (
         <div className='messager_group'>
             <div>
-                <div className="header">
+                <div className="headery">
                         <h3>DesignerGroups</h3>
                         <div>
                            <i className="fas fa-plus borderd"></i>

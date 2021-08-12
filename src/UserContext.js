@@ -136,6 +136,7 @@ const [pages, setPages] = useState()
     //for second products
     const [cartItems, setCartItems] = useState([]);
     const [zoom, setZoom] = useState(true);
+    const [users, setUsers] = useState()
 
   const onAdd = (product) => {
     const exist = cartItems.find(x => x.id === product.id);
@@ -186,6 +187,15 @@ const [pages, setPages] = useState()
           console.log(doc.id, " => ", doc.data());
       });
   });
+
+  //users
+  db.collection("userProfile").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        setUsers(doc.data());
+    });
+});
   }, [])
 
   //admin context
@@ -220,7 +230,8 @@ const [pages, setPages] = useState()
     setZoom,
     individual,
     pages,
-    setPages
+    setPages,
+    users
   }
     return(
         <UserContext.Provider value={value}>

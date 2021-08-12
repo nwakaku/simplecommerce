@@ -137,14 +137,15 @@
     border-radius: 50%;
   }
 
- .header{
+ .headery{
       display: flex;
+      justify-content: space-between;
       padding: 1rem;
       gap: 2rem;
       margin: 1rem 0;
   }
 
-  div .header i {
+  div .headery i {
     margin: 0 0.5rem;
     background-color: #ff4545;
     padding: 1.5rem;
@@ -152,9 +153,8 @@
     margin-top: -5rem;
   }
 
-  div .header i:hover{
-    color: #ff4545;
-    background-color: aliceblue;
+  div .headery i:hover{
+    background-color: #ff454573;
     cursor: pointer;
   }
 

@@ -22,7 +22,7 @@ const Sidebar = () => {
             <div className='sidebar'>
                 <div className='brand'>
                     <span><SiPrometheus/></span>
-                    <h2>MaterialHub</h2>
+                    <Link><h2>MaterialHub</h2></Link>
                 </div>
                 <div className='sidemenu'>
                     <div className='side-user'>
