@@ -5,6 +5,7 @@ import './chat.css'
 import Profile from '../utils/Profile';
 import MessagerGroup from '../utils/MessagerGroup';
 import LastNav from '../utils/LastNav';
+import ChatGroup from '../utils/ChatGroup';
 
 const ChatCommunity = () => {
     const { state } = useContext(UserContext);
@@ -18,6 +19,7 @@ const ChatCommunity = () => {
                 <Chat />
                 <Profile/>
             </div>
+            <ChatGroup/>
         </div>
     )
     }else{

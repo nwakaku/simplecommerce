@@ -586,6 +586,7 @@ span.dot::before {
   z-index: 9999;
   transition: 0.3s;
   transform: scale(1);
+  overflow-y: scroll;
 }
 
 .popup__content {

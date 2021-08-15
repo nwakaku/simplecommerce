@@ -136,7 +136,8 @@ const [pages, setPages] = useState()
     //for second products
     const [cartItems, setCartItems] = useState([]);
     const [zoom, setZoom] = useState(true);
-    const [users, setUsers] = useState()
+    const [users, setUsers] = useState();
+    const [chatGroup, setChatGroup] = useState(true)
 
   const onAdd = (product) => {
     const exist = cartItems.find(x => x.id === product.id);
@@ -231,7 +232,9 @@ const [pages, setPages] = useState()
     individual,
     pages,
     setPages,
-    users
+    users,
+    chatGroup,
+    setChatGroup
   }
     return(
         <UserContext.Provider value={value}>

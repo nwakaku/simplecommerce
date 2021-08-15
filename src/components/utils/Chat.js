@@ -6,7 +6,10 @@ import girl from '../../image/woman.jpg';
 
 
 function Chat() {
-    const { state, messagerGroup } = useContext(UserContext);
+    const { state,
+            messagerGroup,
+            setChatGroup,
+            chatGroup } = useContext(UserContext);
     const scroll = useRef()
     const [messages, setMessages] = useState([])
     useEffect(() => {
@@ -22,6 +25,8 @@ function Chat() {
     return (
         
             <div style={{overflowY:"scroll"}}>
+                <button onClick={() => {setChatGroup(!chatGroup);
+                console.log(chatGroup)}} className="group_button">open</button>
                 <div className="msgs">
                     {messages ? messages.map(({ id, text, photoURL, uid, chater }) => (
                         <div>
