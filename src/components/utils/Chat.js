@@ -24,9 +24,11 @@ function Chat() {
     }, [messagerGroup])
     return (
         
-            <div style={{overflowY:"scroll"}}>
-                <button onClick={() => {setChatGroup(!chatGroup);
-                console.log(chatGroup)}} className="group_button">open</button>
+            <div style={{overflowY:"scroll"}}
+            onLoad={window.scrollTo(0,document.body.scrollHeight)}>
+                <button onClick={() => {setChatGroup(!chatGroup)}} className="group_button">
+                    <i class="fas fa-book-reader"></i>
+                </button>
                 <div className="msgs">
                     {messages ? messages.map(({ id, text, photoURL, uid, chater }) => (
                         <div>

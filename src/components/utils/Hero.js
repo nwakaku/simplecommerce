@@ -91,7 +91,7 @@ export const Hero = () => {
                 animationHandler='fade' 
                 swipeable={false}
                 infiniteLoop={true}
-                interval={1000}
+                interval={2000}
                 autoPlay={true}
                 showThumbs={false}
                 transitionTime={500}>
